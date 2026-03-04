@@ -13,6 +13,7 @@ export function Footer() {
             alt="Logo ABRADEPA"
             width={120}
             height={120}
+            style={{ height: 'auto' }}
             className="mb-6 brightness-0 invert"
           />
           <p className="text-abradepa-pale text-sm leading-relaxed">

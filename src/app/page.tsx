@@ -1,4 +1,7 @@
 import { Header } from '@/components/Header';
+import { About } from '@/components/About';
+import { Objectives } from '@/components/Objectives';
+import { Board } from '@/components/Board';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
@@ -36,16 +39,24 @@ export default function Home() {
                 Cursos e Capacitações
               </h2>
               <p className="text-lg text-slate-600">
-                Tenha acesso ao melhor conteúdo de apoio à saúde integral do
-                país. Nossa missão é capacitar profissionais e acolher
-                pacientes.
+                Acesse conteúdos chancelados com dupla certificação para
+                capacitação profissional e acolhimento de pacientes.
               </p>
             </div>
-            <button className="w-full rounded-2xl bg-abradepa-medium px-8 py-4 text-center font-bold text-white transition-all hover:bg-abradepa-dark md:w-auto">
-              Clique para acessar
+            <button className="w-full md:w-auto cursor-pointer rounded-full bg-abradepa-yellow px-10 py-4 text-center text-lg font-bold text-abradepa-dark shadow-sm transition-all hover:shadow-md hover:brightness-110">
+              Saiba mais
             </button>
           </div>
         </section>
+
+        {/* 3. Quem Somos: A História e Missão */}
+        <About />
+
+        {/* 4. Objetivos: As Frentes de Atuação (O que fazemos) */}
+        <Objectives />
+
+        {/* 5. Diretoria: Liderança e Confiança */}
+        <Board />
       </main>
 
       <Footer />
