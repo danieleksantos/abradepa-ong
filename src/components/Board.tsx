@@ -5,7 +5,7 @@ const members = [
     name: 'Simone Borges',
     role: 'Diretora Presidente',
     bio: 'Dermopigmentadora paramédica fundadora, lidera a missão de unir técnica e humanização na reabilitação oncológica.',
-    image: '/person.png',
+    image: '/simone-abradepa.png',
   },
   {
     name: 'Gisele Lázara de Farias Borges',

@@ -1,20 +1,54 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cores oficiais do manual [cite: 3, 5, 7, 9] */
-  --color-abradepa-dark: #02767c;
-  --color-abradepa-medium: #03989e;
-  --color-abradepa-light: #40e0d0;
-  --color-abradepa-pale: #59e1e4;
-  --color-abradepa-yellow: #fcee21;
+  --color-abradepa-dark: #02767c;   
+  --color-abradepa-medium: #03989e;  
+  --color-abradepa-light: #40e0d0;   
+  --color-abradepa-pale: #59e1e4;   
+  --color-abradepa-yellow: #fcee21;  
 
-  /* Fonte Montserrat [cite: 2] */
   --font-montserrat: var(--font-montserrat), ui-sans-serif, system-ui;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
 }
 
 @layer base {
-  body {
-    @apply antialiased text-slate-900;
-    font-family: var(--font-montserrat);
+  *, ::after, ::before {
+    box-sizing: border-box;
+    border-color: var(--color-slate-200);
   }
+
+  body {
+    @apply antialiased text-slate-900 bg-slate-50;
+    font-family: var(--font-montserrat);
+    text-rendering: optimizeLegibility; 
+  }
+
+  :focus-visible {
+    @apply outline-3 outline-offset-2 outline-abradepa-medium;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-abradepa-yellow text-abradepa-dark font-bold px-6 py-3 
+           rounded-full transition-all hover:scale-105 active:scale-95 
+           shadow-md hover:shadow-lg flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply w-full md:w-auto cursor-pointer rounded-full bg-abradepa-yellow 
+           px-10 py-4 text-center text-lg font-bold text-abradepa-dark 
+           shadow-sm transition-all hover:shadow-md hover:brightness-110
+           active:scale-95 flex items-center justify-center gap-2;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

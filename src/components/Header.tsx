@@ -27,18 +27,24 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#quem-somos" className={linkStyle}>
+            <Link href="/" className={linkStyle}>
+              Home
+            </Link>
+            <Link href="/#quem-somos" className={linkStyle}>
               Quem Somos
             </Link>
-            <Link href="#objetivos" className={linkStyle}>
+            <Link href="/transparencia" className={linkStyle}>
+              Transparência
+            </Link>
+            <Link href="/#objetivos" className={linkStyle}>
               Objetivos
             </Link>
-            <Link href="#blog" className={linkStyle}>
+            <Link href="/#blog" className={linkStyle}>
               Blog
             </Link>
 
             <Link
-              href="#cursos"
+              href="/cursos"
               className="bg-abradepa-yellow text-abradepa-dark px-6 py-2.5 rounded-full font-bold hover:brightness-105 transition-all shadow-sm hover:shadow-md"
             >
               Cursos e Benefícios
@@ -81,28 +87,42 @@ export function Header() {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 absolute w-full left-0 p-4 space-y-4 shadow-xl animate-in slide-in-from-top duration-300">
           <Link
-            href="#quem-somos"
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="block text-abradepa-dark font-medium py-2"
+          >
+            Home
+          </Link>
+          <Link
+            href="/#quem-somos"
             onClick={() => setIsOpen(false)}
             className="block text-abradepa-dark font-medium py-2"
           >
             Quem Somos
           </Link>
           <Link
-            href="#objetivos"
+            href="/transparencia"
+            onClick={() => setIsOpen(false)}
+            className="block text-abradepa-dark font-medium py-2"
+          >
+            Transparência
+          </Link>
+          <Link
+            href="/#objetivos"
             onClick={() => setIsOpen(false)}
             className="block text-abradepa-dark font-medium py-2"
           >
             Objetivos
           </Link>
           <Link
-            href="#blog"
+            href="/#blog"
             onClick={() => setIsOpen(false)}
             className="block text-abradepa-dark font-medium py-2"
           >
             Blog
           </Link>
           <Link
-            href="#cursos"
+            href="/cursos"
             onClick={() => setIsOpen(false)}
             className="block bg-abradepa-yellow text-abradepa-dark text-center px-5 py-3 rounded-full font-bold"
           >

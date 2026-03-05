@@ -16,8 +16,9 @@ export function About() {
                 src="/about.png"
                 alt="Acolhimento ABRADEPA"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Adicione esta linha
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-t from-abradepa-dark/40 to-transparent" />
             </div>
