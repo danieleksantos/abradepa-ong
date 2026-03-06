@@ -115,7 +115,7 @@ export function Header() {
             Objetivos
           </Link>
           <Link
-            href="/noticias"
+            href="/novidades"
             onClick={() => setIsOpen(false)}
             className="block text-abradepa-dark font-medium py-2"
           >
