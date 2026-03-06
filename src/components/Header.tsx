@@ -39,8 +39,8 @@ export function Header() {
             <Link href="/#objetivos" className={linkStyle}>
               Objetivos
             </Link>
-            <Link href="/#blog" className={linkStyle}>
-              Blog
+            <Link href="/novidades" className={linkStyle}>
+              Novidades
             </Link>
 
             <Link
@@ -115,11 +115,11 @@ export function Header() {
             Objetivos
           </Link>
           <Link
-            href="/#blog"
+            href="/noticias"
             onClick={() => setIsOpen(false)}
             className="block text-abradepa-dark font-medium py-2"
           >
-            Blog
+            Novidades
           </Link>
           <Link
             href="/cursos"

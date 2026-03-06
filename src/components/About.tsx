@@ -17,7 +17,7 @@ export function About() {
                 alt="Acolhimento ABRADEPA"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Adicione esta linha
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-t from-abradepa-dark/40 to-transparent" />

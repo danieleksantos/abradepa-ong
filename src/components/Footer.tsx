@@ -69,10 +69,10 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/#blog"
+                href="/novidades"
                 className="hover:text-abradepa-light transition-colors"
               >
-                Blog
+                Novidades
               </Link>
             </li>
             <li>
