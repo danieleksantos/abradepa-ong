@@ -122,26 +122,37 @@ export default function CursosEBeneficiosPage() {
       <section className="py-24 px-4 bg-slate-50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="h-64 bg-white rounded-3xl border border-slate-100 flex items-center justify-center p-8 shadow-sm">
-                  <GraduationCap size={80} className="text-abradepa-yellow" />
-                </div>
-                <div className="h-48 bg-abradepa-yellow rounded-3xl flex items-center justify-center p-8 shadow-sm">
-                  <p className="text-abradepa-dark font-black text-center uppercase tracking-tighter">
-                    Dupla Certificação
-                  </p>
-                </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="h-56 bg-white rounded-[2.5rem] border border-slate-100 flex items-center justify-center p-8 shadow-sm group hover:border-abradepa-yellow transition-all">
+                <GraduationCap
+                  size={70}
+                  className="text-abradepa-yellow group-hover:scale-110 transition-transform"
+                />
               </div>
-              <div className="space-y-4 pt-12">
-                <div className="h-48 bg-abradepa-dark rounded-3xl flex items-center justify-center p-8 shadow-sm">
-                  <p className="text-white font-black text-center uppercase tracking-tighter">
-                    Brasil e Europa
-                  </p>
-                </div>
-                <div className="h-64 bg-white rounded-3xl border border-slate-100 flex items-center justify-center p-8 shadow-sm">
-                  <ShieldCheck size={80} className="text-abradepa-medium" />
-                </div>
+
+              <div className="h-56 bg-abradepa-yellow rounded-[2.5rem] flex flex-col items-center justify-center p-8 shadow-md text-abradepa-dark">
+                <span className="text-[10px] font-black uppercase tracking-widest mb-2 opacity-60">
+                  Reconhecimento
+                </span>
+                <p className="font-black text-center uppercase leading-tight tracking-tighter">
+                  Dupla <br /> Certificação
+                </p>
+              </div>
+
+              <div className="h-56 bg-abradepa-dark rounded-[2.5rem] flex flex-col items-center justify-center p-8 shadow-md text-white">
+                <span className="text-[10px] font-black uppercase tracking-widest mb-2 text-abradepa-yellow">
+                  Abrangência
+                </span>
+                <p className="font-black text-center uppercase leading-tight tracking-tighter">
+                  Brasil <br /> e Europa
+                </p>
+              </div>
+
+              <div className="h-56 bg-white rounded-[2.5rem] border border-slate-100 flex items-center justify-center p-8 shadow-sm group hover:border-abradepa-yellow transition-all">
+                <ShieldCheck
+                  size={70}
+                  className="text-abradepa-medium group-hover:scale-110 transition-transform"
+                />
               </div>
             </div>
           </div>
@@ -153,15 +164,18 @@ export default function CursosEBeneficiosPage() {
                 Formação Profissional
               </span>
             </div>
+
             <h2 className="text-4xl font-black text-abradepa-dark uppercase tracking-tight leading-tight">
               Capacitação Profissional <br /> e Conscientização
             </h2>
+
             <div className="space-y-6 text-slate-600 text-lg font-light leading-relaxed">
               <p>
                 Realização de cursos de formação, eventos, seminários e
                 palestras. Produção de materiais informativos para capacitar
                 profissionais e divulgar conhecimento técnico.
               </p>
+
               <ul className="space-y-4">
                 {[
                   'Dermopigmentação Paramédica Especializada',
@@ -181,10 +195,11 @@ export default function CursosEBeneficiosPage() {
                 ))}
               </ul>
             </div>
+
             <a
               href={`${whatsappUrl}?text=Olá! Gostaria de informações sobre os cursos e palestras`}
               target="_blank"
-              className="btn-primary inline-flex items-center gap-3 px-10 py-5 text-sm font-black uppercase tracking-widest mt-6 shadow-xl hover:scale-105"
+              className="btn-primary inline-flex items-center gap-3 px-10 py-5 text-sm font-black uppercase tracking-widest mt-6 shadow-xl"
             >
               Consultar Agenda de Cursos
               <MessageCircle size={20} />

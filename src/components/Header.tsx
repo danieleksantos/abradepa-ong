@@ -20,7 +20,6 @@ export function Header() {
               alt="Logo ABRADEPA"
               width={70}
               height={70}
-              style={{ width: 'auto', height: 'auto' }}
               priority
               className="object-contain"
             />
