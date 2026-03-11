@@ -1,10 +1,15 @@
+'use client';
+
 import Image from 'next/image';
-import { About } from '@/components/About';
+import Link from 'next/link';
+import { AboutTeaser } from '@/components/AboutTeaser';
 import { Objectives } from '@/components/Objectives';
-import { Board } from '@/components/Board';
+import { Supporters } from '@/components/Supporters';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function Home() {
+  const whatsappUrl = 'https://wa.me/5541991541319';
+
   return (
     <>
       <section className="relative overflow-hidden bg-abradepa-dark px-4 py-20 md:py-32">
@@ -14,24 +19,39 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 text-center lg:text-left">
               <h1 className="animate-fade-in mb-8 text-4xl font-extrabold text-white md:text-7xl tracking-tight leading-[1.1]">
-                Associação Brasileira de Apoio <br />à{' '}
-                <span className="text-abradepa-pale">Saúde Integral</span>
+                ABRADEPA <br />
+                <span className="text-abradepa-pale text-3xl md:text-5xl block mt-2">
+                  Saúde Integral
+                </span>
               </h1>
+
               <p className="mx-auto lg:mx-0 mb-12 max-w-2xl text-lg text-white/90 md:text-xl leading-relaxed">
-                Transformando vidas através do suporte oncológico,
-                anaplastologia e dermomicropigmentação paramédica.
+                Transformando vidas ao ampliar o acesso à saúde, com consultas
+                médicas acessíveis, anaplastologia (próteses estéticas
+                personalizadas), terapias integrativas e dermopigmentação
+                paramédica.
               </p>
+
               <div className="flex flex-col justify-center lg:justify-start gap-6 sm:flex-row">
-                <button className="btn-primary px-10 py-4 text-lg group">
-                  Nosso trabalho
+                <Link
+                  href="/sobre"
+                  className="btn-primary px-10 py-4 text-lg group inline-flex items-center justify-center hover:scale-105"
+                >
+                  Conheça nossa história
                   <ArrowRight
                     size={20}
                     className="ml-2 group-hover:translate-x-1 transition-transform"
                   />
-                </button>
-                <button className="cursor-pointer rounded-full bg-white px-10 py-4 text-lg font-bold text-abradepa-dark shadow-md transition-all hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                </Link>
+
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary px-10 py-4 text-lg hover:scale-105"
+                >
                   <MessageCircle size={20} /> Fale Conosco
-                </button>
+                </a>
               </div>
             </div>
 
@@ -45,15 +65,9 @@ export default function Home() {
                     alt="Acolhimento e Saúde Integral ABRADEPA"
                     fill
                     priority
+                    sizes="(max-width: 1024px) 100vw, 420px"
                     className="object-cover transition-transform duration-700 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-abradepa-dark/40 to-transparent" />
-
-                  <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                    <p className="text-abradepa text-[10px] font-bold uppercase tracking-widest text-center">
-                      Ambiente Inclusivo e Transformador
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -61,23 +75,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-20 mx-auto -mt-16 max-w-7xl px-4">
+      <section
+        id="acesso-saude"
+        className="relative z-20 mx-auto -mt-16 max-w-7xl px-4"
+      >
         <div className="flex flex-col items-center justify-between gap-8 rounded-3xl border border-slate-100 bg-white p-8 shadow-xl md:flex-row md:p-12">
-          <div className="flex-1">
-            <h2 className="mb-4 text-3xl font-bold text-abradepa-dark">
-              Cursos e Capacitações
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="mb-4 text-3xl font-bold text-abradepa-dark uppercase tracking-tight">
+              Acesso à Saúde
             </h2>
             <p className="text-lg text-slate-600">
-              Acesse conteúdos chancelados com dupla certificação.
+              Consultas com Médicos, Psicólogos e Nutricionistas.
             </p>
           </div>
-          <button className="btn-secondary">Saiba mais</button>
+          <Link
+            href="/cursos#cartao-saude"
+            className="btn-primary px-10 py-4 hover:brightness-110"
+          >
+            Saiba mais
+          </Link>
         </div>
       </section>
 
-      <About />
+      <AboutTeaser />
       <Objectives />
-      <Board />
+      <Supporters />
     </>
   );
 }

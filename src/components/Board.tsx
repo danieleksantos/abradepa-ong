@@ -1,22 +1,30 @@
+'use client';
+
 import Image from 'next/image';
 
 const members = [
   {
     name: 'Simone Borges',
-    role: 'Diretora Presidente',
-    bio: 'Dermopigmentadora paramédica fundadora, lidera a missão de unir técnica e humanização na reabilitação oncológica.',
+    role: 'Presidente',
+    bio: 'Idealizadora do Projeto Redesenhando Histórias e autora da PL 1326/2022, dedica-se à reconstrução e anaplastologia.',
     image: '/simone-abradepa.png',
   },
   {
     name: 'Gisele Lázara de Farias Borges',
     role: 'Vice-Presidente',
-    bio: 'Terapeuta focada em práticas integrativas (PICS) para o equilíbrio físico e emocional dos pacientes.',
+    bio: 'Liderança estratégica focada no acolhimento humanizado e suporte integral aos beneficiários da associação.',
     image: '/person.png',
   },
   {
-    name: 'Danielle Christinne Mateus',
-    role: 'Conselho Fiscal',
-    bio: 'Especialista em Gestão Pública, responsável por assegurar a transparência e conformidade institucional da ONG.',
+    name: 'Rita Schunemann',
+    role: 'Secretária Geral',
+    bio: 'Responsável pela gestão administrativa e pela conformidade dos processos institucionais.',
+    image: '/person.png',
+  },
+  {
+    name: 'Georgia Teixeira',
+    role: 'Diretora Financeira',
+    bio: 'Gestão de recursos focada na transparência e na sustentabilidade dos projetos sociais e parcerias.',
     image: '/person.png',
   },
 ];
@@ -30,8 +38,8 @@ export function Board() {
             Nossa Diretoria
           </h3>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-lg">
-            Corpo diretivo eleito para o mandato 2022-2026, comprometido com o
-            acolhimento e a excelência técnica.
+            Corpo diretivo comprometido com a transparência e a humanização na
+            saúde integral.
           </p>
         </div>
 
@@ -60,7 +68,7 @@ export function Board() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-6xl">
             {members.slice(1).map((member, index) => (
               <div
                 key={index}
@@ -73,7 +81,7 @@ export function Board() {
                       src={member.image}
                       alt={member.name}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover"
                     />
                   </div>
@@ -81,7 +89,7 @@ export function Board() {
                 <h4 className="text-lg font-bold text-abradepa-dark">
                   {member.name}
                 </h4>
-                <p className="text-abradepa-medium font-semibold text-xs mb-3 uppercase tracking-wider">
+                <p className="text-abradepa-medium font-semibold text-[10px] mb-3 uppercase tracking-wider">
                   {member.role}
                 </p>
                 <p className="text-slate-500 text-sm leading-relaxed">
@@ -94,9 +102,8 @@ export function Board() {
 
         <div className="mt-20 p-6 bg-slate-100/50 rounded-2xl border border-slate-200 max-w-2xl mx-auto">
           <p className="text-[10px] text-slate-500 leading-relaxed uppercase tracking-widest">
-            Gestão registrada sob o CNPJ 47.368.448/0001-26. Atividade:
-            Atividades de práticas integrativas e complementares em saúde humana
-            (CNAE 86.90-9/01).
+            Gestão registrada sob o CNPJ 47.368.448/0001-26. Sede: Centro Médico
+            Biocentro, Curitiba-PR.
           </p>
         </div>
       </div>

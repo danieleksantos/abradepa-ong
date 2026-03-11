@@ -36,15 +36,14 @@
 @layer components {
   .btn-primary {
     @apply bg-abradepa-yellow text-abradepa-dark font-bold px-6 py-3 
-           rounded-full transition-all hover:scale-105 active:scale-95 
-           shadow-md hover:shadow-lg flex items-center justify-center gap-2;
+           rounded-full transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2;
   }
 
   .btn-secondary {
-    @apply w-full md:w-auto cursor-pointer rounded-full bg-abradepa-yellow 
-           px-10 py-4 text-center text-lg font-bold text-abradepa-dark 
-           shadow-sm transition-all hover:shadow-md hover:brightness-110
-           active:scale-95 flex items-center justify-center gap-2;
+   @apply bg-white text-abradepa-dark font-bold px-6 py-3 
+           rounded-full transition-all  
+           shadow-md hover:shadow-lg flex items-center justify-center gap-2 
+           border border-slate-100;
   }
 }
 

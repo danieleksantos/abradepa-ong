@@ -20,17 +20,17 @@ export function Header() {
               alt="Logo ABRADEPA"
               width={70}
               height={70}
-              style={{ height: 'auto' }}
+              style={{ width: 'auto', height: 'auto' }}
               priority
               className="object-contain"
             />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-6">
             <Link href="/" className={linkStyle}>
               Home
             </Link>
-            <Link href="/#quem-somos" className={linkStyle}>
+            <Link href="/sobre" className={linkStyle}>
               Quem Somos
             </Link>
             <Link href="/transparencia" className={linkStyle}>
@@ -39,19 +39,22 @@ export function Header() {
             <Link href="/#objetivos" className={linkStyle}>
               Objetivos
             </Link>
-            <Link href="/novidades" className={linkStyle}>
-              Novidades
+            <Link href="/blog" className={linkStyle}>
+              Blog
+            </Link>
+            <Link href="/loja" className={linkStyle}>
+              Loja Virtual
             </Link>
 
             <Link
               href="/cursos"
-              className="bg-abradepa-yellow text-abradepa-dark px-6 py-2.5 rounded-full font-bold hover:brightness-105 transition-all shadow-sm hover:shadow-md"
+              className="btn-primary px-6 py-2.5 text-sm whitespace-nowrap shadow-sm hover:shadow-md hover:brightness-110"
             >
               Cursos e Benefícios
             </Link>
           </nav>
 
-          <div className="md:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-abradepa-dark focus:outline-none"
@@ -85,7 +88,7 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 absolute w-full left-0 p-4 space-y-4 shadow-xl animate-in slide-in-from-top duration-300">
+        <div className="xl:hidden bg-white border-b border-gray-100 absolute w-full left-0 p-4 space-y-4 shadow-xl animate-in slide-in-from-top duration-300 z-50">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
@@ -94,7 +97,7 @@ export function Header() {
             Home
           </Link>
           <Link
-            href="/#quem-somos"
+            href="/sobre"
             onClick={() => setIsOpen(false)}
             className="block text-abradepa-dark font-medium py-2"
           >
@@ -115,16 +118,23 @@ export function Header() {
             Objetivos
           </Link>
           <Link
-            href="/novidades"
+            href="/blog"
             onClick={() => setIsOpen(false)}
             className="block text-abradepa-dark font-medium py-2"
           >
-            Novidades
+            Blog
+          </Link>
+          <Link
+            href="/loja"
+            onClick={() => setIsOpen(false)}
+            className="block text-abradepa-dark font-medium py-2"
+          >
+            Loja Virtual
           </Link>
           <Link
             href="/cursos"
             onClick={() => setIsOpen(false)}
-            className="block bg-abradepa-yellow text-abradepa-dark text-center px-5 py-3 rounded-full font-bold"
+            className="btn-primary w-full py-3 hover:brightness-110"
           >
             Cursos e Benefícios
           </Link>

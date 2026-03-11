@@ -11,9 +11,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'ABRADEPA | Apoio à Saúde Integral',
+  title: 'ABRADEPA | Associação de Apoio à Saúde Integral',
   description:
-    'Associação Brasileira de Apoio à Saúde Integral, Anaplastologia e Dermomicropigmentação.',
+    'Promovendo saúde integral através de acolhimento humanizado, anaplastologia, dermopigmentação paramédica e práticas integrativas.',
 };
 
 export default function RootLayout({

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "camiseta-abradepa",
+    "name": "Camiseta Redesenhando Histórias",
+    "price": 59.90,
+    "description": "Camiseta 100% algodão com a estampa oficial do projeto social da ABRADEPA.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=500&auto=format&fit=crop",
+    "category": "Vestuário"
+  },
+  {
+    "id": "caneca-logo",
+    "name": "Caneca Cerâmica Logotipo",
+    "price": 35.00,
+    "description": "Caneca personalizada para acompanhar seu café ou chá com a marca da saúde integral.",
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?q=80&w=500&auto=format&fit=crop",
+    "category": "Acessórios"
+  },
+  {
+    "id": "ecobag-solidaria",
+    "name": "Ecobag Sustentável",
+    "price": 45.00,
+    "description": "Bolsa de lona resistente para uso diário, apoiando práticas sustentáveis e sociais.",
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=500&auto=format&fit=crop",
+    "category": "Acessórios"
+  }
+]

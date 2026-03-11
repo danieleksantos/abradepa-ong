@@ -1,6 +1,10 @@
-import Image from 'next/image';
+'use client';
 
-export function About() {
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+export function AboutTeaser() {
   return (
     <section
       id="quem-somos"
@@ -14,7 +18,7 @@ export function About() {
             <div className="relative h-100 md:h-125 w-full rounded-3xl overflow-hidden shadow-2xl bg-slate-100">
               <Image
                 src="/about.png"
-                alt="Acolhimento ABRADEPA"
+                alt="Presidente Simone Borges ABRADEPA"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -26,7 +30,7 @@ export function About() {
 
           <div className="flex flex-col text-left">
             <span className="text-abradepa-medium font-bold uppercase tracking-[0.2em] text-sm mb-4">
-              Nossa Essência e Valores
+              Nossa Essência
             </span>
 
             <h2 className="text-3xl md:text-5xl font-extrabold text-abradepa-dark mb-8 leading-tight">
@@ -38,26 +42,30 @@ export function About() {
 
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
-                A <strong>ABRADEPA</strong> nasceu da visão da nossa presidente,
-                Simone Borges, com a missão de proporcionar um suporte
-                transformador que integra a dermomicropigmentação paramédica e a
-                anaplastologia ao cuidado oncológico.
+                A Abradepa nasceu em Curitiba - PR com o propósito de oferecer
+                esperança e humanidade aqueles que enfrentam desafios complexos
+                de saúde. Liderada por uma mulher visionária, a associação vai
+                além de tratamentos, oferecendo um recomeço e suporte integral.
               </p>
 
               <p>
-                Fundada em 2022, nossa associação funciona como uma colmeia de
-                colaboração, onde cada profissional contribui para restaurar a
-                autoestima e a funcionalidade. Utilizamos{' '}
-                <strong>práticas integrativas e complementares</strong> para
-                promover o equilíbrio entre corpo e mente, garantindo uma
-                jornada de esperança e inovação.
+                A Abradepa almeja expandir cada vez mais, o acesso às terapias,
+                capacitando cada pessoa a redesenhar sua história e viver com
+                plena confiança e de posse da sua Saúde Integral.
               </p>
 
-              <p className="border-l-4 border-abradepa-yellow pl-6 italic font-medium text-abradepa-dark/80 bg-slate-50 py-4 rounded-r-lg">
-                "Nosso compromisso reflete o círculo da vida: um espaço sem
-                exclusões, focado na totalidade, plenitude e no acolhimento de
-                cada indivíduo."
-              </p>
+              <div className="pt-6 border-t border-slate-50">
+                <Link
+                  href="/sobre"
+                  className="btn-primary w-full md:w-fit px-8 py-4 text-sm flex items-center justify-center gap-2 group hover:scale-105"
+                >
+                  Conheça nossa história completa
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

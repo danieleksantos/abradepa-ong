@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Newspaper, ShieldCheck, NewspaperIcon } from 'lucide-react';
-import { NewsCard } from '@/components/NewsCard';
+import { Newspaper } from 'lucide-react';
+import { BlogCard } from '@/components/BlogCard';
 import newsData from '@/data/news.json';
 
-export default function NovidadesPage() {
+export default function BlogPage() {
   return (
     <div className="animate-fade-in bg-slate-50 min-h-screen">
       <section className="bg-abradepa-dark pt-32 pb-24 text-white px-4 relative overflow-hidden">
@@ -17,24 +17,24 @@ export default function NovidadesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <ShieldCheck className="text-abradepa-yellow" size={20} />
+                <Newspaper className="text-abradepa-yellow" size={20} />
                 <span className="text-abradepa-pale text-xs font-bold uppercase tracking-[0.2em]">
-                  Informativos Oficiais
+                  Informativos e artigos
                 </span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
-                Novidades
+              <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight uppercase">
+                Blog
               </h1>
-              <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
-                Ética e responsabilidade como base fundamental do nosso apoio à
-                saúde integral.
+              <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl italic border-l-4 border-abradepa-yellow pl-6">
+                Informação, ciência e histórias reais para disseminar o
+                conhecimento sobre a saúde integral e o impacto social.
               </p>
             </div>
 
             <div className="hidden lg:flex justify-end">
               <div className="relative">
                 <div className="absolute inset-0 bg-abradepa-yellow/10 blur-[100px] rounded-full"></div>
-                <NewspaperIcon
+                <Newspaper
                   size={260}
                   strokeWidth={0.5}
                   className="relative z-10 text-white/10 rotate-6"
@@ -49,7 +49,7 @@ export default function NovidadesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsData.map((item) => (
-              <NewsCard
+              <BlogCard
                 key={item.id}
                 id={item.id}
                 title={item.title}
@@ -62,6 +62,12 @@ export default function NovidadesPage() {
           </div>
         </div>
       </section>
+
+      <div className="pb-16 text-center">
+        <p className="text-abradepa-medium font-bold text-sm tracking-[0.3em] uppercase italic">
+          Abradepa Saúde Integral. Redesenhando Histórias!
+        </p>
+      </div>
     </div>
   );
 }

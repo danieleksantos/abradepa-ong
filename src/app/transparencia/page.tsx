@@ -11,6 +11,7 @@ import {
   Mail,
   Network,
 } from 'lucide-react';
+import { Manifest } from '@/components/Manifest';
 
 const DocumentCard = ({
   title,
@@ -48,32 +49,33 @@ export default function TransparenciaPage() {
   const infoFiscais = [
     {
       label: 'Razão Social',
-      value:
-        'Associação Brasileira de Dermomicropigmentação Paramédica e Anaplastologia',
+      value: 'ABRADEPA - Associação de Apoio à Saúde Integral',
     },
     { label: 'CNPJ', value: '47.368.448/0001-26' },
     { label: 'Data de Fundação', value: '30 de março de 2022' },
     { label: 'Natureza Jurídica', value: '399-9 - Associação Privada' },
     {
       label: 'Atividade Principal',
-      value: 'Práticas integrativas e complementares em saúde humana',
+      value:
+        'Atividades de práticas integrativas e complementares em saúde humana',
     },
     {
       label: 'Sede Administrativa',
-      value: 'Rua Guararapes, 1261, Vila Izabel, Curitiba/PR',
+      value:
+        'Rua Padre Anchieta, 1846, Sobreloja Sala 6, Bigorrilho, Curitiba/PR',
     },
     { label: 'Situação Cadastral', value: 'Ativa' },
   ];
 
   const diretoriaOficial = [
-    { name: 'Simone Borges', role: 'Presidente Fundadora' },
+    { name: 'Simone Borges', role: 'Presidente' },
     { name: 'Gisele Lázara de Farias Borges', role: 'Vice-Presidente' },
-    { name: 'Danielle Christinne Mateus', role: 'Conselho Fiscal' },
-    { name: 'Adriana Gomes', role: 'Conselho Fiscal' },
+    { name: 'Rita Schunemann', role: 'Secretária Geral' },
+    { name: 'Georgia Teixeira', role: 'Diretora Financeira' },
   ];
 
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in bg-white">
       <section className="bg-abradepa-dark pt-32 pb-24 text-white px-4 relative overflow-hidden">
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-5 pointer-events-none hidden lg:block">
           <Network size={600} strokeWidth={0.5} />
@@ -88,7 +90,7 @@ export default function TransparenciaPage() {
                   Institucional
                 </span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
+              <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight uppercase">
                 Portal da Transparência
               </h1>
               <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl">
@@ -96,16 +98,12 @@ export default function TransparenciaPage() {
                 saúde integral.
               </p>
             </div>
-
             <div className="hidden lg:flex justify-end">
-              <div className="relative">
-                <div className="absolute inset-0 bg-abradepa-yellow/10 blur-[100px] rounded-full"></div>
-                <ShieldCheck
-                  size={260}
-                  strokeWidth={0.5}
-                  className="relative z-10 text-white/10 -rotate-6"
-                />
-              </div>
+              <ShieldCheck
+                size={260}
+                strokeWidth={0.5}
+                className="text-white/10 -rotate-6"
+              />
             </div>
           </div>
         </div>
@@ -117,11 +115,10 @@ export default function TransparenciaPage() {
             <div className="bg-white rounded-4xl p-10 shadow-sm border border-slate-100">
               <div className="flex items-center gap-4 mb-12 border-b border-slate-50 pb-6">
                 <Building2 className="text-abradepa-medium" size={28} />
-                <h2 className="text-2xl font-black text-abradepa-dark">
+                <h2 className="text-2xl font-black text-abradepa-dark uppercase">
                   Identificação Fiscal
                 </h2>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                 {infoFiscais.map((info, i) => (
                   <div key={i} className="space-y-1">
@@ -139,14 +136,15 @@ export default function TransparenciaPage() {
             <div className="bg-abradepa-dark rounded-[2.5rem] p-10 text-white shadow-xl">
               <div className="flex items-center gap-4 mb-8">
                 <ClipboardCheck className="text-abradepa-yellow" size={32} />
-                <h2 className="text-2xl font-black">Certidões e Atas</h2>
+                <h2 className="text-2xl font-black uppercase">
+                  Certidões e Atas
+                </h2>
               </div>
-
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <DocumentCard
-                  title="Ata de Fundação"
-                  filename="ata-fundacao-abradepa.pdf"
-                  size="1.8 MB"
+                  title="Estatuto Social"
+                  filename="estatuto-abradepa.pdf"
+                  size="2.1 MB"
                 />
                 <DocumentCard
                   title="Cartão CNPJ"
@@ -154,7 +152,6 @@ export default function TransparenciaPage() {
                   size="450 KB"
                 />
               </div>
-
               <div className="mt-8 flex items-start gap-3 text-white/40 text-[11px] italic">
                 <Scale size={16} className="shrink-0 mt-0.5" />
                 <p>
@@ -167,8 +164,8 @@ export default function TransparenciaPage() {
 
           <div className="lg:col-span-4 space-y-8">
             <div className="bg-white rounded-4xl p-8 shadow-sm border border-slate-100">
-              <h3 className="text-lg font-black text-abradepa-dark mb-8 border-b border-slate-50 pb-4">
-                Corpo Diretivo
+              <h3 className="text-lg font-black text-abradepa-dark mb-8 border-b border-slate-50 pb-4 uppercase">
+                Governança Oficial
               </h3>
               <div className="space-y-6">
                 {diretoriaOficial.map((m, i) => (
@@ -184,25 +181,34 @@ export default function TransparenciaPage() {
               </div>
             </div>
 
-            <div className="bg-slate-900 rounded-4xl p-8 text-white mt-20">
-              <h4 className="font-black text-lg mb-4 text-abradepa-yellow">
-                Dúvidas?
+            <div className="bg-slate-900 rounded-4xl p-8 text-white">
+              <h4 className="font-black text-lg mb-4 text-abradepa-yellow uppercase">
+                Canais Oficiais
               </h4>
               <p className="text-xs text-slate-400 mb-8 leading-relaxed font-medium">
-                Para outras informações oficiais, utilize nosso canal de contato
-                direto via e-mail.
+                Para suporte financeiro ou institucional, utilize os e-mails
+                diretos da nossa tesouraria e presidência.
               </p>
-              <a
-                href="mailto:contato@abradepa.org.br"
-                className="btn-primary w-full text-sm py-4"
-              >
-                <Mail size={18} />
-                Enviar E-mail
-              </a>
+              <div className="space-y-3">
+                <a
+                  href="mailto:contatoabradepa@gmail.com"
+                  className="btn-primary w-full text-xs py-3 flex items-center justify-center gap-2 font-bold uppercase tracking-widest hover:brightness-110"
+                >
+                  <Mail size={16} /> Vice-Presidência
+                </a>
+                <a
+                  href="mailto:financeiroabradepa@gmail.com"
+                  className="btn-secondary w-full text-xs py-3 flex items-center justify-center gap-2 font-bold uppercase tracking-widest hover:brightness-110"
+                >
+                  <Mail size={16} /> Setor Financeiro
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <Manifest />
     </div>
   );
 }

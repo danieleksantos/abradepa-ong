@@ -15,14 +15,14 @@ export default function ArtigoPage() {
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-abradepa-dark">
-          Artigo não encontrado
+        <h1 className="text-2xl font-bold text-abradepa-dark uppercase tracking-tight">
+          Postagem não encontrada
         </h1>
         <button
-          onClick={() => router.push('/novidades')}
-          className="btn-primary mt-4"
+          onClick={() => router.push('/blog')}
+          className="btn-primary hover:brightness-110 mt-4"
         >
-          Voltar para Novidades
+          Voltar para o Blog
         </button>
       </div>
     );
@@ -33,10 +33,10 @@ export default function ArtigoPage() {
       <header className="pt-32 pb-12 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto">
           <button
-            onClick={() => router.back()}
-            className="flex items-center gap-2 text-abradepa-medium font-bold text-xs uppercase tracking-widest mb-8 hover:gap-4 transition-all"
+            onClick={() => router.push('/blog')}
+            className="flex items-center gap-2 text-abradepa-medium font-bold text-xs uppercase tracking-widest mb-8 hover:gap-4 transition-all cursor-pointer"
           >
-            <ArrowLeft size={16} /> Voltar
+            <ArrowLeft size={16} /> Voltar ao Blog
           </button>
 
           <div className="flex items-center gap-4 mb-6">
@@ -64,7 +64,6 @@ export default function ArtigoPage() {
             priority
             sizes="100vw"
             className="object-cover"
-            unoptimized={post.image.startsWith('http')}
           />
         </div>
       </div>
@@ -80,24 +79,26 @@ export default function ArtigoPage() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2 text-slate-400">
-            <Tag size={18} />
-            <span className="text-xs font-bold uppercase tracking-widest">
-              Saúde Integral • ABRADEPA • {post.tag}
-            </span>
-          </div>
+        <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col gap-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-2 text-slate-400">
+              <Tag size={18} />
+              <span className="text-xs font-bold uppercase tracking-widest">
+                Saúde Integral • ABRADEPA • {post.tag}
+              </span>
+            </div>
 
-          <button
-            onClick={() => router.push('/novidades')}
-            className="group flex items-center gap-2 text-abradepa-dark font-black text-xs uppercase tracking-widest hover:text-abradepa-medium transition-colors cursor-pointer"
-          >
-            <ArrowLeft
-              size={16}
-              className="group-hover:-translate-x-1 transition-transform"
-            />
-            Voltar para as novidades
-          </button>
+            <button
+              onClick={() => router.push('/blog')}
+              className="group flex items-center gap-2 text-abradepa-dark font-black text-xs uppercase tracking-widest hover:text-abradepa-medium transition-colors cursor-pointer"
+            >
+              <ArrowLeft
+                size={16}
+                className="group-hover:-translate-x-1 transition-transform"
+              />
+              Voltar para o blog
+            </button>
+          </div>
         </div>
       </div>
     </article>
