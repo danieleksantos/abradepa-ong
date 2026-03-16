@@ -1,51 +1,94 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
-import { useParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft, Tag } from 'lucide-react';
-import newsData from '@/data/news.json';
+import { PortableText, PortableTextComponents } from '@portabletext/react';
 
-export default function ArtigoPage() {
-  const params = useParams();
-  const router = useRouter();
+// Importações do Sanity
+import { client } from '@/sanity/lib/client';
+import { POST_DETAIL_QUERY } from '@/sanity/lib/queries';
 
-  const post = newsData.find((item) => item.id === params.id);
+// Estilização customizada para o conteúdo que vem do Sanity
+const components: PortableTextComponents = {
+  block: {
+    h2: ({ children }) => (
+      <h2 className="text-2xl font-black text-abradepa-dark mt-10 mb-4 uppercase tracking-tight">
+        {children}
+      </h2>
+    ),
+    h3: ({ children }) => (
+      <h3 className="text-xl font-bold text-abradepa-dark mt-8 mb-3 uppercase">
+        {children}
+      </h3>
+    ),
+    normal: ({ children }) => (
+      <p className="mb-6 leading-relaxed text-slate-700">{children}</p>
+    ),
+    blockquote: ({ children }) => (
+      <blockquote className="border-l-4 border-abradepa-yellow pl-6 italic my-8 text-lg text-slate-600">
+        {children}
+      </blockquote>
+    ),
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc list-inside mb-6 space-y-2 text-slate-700">
+        {children}
+      </ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal list-inside mb-6 space-y-2 text-slate-700">
+        {children}
+      </ol>
+    ),
+  },
+};
+
+interface Props {
+  params: Promise<{ id: string }>;
+}
+
+export default async function ArtigoPage({ params }: Props) {
+  // 1. Resolvemos o params (Necessário no Next.js 15)
+  const { id } = await params;
+
+  // 2. Buscamos o post no Sanity usando o slug (id)
+  const post = await client.fetch(
+    POST_DETAIL_QUERY,
+    { slug: id },
+    { next: { revalidate: 60 } },
+  );
 
   if (!post) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-abradepa-dark uppercase tracking-tight">
-          Postagem não encontrada
-        </h1>
-        <button
-          onClick={() => router.push('/blog')}
-          className="btn-primary hover:brightness-110 mt-4"
-        >
-          Voltar para o Blog
-        </button>
-      </div>
-    );
+    notFound();
   }
 
   return (
     <article className="animate-fade-in bg-white min-h-screen pb-24">
+      {/* HEADER DO ARTIGO */}
       <header className="pt-32 pb-12 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
-            className="flex items-center gap-2 text-abradepa-medium font-bold text-xs uppercase tracking-widest mb-8 hover:gap-4 transition-all cursor-pointer"
+          <Link
+            href="/blog"
+            className="flex items-center gap-2 text-abradepa-medium font-bold text-xs uppercase tracking-widest mb-8 hover:gap-4 transition-all"
           >
             <ArrowLeft size={16} /> Voltar ao Blog
-          </button>
+          </Link>
 
           <div className="flex items-center gap-4 mb-6">
             <span className="bg-abradepa-yellow/20 text-abradepa-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-              {post.tag}
+              {post.tag || 'Informativo'}
             </span>
             <div className="flex items-center gap-2 text-slate-400 text-[10px] font-bold uppercase">
               <Calendar size={14} />
-              {post.date}
+              {post.date
+                ? new Date(post.date).toLocaleDateString('pt-BR', {
+                    day: '2-digit',
+                    month: 'long',
+                    year: 'numeric',
+                  })
+                : 'Data Indisponível'}
             </div>
           </div>
 
@@ -55,10 +98,11 @@ export default function ArtigoPage() {
         </div>
       </header>
 
+      {/* IMAGEM DE CAPA */}
       <div className="max-w-5xl mx-auto px-4 -mt-8">
         <div className="relative h-75 md:h-125 w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
           <Image
-            src={post.image}
+            src={post.image || '/fallback-blog.jpg'}
             alt={post.title}
             fill
             priority
@@ -68,36 +112,41 @@ export default function ArtigoPage() {
         </div>
       </div>
 
+      {/* CONTEÚDO DO POST */}
       <div className="max-w-3xl mx-auto px-4 mt-16">
         <div className="prose prose-slate prose-lg max-w-none">
-          <p className="text-xl font-medium text-slate-600 mb-8 leading-relaxed italic border-l-4 border-abradepa-yellow pl-6">
-            {post.description}
-          </p>
+          {post.description && (
+            <p className="text-xl font-medium text-slate-600 mb-10 leading-relaxed italic border-l-4 border-abradepa-yellow pl-6">
+              {post.description}
+            </p>
+          )}
 
-          <div className="text-slate-800 leading-relaxed space-y-6 whitespace-pre-line">
-            {post.content}
+          <div className="text-slate-800">
+            {/* Renderizador de conteúdo rico do Sanity */}
+            <PortableText value={post.body} components={components} />
           </div>
         </div>
 
+        {/* RODAPÉ DO ARTIGO */}
         <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2 text-slate-400">
               <Tag size={18} />
               <span className="text-xs font-bold uppercase tracking-widest">
-                Saúde Integral • ABRADEPA • {post.tag}
+                Saúde Integral • ABRADEPA • {post.tag || 'Social'}
               </span>
             </div>
 
-            <button
-              onClick={() => router.push('/blog')}
-              className="group flex items-center gap-2 text-abradepa-dark font-black text-xs uppercase tracking-widest hover:text-abradepa-medium transition-colors cursor-pointer"
+            <Link
+              href="/blog"
+              className="group flex items-center gap-2 text-abradepa-dark font-black text-xs uppercase tracking-widest hover:text-abradepa-medium transition-colors"
             >
               <ArrowLeft
                 size={16}
                 className="group-hover:-translate-x-1 transition-transform"
               />
               Voltar para o blog
-            </button>
+            </Link>
           </div>
         </div>
       </div>

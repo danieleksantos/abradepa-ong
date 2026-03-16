@@ -1,11 +1,30 @@
-'use client';
-
 import React from 'react';
 import { Newspaper } from 'lucide-react';
 import { BlogCard } from '@/components/BlogCard';
-import newsData from '@/data/news.json';
 
-export default function BlogPage() {
+// Importações do Sanity
+import { client } from '@/sanity/lib/client';
+import { POSTS_QUERY } from '@/sanity/lib/queries';
+
+interface Post {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  image: string;
+  date: string;
+  tag: string;
+}
+
+export default async function BlogPage() {
+  const posts = await client.fetch<Post[]>(
+    POSTS_QUERY,
+    {},
+    { next: { revalidate: 60 } },
+  );
+  // Buscando os posts do Sanity
+  // O "revalidate: 60" garante que o Next.js verifique novos posts a cada minuto
+
   return (
     <div className="animate-fade-in bg-slate-50 min-h-screen">
       <section className="bg-abradepa-dark pt-32 pb-24 text-white px-4 relative overflow-hidden">
@@ -48,15 +67,24 @@ export default function BlogPage() {
       <section className="py-20 px-4">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsData.map((item) => (
+            {posts.map((post) => (
               <BlogCard
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                description={item.description}
-                image={item.image}
-                date={item.date}
-                tag={item.tag}
+                key={post.id}
+                id={post.slug} // Usamos o slug como ID para a rota do post único
+                title={post.title}
+                description={post.description}
+                image={post.image || '/logo-abradepa.png'} // Imagem padrão caso esqueçam de subir uma
+                // Formatando a data que vem do Sanity para o seu estilo
+                date={
+                  post.date
+                    ? new Date(post.date).toLocaleDateString('pt-BR', {
+                        day: '2-digit',
+                        month: 'long',
+                        year: 'numeric',
+                      })
+                    : 'Data não disponível'
+                }
+                tag={post.tag || 'Social'}
               />
             ))}
           </div>

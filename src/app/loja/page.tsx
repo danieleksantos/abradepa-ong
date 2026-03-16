@@ -1,12 +1,27 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { ShoppingBag, ShoppingCart, ShieldCheck } from 'lucide-react';
-import products from '@/data/products.json';
 
-export default function LojaPage() {
+import { client } from '@/sanity/lib/client';
+import { PRODUCTS_QUERY } from '@/sanity/lib/queries';
+
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+  category: string;
+}
+
+export default async function LojaPage() {
   const whatsappUrl = 'https://wa.me/5541991541319';
+
+  const products = await client.fetch<Product[]>(
+    PRODUCTS_QUERY,
+    {},
+    { next: { revalidate: 60 } },
+  );
 
   return (
     <div className="animate-fade-in bg-slate-50 min-h-screen">
@@ -47,7 +62,7 @@ export default function LojaPage() {
               >
                 <div className="relative h-80 w-full overflow-hidden bg-slate-100">
                   <Image
-                    src={product.image}
+                    src={product.image || '/fallback-product.jpg'}
                     alt={product.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -73,7 +88,10 @@ export default function LojaPage() {
                         Valor
                       </span>
                       <span className="text-2xl font-black text-abradepa-dark">
-                        R$ {product.price.toFixed(2).replace('.', ',')}
+                        R${' '}
+                        {product.price.toLocaleString('pt-BR', {
+                          minimumFractionDigits: 2,
+                        })}
                       </span>
                     </div>
 
