@@ -2,8 +2,15 @@
 
 import { MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function WhatsappButton() {
+  const pathname = usePathname();
+
+  if (pathname?.startsWith('/studio')) {
+    return null;
+  }
+
   const phoneNumber = '554198611626';
   const message = encodeURIComponent(
     'Olá! Gostaria de mais informações sobre os serviços da ABRADEPA.',
