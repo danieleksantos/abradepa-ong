@@ -32,7 +32,6 @@ export function Support() {
   return (
     <section id="apoio" className="py-24 bg-white px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Cabeçalho da Seção */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-abradepa-dark uppercase mb-6 tracking-tight">
             Seu Apoio Transforma Vidas!
@@ -48,7 +47,6 @@ export function Support() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-20">
-          {/* CARD ESQUERDO: CARTÃO DE BENEFÍCIOS */}
           <div className="bg-slate-50 rounded-[2.5rem] p-10 border border-slate-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-abradepa-yellow rounded-2xl flex items-center justify-center shadow-sm">
@@ -125,13 +123,11 @@ export function Support() {
             </a>
           </div>
 
-          {/* COLUNA DIREITA: PIX E VOLUNTÁRIO */}
           <div className="space-y-6 flex flex-col h-full">
-            {/* CARD DO PIX COM QR CODE */}
             <div className="bg-abradepa-dark text-white rounded-[2.5rem] p-8 md:p-10 grow relative flex flex-col justify-center group">
               <div className="relative z-10">
                 <h3 className="text-2xl font-black uppercase mb-6 tracking-tight text-abradepa-yellow">
-                  Faça uma Doação via Pix!
+                  Seja um doador!
                 </h3>
 
                 <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
@@ -181,7 +177,6 @@ export function Support() {
               </div>
             </div>
 
-            {/* CARD DO VOLUNTÁRIO ATUALIZADO */}
             <div className="bg-slate-50 border border-slate-100 p-10 rounded-[2.5rem] text-center flex flex-col items-center justify-center gap-6 hover:border-abradepa-yellow transition-all duration-300 shadow-sm">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-100">
                 <Users className="text-abradepa-medium" size={32} />
@@ -196,7 +191,7 @@ export function Support() {
               </div>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="btn-secondary w-full py-4 text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 group border border-slate-200"
+                className="btn-primary w-full py-4 text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 group cursor-pointer"
               >
                 Preencher Formulário
                 <Send
@@ -208,7 +203,6 @@ export function Support() {
           </div>
         </div>
 
-        {/* RODAPÉ DA SEÇÃO */}
         <div className="max-w-4xl mx-auto text-center pt-10 border-t border-slate-100">
           <div className="space-y-6">
             <p className="text-xl md:text-2xl text-abradepa-dark font-light leading-relaxed">
@@ -233,7 +227,6 @@ export function Support() {
         </div>
       </div>
 
-      {/* Componente Modal que foi separado */}
       <VolunteerModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

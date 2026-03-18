@@ -3,6 +3,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y, Scrollbar } from 'swiper/modules';
+import Link from 'next/link';
 import {
   CreditCard,
   Accessibility,
@@ -13,6 +14,7 @@ import {
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
+  Plus,
 } from 'lucide-react';
 
 import 'swiper/css';
@@ -21,6 +23,7 @@ import 'swiper/css/scrollbar';
 const actingAreas = [
   {
     title: 'Cartão de Benefícios ABRADEPA Saúde+',
+    slug: '/saude-mais',
     items: [
       'Cuidado acessível para você, família e seu Pet.',
       'Médicos, psicólogos e nutricionistas online.',
@@ -32,6 +35,7 @@ const actingAreas = [
   },
   {
     title: 'Anaplastologia',
+    slug: '/anaplastologia',
     items: [
       'Próteses personalizadas (dedos, orelhas, nariz e olhos).',
       'Próteses oncológicas de Aréolas e mamas externas.',
@@ -43,6 +47,7 @@ const actingAreas = [
   },
   {
     title: 'Dermopigmentação Paramédica',
+    slug: '/dermopigmentacao',
     items: [
       'Reconstrução de aréolas pós-mastectomia.',
       'Reconstrução de cicatrizes e queimaduras.',
@@ -53,6 +58,7 @@ const actingAreas = [
   },
   {
     title: 'Apoio Psicológico e Terapias Complementares',
+    slug: '/apoio-psicologico',
     items: [
       'Psicólogos.',
       'Práticas Integrativas (Terapia Floral, Reiki, Auriculoterapia).',
@@ -65,6 +71,7 @@ const actingAreas = [
   },
   {
     title: 'Projetos e Parcerias',
+    slug: '/projetos',
     items: [
       'Programas e projetos sociais estruturados.',
       'Parcerias públicas e privadas.',
@@ -75,6 +82,7 @@ const actingAreas = [
   },
   {
     title: 'Capacitação Profissional e Conscientização',
+    slug: '/capacitacao',
     items: [
       'Cursos, eventos, seminários e palestras.',
       'Materiais informativos para profissionais.',
@@ -123,7 +131,7 @@ export function Objectives() {
             }}
             scrollbar={{
               draggable: true,
-              hide: false, // Deixa a barra sempre visível no mobile
+              hide: false,
               el: '.swiper-custom-scrollbar',
             }}
             breakpoints={{
@@ -146,7 +154,7 @@ export function Objectives() {
                     {area.title}
                   </h4>
 
-                  <ul className="space-y-4 grow">
+                  <ul className="space-y-4 grow mb-10">
                     {area.items.map((item, i) => (
                       <li
                         key={i}
@@ -160,6 +168,18 @@ export function Objectives() {
                       </li>
                     ))}
                   </ul>
+
+                  <div className="mt-auto">
+                    <Link
+                      href={area.slug}
+                      className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors"
+                    >
+                      <span className="border-b-2 border-abradepa-yellow pb-0.5">
+                        Saiba mais
+                      </span>
+                      <Plus size={14} className="text-abradepa-yellow" />
+                    </Link>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
