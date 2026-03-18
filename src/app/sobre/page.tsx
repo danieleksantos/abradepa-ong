@@ -30,8 +30,7 @@ export default function SobrePage() {
             Quem Somos
           </h1>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed font-light italic border-l-4 border-abradepa-yellow pl-6 max-w-2xl">
-            "A Abradepa é uma ponte entre a dor e a esperança. Entre a perda e a
-            reconstrução. Entre o silêncio e a voz."
+            A Abradepa promove a saúde, respeitando sua história!
           </p>
         </div>
       </section>

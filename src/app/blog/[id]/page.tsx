@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Calendar, ArrowLeft, Tag } from 'lucide-react';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
-
-// Importações do Sanity
+import urlBuilder from '@sanity/image-url';
 import { client } from '@/sanity/lib/client';
 import { POST_DETAIL_QUERY } from '@/sanity/lib/queries';
 
-// Estilização customizada para o conteúdo que vem do Sanity
+const builder = urlBuilder(client);
+
 const components: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
@@ -43,6 +43,20 @@ const components: PortableTextComponents = {
       </ol>
     ),
   },
+  types: {
+    image: ({ value }) => {
+      return (
+        <div className="my-10 relative w-full h-75 md:h-112.5 overflow-hidden rounded-3xl border-2 border-slate-50 shadow-sm">
+          <Image
+            src={builder.image(value).url()}
+            alt="Imagem do conteúdo"
+            fill
+            className="object-cover"
+          />
+        </div>
+      );
+    },
+  },
 };
 
 interface Props {
@@ -50,10 +64,8 @@ interface Props {
 }
 
 export default async function ArtigoPage({ params }: Props) {
-  // 1. Resolvemos o params (Necessário no Next.js 15)
   const { id } = await params;
 
-  // 2. Buscamos o post no Sanity usando o slug (id)
   const post = await client.fetch(
     POST_DETAIL_QUERY,
     { slug: id },
@@ -66,7 +78,6 @@ export default async function ArtigoPage({ params }: Props) {
 
   return (
     <article className="animate-fade-in bg-white min-h-screen pb-24">
-      {/* HEADER DO ARTIGO */}
       <header className="pt-32 pb-12 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto">
           <Link
@@ -98,7 +109,6 @@ export default async function ArtigoPage({ params }: Props) {
         </div>
       </header>
 
-      {/* IMAGEM DE CAPA */}
       <div className="max-w-5xl mx-auto px-4 -mt-8">
         <div className="relative h-75 md:h-125 w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
           <Image
@@ -112,7 +122,6 @@ export default async function ArtigoPage({ params }: Props) {
         </div>
       </div>
 
-      {/* CONTEÚDO DO POST */}
       <div className="max-w-3xl mx-auto px-4 mt-16">
         <div className="prose prose-slate prose-lg max-w-none">
           {post.description && (
@@ -122,12 +131,10 @@ export default async function ArtigoPage({ params }: Props) {
           )}
 
           <div className="text-slate-800">
-            {/* Renderizador de conteúdo rico do Sanity */}
             <PortableText value={post.body} components={components} />
           </div>
         </div>
 
-        {/* RODAPÉ DO ARTIGO */}
         <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2 text-slate-400">

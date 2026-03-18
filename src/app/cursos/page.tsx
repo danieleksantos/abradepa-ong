@@ -61,7 +61,7 @@ export default function CursosEBeneficiosPage() {
               </p>
               <p>
                 Por um valor acessível, este cartão abrange o titular e mais
-                seis membros da família, assegurando que todos tenham cuidado de
+                sete membros da família, assegurando que todos tenham cuidado de
                 saúde de forma prática e econômica, incluindo seu pet.
               </p>
             </div>

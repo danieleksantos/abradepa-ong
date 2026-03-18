@@ -24,7 +24,7 @@ const actingAreas = [
     items: [
       'Cuidado acessível para você, família e seu Pet.',
       'Médicos, psicólogos e nutricionistas online.',
-      'Abrange titular e mais seis membros da família.',
+      'Abrange titular e mais sete membros da família.',
       'Saúde de forma prática e econômica.',
     ],
     icon: <CreditCard size={28} />,
@@ -54,7 +54,8 @@ const actingAreas = [
   {
     title: 'Apoio Psicológico e Terapias Complementares',
     items: [
-      'Psicólogos e Práticas Integrativas (PICS).',
+      'Psicólogos.',
+      'Práticas Integrativas (Terapia Floral, Reiki, Auriculoterapia).',
       'Suporte para famílias atípicas (Autismo/PCD).',
       'Psicopedagogia (Método Fônico Mediado).',
       'Apoio essencial às mães atípicas.',

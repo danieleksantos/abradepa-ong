@@ -1,15 +1,23 @@
 'use client';
 
+import Image from 'next/image';
+
 const supporters = [
-  { name: 'Ana Hickmann', type: 'video' },
-  { name: 'Adrenalina Motos', type: 'logo' },
-  { name: 'Mary Kay', type: 'logo' },
-  { name: 'Armazém Garagem', type: 'logo' },
-  { name: 'Radio Mix 98.3 FM Curitiba', type: 'logo' },
-  { name: 'Profile Prime', type: 'logo' },
-  { name: 'América Qualificações Técnicas', type: 'logo' },
-  { name: 'SEJUF', type: 'logo' },
-  { name: 'UNIFAPI', type: 'logo' },
+  {
+    name: 'Adrenalina Motos',
+    logo: '/logos-parceiros/adrenalina-motos-logo.png',
+  },
+  {
+    name: 'América Qualificações Técnicas',
+    logo: '/logos-parceiros/america-logo.jpeg',
+  },
+  { name: 'Armazém Garagem', logo: '/logos-parceiros/garagem-logo.png' },
+  { name: 'Radio Mix 98.3 FM Curitiba', logo: '/logos-parceiros/mix-logo.png' },
+  { name: 'Profile Prime', logo: '/logos-parceiros/profile-prime-logo.jpeg' },
+  { name: 'Ana Hickmann', logo: null },
+  { name: 'Mary Kay', logo: '/logos-parceiros/kary-may-logo.png' },
+  { name: 'SEJUF', logo: null },
+  { name: 'UNIFAPI', logo: null },
 ];
 
 export function Supporters() {
@@ -34,20 +42,21 @@ export function Supporters() {
           {supporters.map((partner, index) => (
             <div
               key={index}
-              className="grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 flex justify-center p-4 group"
+              className="transition-all duration-500 opacity-90 hover:opacity-100 flex justify-center p-4 group"
             >
-              <div className="relative w-full h-16 flex items-center justify-center border border-dashed border-slate-200 rounded-xl group-hover:border-abradepa-yellow transition-colors">
-                <span className="text-[10px] font-bold text-slate-400 uppercase text-center px-2">
-                  {partner.name}
-                </span>
-                {/* Assim que receber as logos, substitua o span pela tag Image:
-                  <Image 
-                    src={`/supporters/${partner.name.toLowerCase().replace(/ /g, '-')}.png`}
-                    alt={partner.name}
+              <div className="relative w-full h-26 flex items-center justify-center border border-dashed border-slate-200 rounded-xl group-hover:border-abradepa-yellow transition-colors overflow-hidden">
+                {partner.logo ? (
+                  <Image
+                    src={partner.logo}
+                    alt={`Logo ${partner.name}`}
                     fill
-                    className="object-contain"
+                    className="object-contain p-2"
                   />
-                */}
+                ) : (
+                  <span className="text-[10px] font-bold text-slate-700 uppercase text-center px-2">
+                    {partner.name}
+                  </span>
+                )}
               </div>
             </div>
           ))}

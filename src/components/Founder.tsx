@@ -90,7 +90,7 @@ export function Founder() {
                   size={20}
                 />
                 <p className="text-[11px] font-bold text-slate-500 uppercase leading-snug tracking-tighter">
-                  Referência em Anaplastologia e Dermomicropigmentação
+                  Referência em Anaplastologia e dermopigmentação paramédica
                 </p>
               </div>
               <div className="flex gap-3 items-start">

@@ -1,25 +1,27 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import {
   CreditCard,
   CheckCircle2,
-  QrCode,
   Users,
   Heart,
   Copy,
   Check,
   MessageCircle,
+  Send,
 } from 'lucide-react';
+import { VolunteerModal } from './VolunteerModal';
 
 export function Support() {
   const [copied, setCopied] = useState(false);
-  const pixKey = '00.000.000/0001-00'; // Substitua pela chave real
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const pixKey = 'financeiroabradepa@gmail.com';
 
   const whatsappCartaoUrl =
     'https://wa.me/5541991541319?text=Olá! Gostaria de saber mais informações e adquirir o Cartão de Benefícios ABRADEPA Saúde+.';
-  const whatsappVoluntarioUrl =
-    'https://wa.me/5541991541319?text=Olá! Gostaria de enviar meu currículo para ser voluntário na Abradepa.';
 
   const handleCopyPix = () => {
     navigator.clipboard.writeText(pixKey);
@@ -30,13 +32,14 @@ export function Support() {
   return (
     <section id="apoio" className="py-24 bg-white px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Cabeçalho da Seção */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-abradepa-dark uppercase mb-6 tracking-tight">
             Seu Apoio Transforma Vidas!
           </h2>
           <div className="space-y-4 text-slate-600 text-lg font-light leading-relaxed">
             <p>
-              Cada cicatriz redesenhada, no físico e no emocional, representam
+              Cada cicatriz redesenhada, no físico e no emocional, representa
               uma história de superação. Para que essas histórias continuem
               sendo escritas com um final feliz, a Abradepa precisa do seu
               apoio.
@@ -45,6 +48,7 @@ export function Support() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-20">
+          {/* CARD ESQUERDO: CARTÃO DE BENEFÍCIOS */}
           <div className="bg-slate-50 rounded-[2.5rem] p-10 border border-slate-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-abradepa-yellow rounded-2xl flex items-center justify-center shadow-sm">
@@ -121,22 +125,32 @@ export function Support() {
             </a>
           </div>
 
+          {/* COLUNA DIREITA: PIX E VOLUNTÁRIO */}
           <div className="space-y-6 flex flex-col h-full">
-            <div className="bg-abradepa-dark text-white rounded-[2.5rem] p-10 grow relative overflow-hidden flex flex-col justify-center group">
-              <QrCode
-                className="absolute right-0 bottom-0 opacity-5 -mr-4 -mb-4 group-hover:scale-110 transition-transform duration-500"
-                size={180}
-              />
-
+            {/* CARD DO PIX COM QR CODE */}
+            <div className="bg-abradepa-dark text-white rounded-[2.5rem] p-8 md:p-10 grow relative flex flex-col justify-center group">
               <div className="relative z-10">
-                <h3 className="text-2xl font-black uppercase mb-4 tracking-tight text-abradepa-yellow">
+                <h3 className="text-2xl font-black uppercase mb-6 tracking-tight text-abradepa-yellow">
                   Faça uma Doação via Pix!
                 </h3>
-                <p className="text-white/70 text-sm mb-8 leading-relaxed max-w-md">
-                  Toda contribuição faz a diferença, permitindo à Abradepa
-                  ampliar atendimentos e levar esperança a um número crescente
-                  de pessoas.
-                </p>
+
+                <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
+                  <p className="text-white/70 text-sm leading-relaxed flex-1">
+                    Toda contribuição faz a diferença, permitindo à Abradepa
+                    ampliar atendimentos e levar esperança. Use o QR Code ao
+                    lado ou copie a chave abaixo.
+                  </p>
+
+                  <div className="shrink-0 bg-white p-3 rounded-2xl shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/qr-pix.png"
+                      alt="QR Code Pix Abradepa"
+                      width={130}
+                      height={130}
+                      className="rounded-lg"
+                    />
+                  </div>
+                </div>
 
                 <div
                   onClick={handleCopyPix}
@@ -146,7 +160,7 @@ export function Support() {
                     Chave Pix (Clique para copiar)
                   </p>
                   <div className="flex items-center justify-center gap-3">
-                    <p className="font-mono text-lg font-bold tracking-wider">
+                    <p className="font-mono text-base md:text-lg font-bold tracking-wider break-all">
                       {pixKey}
                     </p>
                     {copied ? (
@@ -167,39 +181,39 @@ export function Support() {
               </div>
             </div>
 
+            {/* CARD DO VOLUNTÁRIO ATUALIZADO */}
             <div className="bg-slate-50 border border-slate-100 p-10 rounded-[2.5rem] text-center flex flex-col items-center justify-center gap-6 hover:border-abradepa-yellow transition-all duration-300 shadow-sm">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-100">
                 <Users className="text-abradepa-medium" size={32} />
               </div>
               <div className="space-y-2">
                 <h4 className="font-black uppercase text-lg text-abradepa-dark leading-tight">
-                  Torne-se voluntário na Abradepa!
+                  Torne-se um voluntário!
                 </h4>
                 <p className="text-slate-500 text-sm">
-                  Envie seu currículo e ajude a redesenhar histórias.
+                  Preencha nosso formulário e ajude a redesenhar histórias.
                 </p>
               </div>
-              <a
-                href={whatsappVoluntarioUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary w-full py-4 text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 group"
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="btn-secondary w-full py-4 text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 group border border-slate-200"
               >
-                Enviar Currículo via WhatsApp
-                <MessageCircle
+                Preencher Formulário
+                <Send
                   size={18}
-                  className="group-hover:scale-110 transition-transform"
+                  className="group-hover:translate-x-1 transition-transform"
                 />
-              </a>
+              </button>
             </div>
           </div>
         </div>
 
+        {/* RODAPÉ DA SEÇÃO */}
         <div className="max-w-4xl mx-auto text-center pt-10 border-t border-slate-100">
           <div className="space-y-6">
             <p className="text-xl md:text-2xl text-abradepa-dark font-light leading-relaxed">
               Junte-se à equipe da Abradepa nessa nobre causa. Seja parte do
-              movimento que
+              movimento que{' '}
               <strong> redesenha histórias e restaura a vida.</strong>
             </p>
             <p className="text-lg text-slate-600 font-light leading-relaxed">
@@ -218,6 +232,12 @@ export function Support() {
           </div>
         </div>
       </div>
+
+      {/* Componente Modal que foi separado */}
+      <VolunteerModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 }
