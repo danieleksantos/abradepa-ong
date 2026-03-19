@@ -1,5 +1,5 @@
 <div align="center">
-<img src="/logo-abradepa.png" alt="ABRADEPA Logo" width="120"/>
+<img src="https://github.com/user-attachments/assets/a1740114-169e-40a2-8660-e356c8618746" alt="ABRADEPA Logo" width="120"/>
 
 ABRADEPA - Site Institucional & Administrativo
 <p>
