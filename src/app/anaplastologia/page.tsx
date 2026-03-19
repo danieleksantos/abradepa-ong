@@ -17,14 +17,14 @@ export default function AnaplastologiaPage() {
   return (
     <div className="bg-white min-h-screen">
       <section className="bg-abradepa-dark pt-40 pb-24 text-white px-4">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase">
             ANAPLASTOLOGIA - PRÓTESES PERSONALIZADAS
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-abradepa-yellow uppercase mb-8">
             Estética para pacientes amputados e oncológicos
           </h2>
-          <p className="text-lg md:text-xl text-white/90 max-w-4xl leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
             A Anaplastologia é uma especialidade que une ciência e arte para
             desenvolver próteses altamente realistas e totalmente
             personalizadas, produzidas em silicone de grau médico. Indicada para

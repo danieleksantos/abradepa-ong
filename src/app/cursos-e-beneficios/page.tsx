@@ -1,18 +1,16 @@
 'use client';
 
-import React from 'react';
+import Link from 'next/link';
 import {
   GraduationCap,
   CreditCard,
   ShieldCheck,
   CheckCircle2,
-  MessageCircle,
   ArrowRight,
+  Plus,
 } from 'lucide-react';
 
 export default function CursosEBeneficiosPage() {
-  const whatsappUrl = 'https://wa.me/5541991541319';
-
   return (
     <div className="animate-fade-in bg-white min-h-screen">
       <section className="bg-abradepa-dark pt-32 pb-24 text-white px-4 relative overflow-hidden">
@@ -87,14 +85,18 @@ export default function CursosEBeneficiosPage() {
               ))}
             </div>
 
-            <a
-              href={`${whatsappUrl}?text=Olá! Gostaria de adquirir o Cartão Saúde+`}
-              target="_blank"
-              className="btn-primary inline-flex items-center gap-3 px-10 py-5 text-sm font-black uppercase tracking-widest mt-6 hover:scale-105"
+            <Link
+              href="/cartao-abradepa"
+              className="inline-flex items-center gap-2 text-md font-black uppercase tracking-widest text-abradepa-dark hover:text-abradepa-medium transition-colors cursor-pointer group mt-6"
             >
-              Solicitar Cartão via WhatsApp
-              <MessageCircle size={20} />
-            </a>
+              <span className="border-b-2 border-abradepa-yellow pb-0.5">
+                Saiba mais sobre as vantagens
+              </span>
+              <Plus
+                size={14}
+                className="text-abradepa-yellow group-hover:scale-110 transition-transform"
+              />
+            </Link>
           </div>
 
           <div className="relative">
@@ -196,14 +198,18 @@ export default function CursosEBeneficiosPage() {
               </ul>
             </div>
 
-            <a
-              href={`${whatsappUrl}?text=Olá! Gostaria de informações sobre os cursos e palestras`}
-              target="_blank"
-              className="btn-primary inline-flex items-center gap-3 px-10 py-5 text-sm font-black uppercase tracking-widest mt-6 shadow-xl"
+            <Link
+              href="/capacitacao"
+              className="inline-flex items-center gap-2 text-md font-black uppercase tracking-widest text-abradepa-dark hover:text-abradepa-medium transition-colors cursor-pointer group mt-6"
             >
-              Consultar Agenda de Cursos
-              <MessageCircle size={20} />
-            </a>
+              <span className="border-b-2 border-abradepa-yellow pb-0.5">
+                Saiba mais
+              </span>
+              <Plus
+                size={14}
+                className="text-abradepa-yellow group-hover:scale-110 transition-transform"
+              />
+            </Link>
           </div>
         </div>
       </section>

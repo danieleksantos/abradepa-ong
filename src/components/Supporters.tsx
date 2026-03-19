@@ -14,9 +14,9 @@ const supporters = [
   { name: 'Armazém Garagem', logo: '/logos-parceiros/garagem-logo.png' },
   { name: 'Radio Mix 98.3 FM Curitiba', logo: '/logos-parceiros/mix-logo.png' },
   { name: 'Profile Prime', logo: '/logos-parceiros/profile-prime-logo.jpeg' },
-  { name: 'Ana Hickmann', logo: null },
+  { name: 'Ana Hickmann', logo: '/logos-parceiros/ana-hickman-logo.jpeg' },
   { name: 'Mary Kay', logo: '/logos-parceiros/kary-may-logo.png' },
-  { name: 'SEJUF', logo: null },
+  { name: 'SEJUF', logo: '/logos-parceiros/sejuf-logo.jpeg' },
   { name: 'UNIFAPI', logo: null },
 ];
 

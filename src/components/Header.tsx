@@ -46,7 +46,7 @@ export function Header() {
             </Link>
 
             <Link
-              href="/cursos"
+              href="/cursos-e-beneficios"
               className="btn-primary px-6 py-2.5 text-sm whitespace-nowrap shadow-sm hover:shadow-md hover:brightness-110"
             >
               Cursos e Benefícios
@@ -131,7 +131,7 @@ export function Header() {
             Loja Virtual
           </Link>
           <Link
-            href="/cursos"
+            href="/cursos-e-beneficios"
             onClick={() => setIsOpen(false)}
             className="btn-primary w-full py-3 hover:brightness-110"
           >

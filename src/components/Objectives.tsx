@@ -23,7 +23,7 @@ import 'swiper/css/scrollbar';
 const actingAreas = [
   {
     title: 'Cartão de Benefícios ABRADEPA Saúde+',
-    slug: '/saude-mais',
+    slug: '/cartao-abradepa',
     items: [
       'Cuidado acessível para você, família e seu Pet.',
       'Médicos, psicólogos e nutricionistas online.',

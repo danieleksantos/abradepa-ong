@@ -89,7 +89,7 @@ export default function Home() {
             </p>
           </div>
           <Link
-            href="/cursos#cartao-saude"
+            href="/cartao-abradepa"
             className="btn-primary px-10 py-4 hover:brightness-110"
           >
             Saiba mais
