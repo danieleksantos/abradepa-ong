@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://abradepa.org.br/logo.png" alt="ABRADEPA Logo" width="120"/>
+<img src="/logo-abradepa.png" alt="ABRADEPA Logo" width="120"/>
 
 ABRADEPA - Site Institucional & Administrativo
 <p>
@@ -34,17 +34,17 @@ Esta arquitetura permite:
 - Performance: O conteúdo é entregue via CDN, tornando o carregamento do site institucional extremamente veloz.
 
 ## Tecnologias Utilizadas
-Core
+### Core
 - Next.js 16 (App Router): Framework de ponta para renderização híbrida.
 - React 19: Utilização das últimas features de componentes e performance.
 - TypeScript: Tipagem estática para maior segurança e manutenção do código.
 
-Gestão de Conteúdo (Sanity Stack)
+### Gestão de Conteúdo (Sanity Stack)
 - Sanity Studio v4: Interface administrativa customizada embutida no projeto.
 - @portabletext/react: Renderização de conteúdo rico (texto, imagens, links) vindo do CMS.
 - next-sanity: Integração otimizada para busca de dados e Live Preview.
 
-UI & UX
+### UI & UX
 - Tailwind CSS 4: Estilização moderna e utilitária.
 - Lucide Icons: Conjunto de ícones consistentes.
 - Swiper.js 12: Sliders responsivos para as áreas de atuação da associação.
