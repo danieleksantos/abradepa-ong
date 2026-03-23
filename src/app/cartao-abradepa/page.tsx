@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import {
   CheckCircle2,
   Stethoscope,
@@ -67,7 +68,7 @@ export default function CartaoAbradepaPage() {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen font-sans">
       <section className="bg-abradepa-dark pt-44 pb-24 text-white px-4">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tight uppercase leading-tight">
@@ -84,21 +85,39 @@ export default function CartaoAbradepaPage() {
       </section>
 
       <section className="py-24 px-4 bg-slate-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-abradepa-yellow/20 text-abradepa-dark px-4 py-2 rounded-full mb-6 font-black uppercase text-xs tracking-widest">
-              <Stethoscope size={16} /> Programa Tá Dodói
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+            <div className="flex-1 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 bg-abradepa-yellow/20 text-abradepa-dark px-4 py-2 rounded-full mb-6 font-black uppercase text-xs tracking-widest">
+                <Stethoscope size={16} /> Programa Tá Dodói
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-abradepa-dark uppercase mb-6 leading-tight">
+                Você nunca fica sozinho
+              </h2>
+              <p className="text-slate-600 text-lg md:text-xl leading-relaxed italic">
+                🩺 Com o Tá Dodói, você nunca fica sozinho quando surge uma
+                dúvida de saúde ou um desconforto emocional. Nossa equipe está
+                disponível 24h para conversar por telefone, chat ou vídeo,
+                oferecendo orientação clara e acolhedora. É como ter alguém de
+                confiança por perto, pronto para ajudar sem que você precise
+                sair de casa.
+              </p>
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-abradepa-dark uppercase mb-6 leading-tight">
-              Você nunca fica sozinho
-            </h2>
-            <p className="text-slate-600 text-lg md:text-xl leading-relaxed italic">
-              🩺 Com o Tá Dodói, você nunca fica sozinho quando surge uma dúvida
-              de saúde ou um desconforto emocional. Nossa equipe está disponível
-              24h para conversar por telefone, chat ou vídeo, oferecendo
-              orientação clara e acolhedora. É como ter alguém de confiança por
-              perto, pronto para ajudar sem que você precise sair de casa.
-            </p>
+
+            <div className="shrink-0">
+              <div className="relative w-40 h-50 md:w-48 md:h-58">
+                <div className="absolute -top-3 -right-3 w-full h-full border-2 border-abradepa-yellow rounded-[2.5rem]" />
+
+                <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden border-4 border-abradepa-medium bg-white shadow-xl">
+                  <Image
+                    src="/cartao-ta-dodoi.png"
+                    alt="Logo Tá Dodói"
+                    fill
+                    className="object-cover rounded-[1.8rem]"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-sm border border-slate-100">
@@ -121,7 +140,7 @@ export default function CartaoAbradepaPage() {
                 {
                   icon: <Send className="text-abradepa-medium" />,
                   t: 'Acesso simples e rápido',
-                  d: 'atendimento por telefone, chat ou vídeo. Aplicativo (Google Play ou App Store), com agendamento ágil.',
+                  d: 'atendimento por telefone, chat ou vídeo. Aplicativo com agendamento ágil.',
                 },
                 {
                   icon: <Users className="text-green-500" />,
@@ -136,7 +155,7 @@ export default function CartaoAbradepaPage() {
                 {
                   icon: <ShieldCheck className="text-orange-500" />,
                   t: 'Orientação segura',
-                  d: 'não substitui atendimentos de emergência presencial; o foco é acolhimento e direcionamento adequado.',
+                  d: 'não substitui atendimentos de emergência; o foco é acolhimento e direcionamento.',
                 },
               ].map((item, i) => (
                 <div
@@ -181,11 +200,9 @@ export default function CartaoAbradepaPage() {
                     Mais Completo
                   </span>
                 )}
-
                 <h4 className="text-lg font-black text-abradepa-dark mb-8 text-center uppercase leading-tight min-h-12 flex items-center justify-center italic">
                   {plano.nome}
                 </h4>
-
                 <div className="text-center mb-10">
                   <span className="text-slate-400 text-sm font-bold">R$</span>
                   <span className="text-5xl font-black text-abradepa-dark">
@@ -198,7 +215,6 @@ export default function CartaoAbradepaPage() {
                     Mensais
                   </p>
                 </div>
-
                 <ul className="space-y-4 mb-12 grow">
                   {plano.vantagens.map((item, idx) => (
                     <li
@@ -213,7 +229,6 @@ export default function CartaoAbradepaPage() {
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href={plano.link}
                   target="_blank"
@@ -232,10 +247,10 @@ export default function CartaoAbradepaPage() {
                 <Dog size={40} className="text-abradepa-dark" />
               </div>
               <div className="grow">
-                <h3 className="text-2xl font-black uppercase text-abradepa-yellow mb-2">
+                <h3 className="text-2xl font-black uppercase text-abradepa-yellow mb-2 tracking-tight">
                   Pode incluir: Telemedicina PET (online)
                 </h3>
-                <p className="text-white/70 italic leading-relaxed">
+                <p className="text-white/70 italic leading-relaxed text-sm">
                   Inclua seu pet no Cartão por apenas{' '}
                   <span className="text-white font-bold">
                     R$ 10,00 adicionais
@@ -244,9 +259,6 @@ export default function CartaoAbradepaPage() {
                   precisar!
                 </p>
               </div>
-            </div>
-            <div className="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
-              <Dog size={200} />
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ const actingAreas = [
     items: [
       'Próteses personalizadas (dedos, orelhas, nariz e olhos).',
       'Próteses oncológicas de Aréolas e mamas externas.',
-      'Recuperão da imagem e da autoestima.',
+      'Recuperação da imagem e da autoestima.',
       'Equilíbrio psicológico e reintegração social.',
     ],
     icon: <Accessibility size={28} />,

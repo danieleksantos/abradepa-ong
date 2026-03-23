@@ -30,7 +30,7 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden xl:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             <Link href="/" className={linkStyle}>
               Home
             </Link>
@@ -81,13 +81,13 @@ export function Header() {
 
             <Link
               href="/cursos-e-beneficios"
-              className="btn-primary px-6 py-2.5 text-sm whitespace-nowrap shadow-sm hover:shadow-md hover:brightness-110"
+              className="btn-primary px-4 lg:px-6 py-2.5 text-xs lg:text-sm whitespace-nowrap shadow-sm hover:shadow-md hover:brightness-110"
             >
               Cursos e Benefícios
             </Link>
           </nav>
 
-          <div className="xl:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-abradepa-dark focus:outline-none"
@@ -121,7 +121,7 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <div className="xl:hidden bg-white border-b border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-300 z-50 overflow-y-auto max-h-[90vh]">
+        <div className="md:hidden bg-white border-b border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-300 z-50 overflow-y-auto max-h-[90vh]">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
@@ -152,28 +152,28 @@ export function Header() {
               <Link
                 href="/anaplastologia"
                 onClick={() => setIsOpen(false)}
-                className="block text-sm py-1 text-slate-500 font-bold uppercase tracking-tight"
+                className="block text-sm py-1 text-slate-500 font-bold uppercase"
               >
                 Anaplastologia
               </Link>
               <Link
                 href="/dermopigmentacao"
                 onClick={() => setIsOpen(false)}
-                className="block text-sm py-1 text-slate-500 font-bold uppercase tracking-tight"
+                className="block text-sm py-1 text-slate-500 font-bold uppercase"
               >
                 Dermopigmentação
               </Link>
               <Link
                 href="/capacitacao"
                 onClick={() => setIsOpen(false)}
-                className="block text-sm py-1 text-slate-500 font-bold uppercase tracking-tight"
+                className="block text-sm py-1 text-slate-500 font-bold uppercase"
               >
                 Capacitação
               </Link>
               <Link
                 href="/cartao-abradepa"
                 onClick={() => setIsOpen(false)}
-                className="block text-sm py-1 text-slate-500 font-bold uppercase tracking-tight"
+                className="block text-sm py-1 text-slate-500 font-bold uppercase"
               >
                 Cartão Saúde+
               </Link>
@@ -199,7 +199,7 @@ export function Header() {
             <Link
               href="/cursos-e-beneficios"
               onClick={() => setIsOpen(false)}
-              className="btn-primary w-full py-4 text-center block shadow-lg active:scale-95 transition-transform"
+              className="btn-primary w-full py-4 text-center block shadow-lg"
             >
               Cursos e Benefícios
             </Link>
