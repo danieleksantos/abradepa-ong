@@ -17,7 +17,8 @@ const supporters = [
   { name: 'Ana Hickmann', logo: '/logos-parceiros/ana-hickman-logo.jpeg' },
   { name: 'Mary Kay', logo: '/logos-parceiros/kary-may-logo.png' },
   { name: 'SEJUF', logo: '/logos-parceiros/sejuf-logo.jpeg' },
-  { name: 'UNIFAPI', logo: null },
+  { name: 'UNIFAPI', logo: '/logos-parceiros/fapi-logo.png' },
+  { name: 'UTFPR', logo: '/logos-parceiros/utfpr.jpeg' },
 ];
 
 export function Supporters() {

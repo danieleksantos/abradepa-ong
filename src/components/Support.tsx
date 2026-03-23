@@ -45,7 +45,6 @@ export function Support() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* CARD SEJA UM DOADOR */}
           <div className="bg-abradepa-dark text-white rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center group relative overflow-hidden">
             <div className="relative z-10">
               <h3 className="text-2xl font-black uppercase mb-6 tracking-tight text-abradepa-yellow">
@@ -94,7 +93,6 @@ export function Support() {
             </div>
           </div>
 
-          {/* CARD SEJA UM VOLUNTÁRIO */}
           <div className="bg-slate-50 border border-slate-100 p-8 md:p-10 rounded-[2.5rem] text-center flex flex-col items-center justify-center gap-6 hover:border-abradepa-yellow transition-all duration-300 shadow-sm">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-100">
               <Users className="text-abradepa-medium" size={32} />
@@ -121,7 +119,6 @@ export function Support() {
           </div>
         </div>
 
-        {/* CARD CARTÃO DE BENEFÍCIOS (LINHA DE BAIXO) */}
         <div className="bg-slate-50 rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="max-w-2xl">

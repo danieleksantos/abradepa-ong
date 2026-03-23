@@ -28,16 +28,6 @@ export default function CapacitacaoPage() {
             técnico e apoio emocional, promovendo a saúde integral e o
             desenvolvimento humano.
           </p>
-          <div className="mt-12 relative z-10">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary bg-abradepa-yellow text-abradepa-dark py-4 px-10 rounded-full font-black uppercase text-xs tracking-widest inline-flex items-center gap-2 hover:bg-white transition-all shadow-xl"
-            >
-              Faça contato conosco <MessageCircle size={18} />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -192,9 +182,9 @@ export default function CapacitacaoPage() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary bg-abradepa-dark text-white py-5 px-14 rounded-full text-sm font-black uppercase tracking-[0.2em] inline-flex items-center gap-3 shadow-2xl transition-all hover:scale-105 active:scale-95 cursor-pointer"
+            className="btn-secundary bg-abradepa-dark text-white py-5 px-14 rounded-full text-sm font-black uppercase tracking-[0.2em] inline-flex items-center gap-3 shadow-2xl transition-all hover:scale-105 active:scale-95 cursor-pointer"
           >
-            Falar com a Abradepa <MessageCircle size={20} />
+            Consultar agenda <MessageCircle size={20} />
           </a>
         </div>
       </section>

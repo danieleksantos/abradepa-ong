@@ -63,10 +63,10 @@ export function Footer() {
           <ul className="space-y-4 text-sm font-medium">
             <li>
               <Link
-                href="/sobre"
+                href="/"
                 className="hover:text-abradepa-yellow transition-colors"
               >
-                Quem Somos
+                Home
               </Link>
             </li>
             <li>
@@ -79,23 +79,23 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/blog"
+                href="/anaplastologia"
                 className="hover:text-abradepa-yellow transition-colors"
               >
-                Blog
+                Anaplastologia
               </Link>
             </li>
             <li>
               <Link
-                href="/loja"
+                href="/dermopigmentacao"
                 className="hover:text-abradepa-yellow transition-colors"
               >
-                Loja Virtual
+                Dermopigmentacao
               </Link>
             </li>
             <li>
               <Link
-                href="/cursos"
+                href="/cursos-e-beneficios"
                 className="hover:text-abradepa-yellow transition-colors"
               >
                 Cursos e Benefícios

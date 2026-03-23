@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, ArrowRight } from 'lucide-react';
 
-// Ajustado nome da interface para manter a consistência
 interface BlogCardProps {
   id: string;
   title: string;
@@ -24,7 +23,6 @@ export function BlogCard({
 }: BlogCardProps) {
   return (
     <Link
-      // AJUSTE CRUCIAL: Rota alterada de /novidades para /blog conforme solicitado
       href={`/blog/${id}`}
       className="group bg-white rounded-4xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all flex flex-col h-full"
     >

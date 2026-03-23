@@ -88,7 +88,6 @@ export function VolunteerModal({ isOpen, onClose }: VolunteerModalProps) {
 
         <div className="p-6 md:p-10">
           {' '}
-          {/* Reduzido para ganhar espaço */}
           {isSuccess ? (
             <div className="flex flex-col items-center justify-center py-12 text-center animate-in zoom-in-50">
               <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
@@ -105,7 +104,6 @@ export function VolunteerModal({ isOpen, onClose }: VolunteerModalProps) {
             <>
               <div className="mb-6">
                 {' '}
-                {/* Reduzido de mb-8 */}
                 <h3 className="text-xl md:text-2xl font-black text-abradepa-dark uppercase mb-1 leading-tight">
                   Seja um Voluntário
                 </h3>
@@ -116,7 +114,6 @@ export function VolunteerModal({ isOpen, onClose }: VolunteerModalProps) {
 
               <form onSubmit={handleSubmit} className="space-y-3">
                 {' '}
-                {/* Reduzido de space-y-5 */}
                 <div>
                   <label className="block text-[10px] uppercase font-bold text-slate-700 mb-1 ml-1 tracking-widest">
                     Nome Completo
@@ -166,7 +163,7 @@ export function VolunteerModal({ isOpen, onClose }: VolunteerModalProps) {
                   <textarea
                     required
                     name="motivo"
-                    rows={2} // Reduzido de 3 para 2
+                    rows={2}
                     placeholder="Sua motivação..."
                     className={`${inputClass} resize-none`}
                   />
@@ -178,7 +175,7 @@ export function VolunteerModal({ isOpen, onClose }: VolunteerModalProps) {
                   <textarea
                     required
                     name="contribuicao"
-                    rows={2} // Reduzido de 3 para 2
+                    rows={2}
                     placeholder="Suas habilidades..."
                     className={`${inputClass} resize-none`}
                   />

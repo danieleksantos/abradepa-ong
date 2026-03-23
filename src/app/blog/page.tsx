@@ -1,8 +1,6 @@
 import React from 'react';
 import { Newspaper } from 'lucide-react';
 import { BlogCard } from '@/components/BlogCard';
-
-// Importações do Sanity
 import { client } from '@/sanity/lib/client';
 import { POSTS_QUERY } from '@/sanity/lib/queries';
 
@@ -22,8 +20,6 @@ export default async function BlogPage() {
     {},
     { next: { revalidate: 60 } },
   );
-  // Buscando os posts do Sanity
-  // O "revalidate: 60" garante que o Next.js verifique novos posts a cada minuto
 
   return (
     <div className="animate-fade-in bg-slate-50 min-h-screen">
@@ -70,11 +66,10 @@ export default async function BlogPage() {
             {posts.map((post) => (
               <BlogCard
                 key={post.id}
-                id={post.slug} // Usamos o slug como ID para a rota do post único
+                id={post.slug}
                 title={post.title}
                 description={post.description}
-                image={post.image || '/logo-abradepa.png'} // Imagem padrão caso esqueçam de subir uma
-                // Formatando a data que vem do Sanity para o seu estilo
+                image={post.image || '/logo-abradepa.png'}
                 date={
                   post.date
                     ? new Date(post.date).toLocaleDateString('pt-BR', {
