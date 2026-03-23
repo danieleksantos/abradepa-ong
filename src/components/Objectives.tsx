@@ -58,7 +58,7 @@ const actingAreas = [
   },
   {
     title: 'Apoio Psicológico e Terapias Complementares',
-    slug: '/apoio-psicologico',
+    slug: '/',
     items: [
       'Psicólogos.',
       'Práticas Integrativas (Terapia Floral, Reiki, Auriculoterapia).',
@@ -71,7 +71,7 @@ const actingAreas = [
   },
   {
     title: 'Projetos e Parcerias',
-    slug: '/projetos',
+    slug: '/',
     items: [
       'Programas e projetos sociais estruturados.',
       'Parcerias públicas e privadas.',
