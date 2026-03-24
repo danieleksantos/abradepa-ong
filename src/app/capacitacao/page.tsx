@@ -15,6 +15,7 @@ export default function CapacitacaoPage() {
 
   return (
     <div className="bg-white min-h-screen relative">
+      {/* HERO SECTION */}
       <section className="bg-abradepa-dark pt-40 pb-28 text-white px-4">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase">
@@ -31,6 +32,7 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
+      {/* SEÇÃO 1: GISELE (CARD ESQUERDA - BG CLARO) */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
@@ -54,7 +56,6 @@ export default function CapacitacaoPage() {
                 <Sparkles className="text-abradepa-yellow" /> Palestras e
                 Workshops
               </h4>
-
               <div className="grid grid-cols-1 gap-6">
                 {[
                   {
@@ -67,7 +68,7 @@ export default function CapacitacaoPage() {
                   },
                   {
                     t: 'Cuide de Si! Filosofia dos Florais de Bach',
-                    d: 'A palestra apresenta os Florais de Bach como uma ferramenta complementar de autocuidado, ajudando no equilíbrio emocional, mental e espiritual de quem cuida, convive ou apoia outras pessoas. Ela conecta saúde integral, autoconhecimento e desenvolvimento de virtudes humanas alinhada à filosofia do Dr.Edward Bach e à visão da OMS.',
+                    d: 'A palestra apresenta os Florais de Bach como uma ferramenta complementar de autocuidado, ajudando no equilíbrio emocional e desenvolvimento de virtudes humanas.',
                   },
                 ].map((item, i) => (
                   <div
@@ -88,6 +89,7 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
+      {/* SEÇÃO 2: RITA (CARD DIREITA - BG BRANCO) */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start">
@@ -111,64 +113,134 @@ export default function CapacitacaoPage() {
                 <BookOpen className="text-abradepa-yellow" /> Programas
                 Educacionais
               </h4>
-
               <div className="space-y-6">
-                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                  <h5 className="font-black text-abradepa-dark uppercase text-sm mb-6 leading-relaxed border-l-4 border-abradepa-yellow pl-4">
-                    1. Palestra de Regulação Emocional do comportamento
-                  </h5>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[
+                {[
+                  {
+                    t: '1. Palestra de Regulação Emocional do comportamento',
+                    items: [
                       'Transtorno do Processamento Sensorial',
                       '8 sistemas Sensoriais',
                       'Sistema Sensorial de Propriocepção',
                       'Sistema Sensorial de vestibular',
                       'Sistema Sensorial de interocepção',
-                    ].map((item, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-3 text-xs font-bold text-slate-600 uppercase"
-                      >
-                        <CheckCircle2
-                          size={14}
-                          className="text-abradepa-yellow shrink-0"
-                        />
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                  <h5 className="font-black text-abradepa-dark uppercase text-sm mb-6 leading-relaxed border-l-4 border-abradepa-yellow pl-4">
-                    2. Palestra de estratégias para a inclusão da criança TEA
-                  </h5>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[
+                    ],
+                  },
+                  {
+                    t: '2. Palestra de estratégias para a inclusão da criança TEA',
+                    items: [
                       'Rotina visível e previsível',
                       'Movimento e Atividades adaptadas',
                       'Treinamento da consciência corporal',
                       'Ambiente Sensorial adequado',
-                    ].map((item, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-3 text-xs font-bold text-slate-600 uppercase"
-                      >
-                        <CheckCircle2
-                          size={14}
-                          className="text-abradepa-yellow shrink-0"
-                        />
-                        {item}
-                      </div>
-                    ))}
+                    ],
+                  },
+                ].map((prog, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-slate-50 p-8 rounded-3xl border border-slate-100"
+                  >
+                    <h5 className="font-black text-abradepa-dark uppercase text-sm mb-6 leading-relaxed border-l-4 border-abradepa-yellow pl-4">
+                      {prog.t}
+                    </h5>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {prog.items.map((item, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-3 text-xs font-bold text-slate-600 uppercase"
+                        >
+                          <CheckCircle2
+                            size={14}
+                            className="text-abradepa-yellow shrink-0"
+                          />
+                          {item}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* SEÇÃO 3: PIETRA (CARD ESQUERDA - BG CLARO) */}
+      <section className="py-24 px-4 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+            <div className="w-full lg:w-1/3 px-4 sm:px-0">
+              <div className="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-100 text-center">
+                <div className="w-20 h-20 bg-abradepa-yellow/10 rounded-full flex items-center justify-center mx-auto mb-6 text-abradepa-dark">
+                  <Users size={40} />
+                </div>
+                <h3 className="text-2xl font-black text-abradepa-dark uppercase leading-tight mb-2">
+                  Pietra Corrêa Mello
+                </h3>
+                <p className="text-abradepa-medium font-bold uppercase text-[10px] tracking-widest mb-6">
+                  Nutricionista
+                </p>
+                <div className="w-12 h-1 bg-abradepa-yellow mx-auto rounded-full"></div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-2/3 space-y-8 px-4 sm:px-0">
+              <h4 className="text-xl font-black text-abradepa-dark uppercase tracking-widest flex items-center gap-3">
+                <Sparkles className="text-abradepa-yellow" /> Palestra
+              </h4>
+              <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-abradepa-yellow transition-all group">
+                <h5 className="font-black text-abradepa-dark uppercase text-sm mb-4 leading-relaxed group-hover:text-abradepa-medium transition-colors">
+                  1. Alimentação e suas influências no TDAH e TEA
+                </h5>
+                <p className="text-slate-500 text-sm leading-relaxed italic">
+                  Uma análise profunda sobre como as escolhas alimentares e o
+                  suporte nutricional impactam diretamente o comportamento e o
+                  bem-estar de indivíduos com TDAH e TEA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEÇÃO 4: EUNICE (CARD DIREITA - BG BRANCO) */}
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start">
+            <div className="w-full lg:w-1/3 px-4 sm:px-0">
+              <div className="bg-slate-900 p-8 rounded-[3rem] shadow-xl text-white text-center">
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 text-abradepa-yellow">
+                  <GraduationCap size={40} />
+                </div>
+                <h3 className="text-2xl font-black uppercase leading-tight mb-2">
+                  Eunice Roberto
+                </h3>
+                <p className="text-abradepa-yellow font-bold uppercase text-[10px] tracking-widest mb-6">
+                  Psicóloga e Neuropsicóloga
+                </p>
+                <div className="w-12 h-1 bg-abradepa-yellow mx-auto rounded-full"></div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-2/3 space-y-8 px-4 sm:px-0">
+              <h4 className="text-xl font-black text-abradepa-dark uppercase tracking-widest flex items-center gap-3">
+                <Sparkles className="text-abradepa-yellow" /> Palestra
+              </h4>
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-abradepa-yellow transition-all group">
+                <h5 className="font-black text-abradepa-dark uppercase text-sm mb-4 leading-relaxed group-hover:text-abradepa-medium transition-colors">
+                  1. Equilíbrio Emocional para mães atípicas
+                </h5>
+                <p className="text-slate-500 text-sm leading-relaxed italic">
+                  Foco no suporte psicológico e estratégias de enfrentamento
+                  para mães de crianças atípicas, promovendo resiliência e saúde
+                  emocional para toda a família.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
       <section className="py-24 px-4 bg-abradepa-yellow">
         <div className="max-w-4xl mx-auto text-center text-abradepa-dark">
           <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">
