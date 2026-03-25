@@ -13,6 +13,17 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden bg-abradepa-dark px-4 py-20 md:py-32">
+        <div className="absolute inset-0 z-0 lg:hidden opacity-60">
+          <Image
+            src="/cuidado-integral.jpg"
+            alt="Background Abradepa"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-b from-abradepa-dark/80 via-abradepa-dark/40 to-abradepa-dark" />
+        </div>
+
         <div className="absolute right-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/4 rounded-full bg-abradepa-medium/20 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-7xl">
@@ -25,7 +36,7 @@ export default function Home() {
                 </span>
               </h1>
 
-              <p className="mx-auto lg:mx-0 mb-12 max-w-2xl text-lg text-white/90 md:text-xl leading-relaxed">
+              <p className="mx-auto lg:mx-0 mb-12 max-w-2xl text-lg text-white md:text-xl leading-relaxed font-medium lg:font-light">
                 Transformando vidas ao ampliar o acesso à saúde, com consultas
                 médicas acessíveis, anaplastologia (próteses estéticas
                 personalizadas), terapias integrativas e dermopigmentação
@@ -65,7 +76,7 @@ export default function Home() {
                     alt="Acolhimento e Saúde Integral ABRADEPA"
                     fill
                     priority
-                    sizes="(max-width: 1024px) 100vw, 420px"
+                    sizes="420px"
                     className="object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>

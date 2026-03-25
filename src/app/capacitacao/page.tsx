@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import {
   GraduationCap,
   Users,
@@ -15,7 +14,6 @@ export default function CapacitacaoPage() {
 
   return (
     <div className="bg-white min-h-screen relative">
-      {/* HERO SECTION */}
       <section className="bg-abradepa-dark pt-40 pb-28 text-white px-4">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase">
@@ -32,7 +30,6 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* SEÇÃO 1: GISELE (CARD ESQUERDA - BG CLARO) */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
@@ -89,7 +86,6 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* SEÇÃO 2: RITA (CARD DIREITA - BG BRANCO) */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start">
@@ -164,7 +160,6 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* SEÇÃO 3: PIETRA (CARD ESQUERDA - BG CLARO) */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
@@ -202,7 +197,6 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* SEÇÃO 4: EUNICE (CARD DIREITA - BG BRANCO) */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start">
@@ -240,7 +234,6 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
       <section className="py-24 px-4 bg-abradepa-yellow">
         <div className="max-w-4xl mx-auto text-center text-abradepa-dark">
           <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">
