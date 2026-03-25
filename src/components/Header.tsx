@@ -72,6 +72,9 @@ export function Header() {
               )}
             </div>
 
+            <Link href="/como-apoiar" className={linkStyle}>
+              Como apoiar
+            </Link>
             <Link href="/blog" className={linkStyle}>
               Blog
             </Link>
@@ -180,6 +183,13 @@ export function Header() {
             </div>
           </div>
 
+          <Link
+            href="/como-apoiar"
+            onClick={() => setIsOpen(false)}
+            className="block text-abradepa-dark font-medium py-2 text-lg"
+          >
+            Como apoiar
+          </Link>
           <Link
             href="/blog"
             onClick={() => setIsOpen(false)}

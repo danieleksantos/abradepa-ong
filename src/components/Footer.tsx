@@ -79,18 +79,26 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/anaplastologia"
+                href="/como-apoiar"
                 className="hover:text-abradepa-yellow transition-colors"
               >
-                Anaplastologia
+                Como apoiar
               </Link>
             </li>
             <li>
               <Link
-                href="/dermopigmentacao"
+                href="/blog"
                 className="hover:text-abradepa-yellow transition-colors"
               >
-                Dermopigmentacao
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/loja"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Loja Virtual
               </Link>
             </li>
             <li>

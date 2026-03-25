@@ -2,7 +2,6 @@
 
 import { Users, Target, Eye, Heart } from 'lucide-react';
 import { Founder } from '@/components/Founder';
-import { Support } from '@/components/Support';
 
 export default function SobrePage() {
   const diretoria = [
@@ -138,8 +137,6 @@ export default function SobrePage() {
           </div>
         </div>
       </section>
-
-      <Support />
 
       <section className="py-20 px-4 bg-white border-t border-slate-50">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12">
