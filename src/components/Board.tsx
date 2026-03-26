@@ -10,7 +10,7 @@ const members = [
     image: '/simone-abradepa.png',
   },
   {
-    name: 'Gisele Lázara de Farias Borges',
+    name: 'Gisele Lazara de Faria Borges',
     role: 'Vice-Presidente',
     bio: 'Liderança estratégica focada no acolhimento humanizado e suporte integral aos beneficiários da associação.',
     image: '/person.png',

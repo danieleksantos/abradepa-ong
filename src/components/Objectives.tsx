@@ -71,7 +71,7 @@ const actingAreas = [
   },
   {
     title: 'Projetos e Parcerias',
-    slug: '/',
+    slug: '/projetos-e-parcerias',
     items: [
       'Programas e projetos sociais estruturados.',
       'Parcerias públicas e privadas.',

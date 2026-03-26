@@ -8,7 +8,6 @@ export default function CapacitacaoPage() {
 
   return (
     <div className="bg-white min-h-screen relative">
-      {/* HERO SECTION */}
       <section className="bg-abradepa-dark pt-40 pb-28 text-white px-4">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase">
@@ -25,13 +24,11 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* PROFISSIONAL 1 - GISELE */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             <div className="w-full lg:w-1/3 px-4 sm:px-0">
               <div className="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-100 text-center">
-                {/* FOTO GISELE */}
                 <div className="relative w-32 h-32 mx-auto mb-6">
                   <div className="absolute inset-0 border-2 border-abradepa-yellow rounded-full -m-1" />
                   <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white shadow-md">
@@ -91,13 +88,11 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* PROFISSIONAL 2 - RITA */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start">
             <div className="w-full lg:w-1/3 px-4 sm:px-0">
               <div className="bg-slate-900 p-8 rounded-[3rem] shadow-xl text-white text-center">
-                {/* FOTO RITA */}
                 <div className="relative w-32 h-32 mx-auto mb-6">
                   <div className="absolute inset-0 border-2 border-abradepa-yellow rounded-full -m-1" />
                   <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-slate-900 shadow-md">
@@ -175,13 +170,11 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* PROFISSIONAL 3 - PIETRA */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             <div className="w-full lg:w-1/3 px-4 sm:px-0">
               <div className="bg-white p-8 rounded-[3rem] shadow-sm border border-slate-100 text-center">
-                {/* FOTO PIETRA */}
                 <div className="relative w-32 h-32 mx-auto mb-6">
                   <div className="absolute inset-0 border-2 border-abradepa-yellow rounded-full -m-1" />
                   <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white shadow-md">
@@ -222,13 +215,11 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* PROFISSIONAL 4 - EUNICE */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start">
             <div className="w-full lg:w-1/3 px-4 sm:px-0">
               <div className="bg-slate-900 p-8 rounded-[3rem] shadow-xl text-white text-center">
-                {/* FOTO EUNICE */}
                 <div className="relative w-32 h-32 mx-auto mb-6">
                   <div className="absolute inset-0 border-2 border-abradepa-yellow rounded-full -m-1" />
                   <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-slate-900 shadow-md">
@@ -269,7 +260,6 @@ export default function CapacitacaoPage() {
         </div>
       </section>
 
-      {/* CHAMADA FINAL */}
       <section className="py-24 px-4 bg-abradepa-yellow">
         <div className="max-w-4xl mx-auto text-center text-abradepa-dark">
           <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">
