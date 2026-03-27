@@ -8,7 +8,7 @@ import { Supporters } from '@/components/Supporters';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function Home() {
-  const whatsappUrl = 'https://wa.me/5541991541319';
+  const whatsappUrl = 'https://wa.me/5541995912817';
 
   return (
     <>

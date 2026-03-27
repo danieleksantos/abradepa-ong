@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 export default function ProjetosParceriasPage() {
-  const whatsappUrl = 'https://wa.me/5541991541319';
+  const whatsappUrl = 'https://wa.me/5541995912817';
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const openLightbox = (src: string) => setSelectedImage(src);

@@ -15,7 +15,7 @@ interface Product {
 }
 
 export default async function LojaPage() {
-  const whatsappUrl = 'https://wa.me/5541991541319';
+  const whatsappUrl = 'https://wa.me/5541995912817';
 
   const products = await client.fetch<Product[]>(
     PRODUCTS_QUERY,
