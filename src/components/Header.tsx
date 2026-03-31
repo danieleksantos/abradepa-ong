@@ -62,6 +62,9 @@ export function Header() {
                   <Link href="/dermopigmentacao" className={dropdownItemStyle}>
                     Dermopigmentação
                   </Link>
+                  <Link href="/terapia-floral" className={dropdownItemStyle}>
+                    Terapia Floral
+                  </Link>
                   <Link
                     href="/projetos-e-parcerias"
                     className={dropdownItemStyle}
@@ -171,6 +174,13 @@ export function Header() {
                 className="block text-sm py-1 text-slate-500 font-bold uppercase"
               >
                 Dermopigmentação
+              </Link>
+              <Link
+                href="/terapia-floral"
+                onClick={() => setIsOpen(false)}
+                className="block text-sm py-1 text-slate-500 font-bold uppercase"
+              >
+                Terapia Floral
               </Link>
               <Link
                 href="/projetos-e-parcerias"

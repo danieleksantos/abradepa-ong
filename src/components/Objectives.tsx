@@ -15,6 +15,8 @@ import {
   ChevronRight,
   CheckCircle2,
   Plus,
+  Leaf,
+  BookOpen,
 } from 'lucide-react';
 
 import 'swiper/css';
@@ -27,7 +29,7 @@ const actingAreas = [
     items: [
       'Cuidado acessível para você, família e seu Pet.',
       'Médicos, psicólogos e nutricionistas online.',
-      'Abrange titular e mais sete membros da família.',
+      'Abrange titular e mais seis membros da família.',
       'Saúde de forma prática e econômica.',
     ],
     icon: <CreditCard size={28} />,
@@ -57,15 +59,34 @@ const actingAreas = [
     color: 'bg-abradepa-yellow',
   },
   {
-    title: 'Apoio Psicológico e Terapias Complementares',
-    slug: '/',
+    title: 'Terapia Floral Integrativa',
+    slug: '/terapia-floral',
+    isExternal: true,
     items: [
-      'Psicólogos.',
-      'Práticas Integrativas (Terapia Floral, Reiki, Auriculoterapia).',
-      'Suporte para famílias atípicas (Autismo/PCD).',
-      'Psicopedagogia (Método Fônico Mediado).',
-      'Apoio essencial às mães atípicas.',
+      'Atendimento para crianças, adolescentes, adultos e idosos.',
+      'Indicação de Fórmula Floral personalizada.',
+      'Atendimento para famílias atípicas (Autismo/PCD).',
     ],
+    icon: <Leaf size={28} />,
+    color: 'bg-green-700',
+  },
+  {
+    title: 'Psicopedagogia',
+    slug: 'https://wa.me/5541995912817', // Celular Abradepa
+    isExternal: true,
+    items: [
+      'Método Fônico Mediado.',
+      'Atendimento especializado e individualizado.',
+      'Foco em alfabetização e desenvolvimento cognitivo.',
+    ],
+    icon: <BookOpen size={28} />,
+    color: 'bg-blue-800',
+  },
+  {
+    title: 'Apoio Psicológico e Terapias Complementares',
+    slug: 'https://wa.me/5541995912817', // Celular Abradepa
+    isExternal: true,
+    items: ['Psicólogos.', 'Auriculoterapia.', 'Reiki.'],
     icon: <HeartPulse size={28} />,
     color: 'bg-slate-800',
   },
@@ -170,15 +191,29 @@ export function Objectives() {
                   </ul>
 
                   <div className="mt-auto">
-                    <Link
-                      href={area.slug}
-                      className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors"
-                    >
-                      <span className="border-b-2 border-abradepa-yellow pb-0.5">
-                        Saiba mais
-                      </span>
-                      <Plus size={14} className="text-abradepa-yellow" />
-                    </Link>
+                    {area.isExternal ? (
+                      <a
+                        href={area.slug}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors cursor-pointer"
+                      >
+                        <span className="border-b-2 border-abradepa-yellow pb-0.5">
+                          Mais informações
+                        </span>
+                        <Plus size={14} className="text-abradepa-yellow" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={area.slug}
+                        className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors"
+                      >
+                        <span className="border-b-2 border-abradepa-yellow pb-0.5">
+                          Mais informações
+                        </span>
+                        <Plus size={14} className="text-abradepa-yellow" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </SwiperSlide>

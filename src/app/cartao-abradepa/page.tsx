@@ -18,19 +18,35 @@ import {
 export default function CartaoAbradepaPage() {
   const planos = [
     {
-      nome: 'ABRADEPA SAÚDE+ BRONZE',
+      nome: 'ABRADEPA SAÚDE+ ESSENCIAL',
       preco: '29,90',
       link: 'https://go.pontobrweb.com.br/6of',
-      cor: 'border-orange-300',
-      bg: 'bg-orange-50',
+      cor: 'border-slate-200',
+      bg: 'bg-slate-50/50',
       vantagens: [
         'ACESSO ILIMITADO AO TÁ DODÓI 24H',
         'REDE PARCEIRA EM TODO BRASIL',
         'TELEMEDICINA COM TRIAGEM',
         'TELEPSICOLOGIA',
         'TELENUTRIÇÃO',
-        'ATÉ 75% OFF EM MEDICAMENTOS',
-        'MAIS DE 5500 FARMÁCIAS',
+        'DESCONTO DE ATÉ 75% EM MEDICAMENTO E PERFUMARIA',
+        'MAIS DE 5500 FARMÁCIAS CONVENIADAS',
+      ],
+    },
+    {
+      nome: 'ABRADEPA SAÚDE+ BRONZE',
+      preco: '35,90',
+      link: 'https://go.pontobrweb.com.br/6of',
+      cor: 'border-orange-300',
+      bg: 'bg-orange-50/30',
+      vantagens: [
+        'ACESSO ILIMITADO AO TÁ DODÓI 24H',
+        'REDE PARCEIRA EM TODO BRASIL',
+        'TELEMEDICINA LIVRE',
+        'TELEPSICOLOGIA',
+        'TELENUTRIÇÃO',
+        'DESCONTO DE ATÉ 75% EM MEDICAMENTO E PERFUMARIA',
+        'MAIS DE 5500 FARMÁCIAS CONVENIADAS',
       ],
     },
     {
@@ -42,10 +58,11 @@ export default function CartaoAbradepaPage() {
       vantagens: [
         'ACESSO ILIMITADO AO TÁ DODÓI 24H',
         'REDE PARCEIRA EM TODO BRASIL',
-        'TELEMEDICINA LIVRE E ESPECIALIZADA',
+        'TELEMEDICINA ESPECIALIZADA',
         'TELEPSICOLOGIA',
         'TELENUTRIÇÃO',
-        'DESCONTO EM MEDICAMENTO E PERFUMARIA',
+        'DESCONTO DE ATÉ 75% EM MEDICAMENTO E PERFUMARIA',
+        'MAIS DE 5500 FARMÁCIAS CONVENIADAS',
       ],
     },
     {
@@ -58,11 +75,12 @@ export default function CartaoAbradepaPage() {
       vantagens: [
         'ACESSO ILIMITADO AO TÁ DODÓI 24H',
         'REDE PARCEIRA EM TODO BRASIL',
-        'TELEMEDICINA LIVRE E ESPECIALIZADA',
+        'TELEMEDICINA ESPECIALIZADA',
         'TELEPERSONAL',
         'TELEPSICOLOGIA',
         'TELENUTRIÇÃO',
-        'DESCONTO EM MEDICAMENTO E PERFUMARIA',
+        'DESCONTO DE ATÉ 75% EM MEDICAMENTO E PERFUMARIA',
+        'MAIS DE 5500 FARMÁCIAS CONVENIADAS',
       ],
     },
   ];
@@ -79,7 +97,7 @@ export default function CartaoAbradepaPage() {
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
             Ao adquirir o cartão Abradepa, você apoia nossa iniciativa social e
-            garante mais saúde e bem-estar para você e mais 7 familiares!
+            garante mais saúde e bem-estar para você e mais 6 familiares!
           </p>
         </div>
       </section>
@@ -145,7 +163,7 @@ export default function CartaoAbradepaPage() {
                 {
                   icon: <Users className="text-green-500" />,
                   t: 'Cuidado para toda a família',
-                  d: 'o cartão inclui o Titular + 7 pessoas da família.',
+                  d: 'o cartão inclui o Titular + 6 pessoas da família.',
                 },
                 {
                   icon: <Globe className="text-purple-500" />,
@@ -180,6 +198,7 @@ export default function CartaoAbradepaPage() {
         </div>
       </section>
 
+      {/* PLANOS ATUALIZADOS */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -189,41 +208,41 @@ export default function CartaoAbradepaPage() {
             <div className="w-24 h-1.5 bg-abradepa-yellow mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {planos.map((plano, i) => (
               <div
                 key={i}
-                className={`relative flex flex-col p-10 rounded-[2.5rem] border-2 ${plano.cor} ${plano.bg} transition-all hover:shadow-xl hover:-translate-y-2`}
+                className={`relative flex flex-col p-8 rounded-[2.5rem] border-2 ${plano.cor} ${plano.bg} transition-all hover:shadow-xl hover:-translate-y-2`}
               >
                 {plano.destaque && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-abradepa-dark text-abradepa-yellow px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg">
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-abradepa-dark text-abradepa-yellow px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg whitespace-nowrap">
                     Mais Completo
                   </span>
                 )}
-                <h4 className="text-lg font-black text-abradepa-dark mb-8 text-center uppercase leading-tight min-h-12 flex items-center justify-center italic">
+                <h4 className="text-sm font-black text-abradepa-dark mb-6 text-center uppercase leading-tight min-h-10 flex items-center justify-center italic">
                   {plano.nome}
                 </h4>
-                <div className="text-center mb-10">
+                <div className="text-center mb-8">
                   <span className="text-slate-400 text-sm font-bold">R$</span>
-                  <span className="text-5xl font-black text-abradepa-dark">
+                  <span className="text-4xl font-black text-abradepa-dark">
                     {plano.preco.split(',')[0]}
                   </span>
                   <span className="text-lg font-black text-abradepa-dark">
                     ,{plano.preco.split(',')[1]}
                   </span>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2">
+                  <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">
                     Mensais
                   </p>
                 </div>
-                <ul className="space-y-4 mb-12 grow">
+                <ul className="space-y-3 mb-10 grow">
                   {plano.vantagens.map((item, idx) => (
                     <li
                       key={idx}
-                      className="flex gap-3 text-[11px] font-bold uppercase text-slate-600 leading-tight"
+                      className="flex gap-2 text-[10px] font-bold uppercase text-slate-600 leading-tight"
                     >
                       <CheckCircle2
-                        size={16}
-                        className="text-abradepa-yellow shrink-0"
+                        size={14}
+                        className="text-abradepa-yellow shrink-0 mt-0.5"
                       />
                       {item}
                     </li>
@@ -233,31 +252,53 @@ export default function CartaoAbradepaPage() {
                   href={plano.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-abradepa-dark text-white py-5 rounded-2xl font-black uppercase text-xs tracking-widest flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors shadow-lg"
+                  className="w-full bg-abradepa-dark text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors shadow-lg"
                 >
-                  Adquirir Agora <ArrowRight size={16} />
+                  Adquirir Agora <ArrowRight size={14} />
                 </a>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 max-w-3xl mx-auto bg-slate-900 text-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden border border-abradepa-yellow/30">
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-              <div className="w-20 h-20 bg-abradepa-yellow rounded-3xl flex items-center justify-center shadow-lg shrink-0">
-                <Dog size={40} className="text-abradepa-dark" />
+          {/* OPCIONAIS: SEGURO ICATU E PET */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* SEGURO ICATU INCLUÍDO AQUI */}
+            <div className="bg-slate-900 text-white p-8 rounded-[3rem] shadow-2xl relative overflow-hidden border border-abradepa-yellow/30 group">
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg shrink-0">
+                  <ShieldCheck size={32} className="text-abradepa-dark" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-black uppercase text-abradepa-yellow mb-2">
+                    PODE INCLUIR: Seguro de vida Icatu
+                  </h3>
+                  <p className="text-white/70 italic leading-relaxed text-sm">
+                    Inclua no Cartão por apenas{' '}
+                    <span className="text-white font-bold">R$ 10,00</span>{' '}
+                    seguro de vida Icatu para o Titular!
+                  </p>
+                </div>
               </div>
-              <div className="grow">
-                <h3 className="text-2xl font-black uppercase text-abradepa-yellow mb-2 tracking-tight">
-                  Pode incluir: Telemedicina PET (online)
-                </h3>
-                <p className="text-white/70 italic leading-relaxed text-sm">
-                  Inclua seu pet no Cartão por apenas{' '}
-                  <span className="text-white font-bold">
-                    R$ 10,00 adicionais
-                  </span>{' '}
-                  e tenha acesso a suporte médico-veterinário online sempre que
-                  precisar!
-                </p>
+            </div>
+
+            <div className="bg-abradepa-medium text-white p-8 rounded-[3rem] shadow-2xl relative overflow-hidden group">
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg shrink-0">
+                  <Dog size={32} className="text-abradepa-medium" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-black uppercase text-white mb-2">
+                    Pode incluir: Telemedicina PET (online)
+                  </h3>
+                  <p className="text-white/80 italic leading-relaxed text-sm">
+                    Inclua seu pet no Cartão por apenas{' '}
+                    <span className="text-white font-bold">
+                      R$ 10,00 adicionais
+                    </span>{' '}
+                    e tenha acesso a suporte médico-veterinário online sempre
+                    que precisar!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -269,7 +310,7 @@ export default function CartaoAbradepaPage() {
           <p className="text-[10px] uppercase font-black tracking-widest text-slate-400 leading-relaxed italic">
             * O Tá Dodói não substitui atendimentos de emergência presencial; o
             foco é acolhimento e direcionamento adequado. <br />
-            Cuidado extensivo para toda a família: Titular + 7 pessoas.
+            Cuidado extensivo para toda a família: Titular + 6 pessoas.
           </p>
         </div>
       </section>

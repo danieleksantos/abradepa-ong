@@ -17,12 +17,33 @@ export function Footer() {
             style={{ width: 'auto', height: 'auto' }}
             className="mb-6 brightness-0 invert"
           />
-          <p className="text-white font-bold text-sm mb-2 uppercase">
+          <p className="text-white font-bold text-sm mb-1 uppercase">
             ABRADEPA - Saúde Integral
           </p>
-          <p className="text-abradepa-yellow text-xs italic leading-relaxed">
+          <p className="text-abradepa-yellow text-xs italic leading-relaxed mb-6">
             Redesenhando Histórias!
           </p>
+
+          <div className="flex space-x-3">
+            <Link
+              href="https://www.instagram.com/abradepa_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white/5 rounded-lg hover:bg-abradepa-yellow hover:text-abradepa-dark transition-all"
+              aria-label="@abradepa_ no Instagram"
+            >
+              <Instagram size={18} />
+            </Link>
+            <Link
+              href="https://www.youtube.com/@simoneborgesdermopigmentacao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white/5 rounded-lg hover:bg-abradepa-yellow hover:text-abradepa-dark transition-all"
+              aria-label="YouTube Simone Borges"
+            >
+              <Youtube size={18} />
+            </Link>
+          </div>
         </div>
 
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
@@ -35,7 +56,7 @@ export function Footer() {
                 size={18}
                 className="shrink-0 text-abradepa-yellow mt-0.5"
               />
-              <p className="text-left">
+              <p className="text-left text-xs leading-relaxed">
                 Biocentro - R. Padre Anchieta, 1846
                 <br />
                 Sobreloja Sala 6 - Bigorrilho
@@ -43,109 +64,123 @@ export function Footer() {
                 CEP: 80.730-000 - Curitiba/PR
               </p>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <Mail size={18} className="shrink-0 text-abradepa-yellow" />
-                <p className="text-left text-xs">contatoabradepa@gmail.com </p>
+                <Mail size={16} className="shrink-0 text-abradepa-yellow" />
+                <p className="text-left text-xs">contatoabradepa@gmail.com</p>
               </div>
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <Phone size={18} className="shrink-0 text-abradepa-yellow" />
-                <p className="text-left text-xs">(41) 99154-1319 </p>
+                <Phone size={16} className="shrink-0 text-abradepa-yellow" />
+                <p className="text-left text-xs">(41) 99591-2817</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h4 className="font-bold text-lg mb-6 text-abradepa-yellow uppercase tracking-wider">
-            Navegação
+        <div className="md:col-span-2">
+          <h4 className="font-bold text-lg mb-6 text-abradepa-yellow uppercase tracking-wider text-center md:text-left">
+            Navegação e Serviços
           </h4>
-          <ul className="space-y-4 text-sm font-medium">
-            <li>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-[11px] md:text-sm font-medium justify-items-start md:justify-items-start px-8 md:px-0">
+            <div className="flex flex-col gap-4">
               <Link
                 href="/"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="hover:text-abradepa-yellow transition-colors italic uppercase font-black"
               >
                 Home
               </Link>
-            </li>
-            <li>
+              <Link
+                href="/sobre"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Nossa história
+              </Link>
+
               <Link
                 href="/transparencia"
                 className="hover:text-abradepa-yellow transition-colors"
               >
                 Transparência
               </Link>
-            </li>
-            <li>
+
               <Link
                 href="/como-apoiar"
                 className="hover:text-abradepa-yellow transition-colors"
               >
-                Como apoiar
+                Como Apoiar
               </Link>
-            </li>
-            <li>
+              <Link
+                href="/capacitacao"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Palestras e Cursos
+              </Link>
               <Link
                 href="/blog"
                 className="hover:text-abradepa-yellow transition-colors"
               >
                 Blog
               </Link>
-            </li>
-            <li>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Link
+                href="/anaplastologia"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Anaplastologia
+              </Link>
+              <Link
+                href="/dermopigmentacao"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Dermopigmentação
+              </Link>
+              <Link
+                href="/terapia-floral"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Terapia Floral
+              </Link>
+
+              <Link
+                href="/projetos-e-parcerias"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Projetos e Parcerias
+              </Link>
+
+              <Link
+                href="/cartao-abradepa"
+                className="hover:text-abradepa-yellow transition-colors"
+              >
+                Cartão Saúde+
+              </Link>
               <Link
                 href="/loja"
                 className="hover:text-abradepa-yellow transition-colors"
               >
                 Loja Virtual
               </Link>
-            </li>
-            <li>
-              <Link
-                href="/cursos-e-beneficios"
-                className="hover:text-abradepa-yellow transition-colors"
-              >
-                Cursos e Benefícios
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h4 className="font-bold text-lg mb-6 text-abradepa-yellow uppercase tracking-wider">
-            Siga-nos
-          </h4>
-          <div className="flex space-x-4">
-            <Link
-              href="https://www.instagram.com/abradepa_/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/10 rounded-full hover:bg-abradepa-yellow hover:text-abradepa-dark transition-all"
-              aria-label="@abradepa_ no Instagram"
-            >
-              <Instagram size={20} />
-            </Link>
-            <Link
-              href="https://www.youtube.com/@simoneborgesdermopigmentacao"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/10 rounded-full hover:bg-abradepa-yellow hover:text-abradepa-dark transition-all"
-              aria-label="YouTube Simone Borges"
-            >
-              <Youtube size={20} />
-            </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] md:text-xs text-abradepa-pale/60 tracking-wider">
-        <div className="text-center md:text-left mb-4 md:mb-0 font-bold">
-          <p>© 2026 - Todos os Direitos reservados ABRADEPA</p>
+      <div className="max-w-7xl mx-auto pt-8 pb-20 md:pb-8 flex flex-col items-center text-center  md:text-xs text-abradepa-pale/60 tracking-wider space-y-4 md:space-y-2">
+        <div className="font-bold text-[14px]">
+          <p>© 2026 - ABRADEPA | Todos os direitos reservados</p>
         </div>
-        <p className="text-center md:text-right font-bold">
-          Desenvolvido por Daniele K. Santos
-        </p>
+        <div className="font-bold text-[12px]">
+          Desenvolvido por{' '}
+          <Link
+            href="https://danieleksantos.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-abradepa-yellow hover:text-white transition-colors underline underline-offset-4 decoration-white/20 "
+          >
+            Daniele K. Santos
+          </Link>
+        </div>
       </div>
     </footer>
   );
