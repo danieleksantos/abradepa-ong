@@ -14,7 +14,7 @@ export function Footer() {
             alt="Logo ABRADEPA"
             width={120}
             height={120}
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: '120px', height: '120px' }}
             className="mb-6 brightness-0 invert"
           />
           <p className="text-white font-bold text-sm mb-1 uppercase">

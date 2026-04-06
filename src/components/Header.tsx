@@ -27,6 +27,7 @@ export function Header() {
               height={70}
               priority
               className="object-contain"
+              style={{ width: '70px', height: '70px' }}
             />
           </Link>
 

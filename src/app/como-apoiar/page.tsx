@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  CreditCard,
   CheckCircle2,
   Users,
   Heart,
@@ -127,13 +126,10 @@ export default function ComoApoiarPage() {
             </div>
           </div>
 
-          <div className="bg-slate-50 rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div className="bg-slate-50 rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-12 relative z-10">
               <div className="max-w-2xl">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 bg-abradepa-yellow rounded-xl flex items-center justify-center shadow-sm">
-                    <CreditCard className="text-abradepa-dark" size={20} />
-                  </div>
                   <h3 className="text-xl font-black text-abradepa-dark uppercase">
                     Cartão de Benefícios ABRADEPA Saúde+
                   </h3>
@@ -145,7 +141,7 @@ export default function ComoApoiarPage() {
                   associação.
                 </p>
 
-                <div className="flex flex-wrap gap-x-6 gap-y-2 mb-8">
+                <div className="flex flex-wrap gap-x-6 gap-y-4 mb-8">
                   {[
                     'Telemedicina 24h',
                     'Apoio Psicológico',
@@ -179,11 +175,17 @@ export default function ComoApoiarPage() {
                 </Link>
               </div>
 
-              <div className="hidden lg:block shrink-0 opacity-20">
-                <CreditCard
-                  size={120}
-                  className="text-abradepa-dark rotate-12"
-                />
+              <div className="hidden lg:block shrink-0 relative group">
+                <div className="absolute inset-0 bg-abradepa-yellow/10 blur-3xl rounded-full scale-125 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Link href="/cartao-abradepa">
+                  <Image
+                    src="/cartao-abradepa.png"
+                    alt="Cartão Abradepa Saúde+"
+                    width={280}
+                    height={180}
+                    className="relative drop-shadow-[0_15px_30px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:rotate-2"
+                  />
+                </Link>
               </div>
             </div>
           </div>

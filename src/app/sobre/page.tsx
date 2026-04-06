@@ -1,7 +1,9 @@
 'use client';
 
-import { Users, Target, Eye, Heart } from 'lucide-react';
+import { Users, Target, Eye, Heart, Plus } from 'lucide-react';
 import { Founder } from '@/components/Founder';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function SobrePage() {
   const diretoria = [
@@ -138,7 +140,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white border-t border-slate-50">
+      <section className="pt-20 pb-10 px-4 bg-white border-t border-slate-50">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <h2 className="text-3xl font-black text-abradepa-dark uppercase tracking-tight mb-6">
@@ -163,6 +165,60 @@ export default function SobrePage() {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 px-4 bg-white">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-0 md:gap-6">
+          <div className="text-center md:text-left order-1 md:order-2 flex flex-col">
+            <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
+              Cartão Abradepa Saúde+
+            </h3>
+            <p className="text-slate-400 text-[9px] uppercase tracking-widest font-bold opacity-80 mb-0 md:mb-4">
+              Cuidado integral para você e sua família
+            </p>
+
+            <div className="hidden md:block">
+              <Link
+                href="/cartao-abradepa"
+                className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
+              >
+                <span className="border-b border-abradepa-yellow pb-0.5">
+                  Adquirir agora
+                </span>
+                <Plus size={10} className="text-abradepa-yellow" />
+              </Link>
+            </div>
+          </div>
+
+          <Link
+            href="/cartao-abradepa"
+            className="block group shrink-0 order-2 md:order-1"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-abradepa-yellow/10 blur-2xl rounded-full scale-110 group-hover:bg-abradepa-yellow/20 transition-all duration-500" />
+              <Image
+                src="/cartao-abradepa.png"
+                alt="Cartão Abradepa Saúde+"
+                width={240}
+                height={160}
+                className="relative drop-shadow-[0_10px_20px_rgba(0,0,0,0.08)] group-hover:drop-shadow-[0_20px_40px_rgba(255,210,0,0.15)] transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1"
+                style={{ width: '220px', height: 'auto' }}
+              />
+            </div>
+          </Link>
+
+          <div className="text-center order-3 md:hidden">
+            <Link
+              href="/cartao-abradepa"
+              className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
+            >
+              <span className="border-b border-abradepa-yellow pb-0.5 ">
+                Adquirir agora
+              </span>
+              <Plus size={10} className="text-abradepa-yellow" />
+            </Link>
           </div>
         </div>
       </section>
