@@ -87,7 +87,7 @@ export default function CartaoAbradepaPage() {
         'TELEPSICOLOGIA',
         'TELENUTRIÇÃO',
         'ATÉ 75% OFF FARMÁCIAS',
-        'SEGURO DE VIDA TITULAR',
+        'SEGURO DE VIDA PARA O TITULAR',
       ],
     },
   ];

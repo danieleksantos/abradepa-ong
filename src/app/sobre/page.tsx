@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function SobrePage() {
   const diretoria = [
     { name: 'Simone Borges', role: 'Presidente' },
-    { name: 'Gisele Lázara de Farias Borges', role: 'Vice-Presidente' },
+    { name: 'Gisele Lazara de Faria Borges', role: 'Vice-Presidente' },
     { name: 'Rita Schunemann', role: 'Secretária Geral' },
     { name: 'Georgia Teixeira', role: 'Diretora Financeira' },
   ];
