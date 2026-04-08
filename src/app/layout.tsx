@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { WhatsappButton } from '@/components/WhatsappButton';
 import { Metadata } from 'next';
+import './globals.css';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
