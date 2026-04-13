@@ -177,9 +177,9 @@ export function Objectives() {
                     {area.icon}
                   </div>
 
-                  <h4 className="text-lg font-black text-abradepa-dark mb-6 leading-tight uppercase tracking-tight min-h-14 flex items-center">
+                  <h3 className="text-lg font-black text-abradepa-dark mb-6 leading-tight uppercase tracking-tight min-h-14 flex items-center">
                     {area.title}
-                  </h4>
+                  </h3>
 
                   <ul className="space-y-4 grow mb-10">
                     {area.items.map((item, i) => (

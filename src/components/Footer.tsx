@@ -30,7 +30,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white/5 rounded-lg hover:bg-abradepa-yellow hover:text-abradepa-dark transition-all"
-              aria-label="@abradepa_ no Instagram"
+              aria-label="Siga a Abradepa no Instagram"
             >
               <Instagram size={18} />
             </Link>
@@ -39,7 +39,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white/5 rounded-lg hover:bg-abradepa-yellow hover:text-abradepa-dark transition-all"
-              aria-label="YouTube Simone Borges"
+              aria-label="Assista nosso canal no YouTube"
             >
               <Youtube size={18} />
             </Link>
@@ -47,14 +47,15 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h4 className="font-bold text-lg mb-6 text-abradepa-yellow uppercase tracking-wider">
+          <h3 className="font-bold text-lg mb-6 text-abradepa-yellow uppercase tracking-wider">
             Sede Curitiba
-          </h4>
+          </h3>
           <div className="space-y-4 text-sm text-white w-full">
             <div className="flex items-start gap-3 justify-center md:justify-start">
               <MapPin
                 size={18}
                 className="shrink-0 text-abradepa-yellow mt-0.5"
+                aria-hidden="true"
               />
               <p className="text-left text-xs leading-relaxed">
                 Biocentro - R. Padre Anchieta, 1846
@@ -66,11 +67,19 @@ export function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <Mail size={16} className="shrink-0 text-abradepa-yellow" />
+                <Mail
+                  size={16}
+                  className="shrink-0 text-abradepa-yellow"
+                  aria-hidden="true"
+                />
                 <p className="text-left text-xs">contatoabradepa@gmail.com</p>
               </div>
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <Phone size={16} className="shrink-0 text-abradepa-yellow" />
+                <Phone
+                  size={16}
+                  className="shrink-0 text-abradepa-yellow"
+                  aria-hidden="true"
+                />
                 <p className="text-left text-xs">(41) 99591-2817</p>
               </div>
             </div>
@@ -78,10 +87,10 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h4 className="font-bold text-lg mb-6 text-abradepa-yellow uppercase tracking-wider text-center md:text-left">
+          <h3 className="font-bold text-lg mb-6 text-abradepa-yellow uppercase tracking-wider text-center md:text-left">
             Navegação e Serviços
-          </h4>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-[11px] md:text-sm font-medium justify-items-start md:justify-items-start px-8 md:px-0">
+          </h3>
+          <nav className="grid grid-cols-2 gap-x-8 gap-y-4 text-[11px] md:text-sm font-medium justify-items-start md:justify-items-start px-8 md:px-0">
             <div className="flex flex-col gap-4">
               <Link
                 href="/"
@@ -95,14 +104,12 @@ export function Footer() {
               >
                 Nossa história
               </Link>
-
               <Link
                 href="/transparencia"
                 className="hover:text-abradepa-yellow transition-colors"
               >
                 Transparência
               </Link>
-
               <Link
                 href="/como-apoiar"
                 className="hover:text-abradepa-yellow transition-colors"
@@ -141,14 +148,12 @@ export function Footer() {
               >
                 Terapia Floral
               </Link>
-
               <Link
                 href="/projetos-e-parcerias"
                 className="hover:text-abradepa-yellow transition-colors"
               >
                 Projetos e Parcerias
               </Link>
-
               <Link
                 href="/cartao-abradepa"
                 className="hover:text-abradepa-yellow transition-colors"
@@ -162,11 +167,11 @@ export function Footer() {
                 Loja Virtual
               </Link>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto pt-8 pb-20 md:pb-8 flex flex-col items-center text-center  md:text-xs text-abradepa-pale/60 tracking-wider space-y-4 md:space-y-2">
+      <div className="max-w-7xl mx-auto pt-8 pb-20 md:pb-8 flex flex-col items-center text-center md:text-xs text-abradepa-pale/60 tracking-wider space-y-4 md:space-y-2">
         <div className="font-bold text-[14px]">
           <p>© 2026 - ABRADEPA | Todos os direitos reservados</p>
         </div>
@@ -176,6 +181,7 @@ export function Footer() {
             href="https://danieleksantos.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Ir para o portfólio de Daniele K. Santos, desenvolvedora deste site"
             className="text-abradepa-yellow hover:text-white transition-colors underline underline-offset-4 decoration-white/20 "
           >
             Daniele K. Santos

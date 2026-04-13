@@ -19,7 +19,11 @@ export function Header() {
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50 py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="shrink-0 flex items-center">
+          <Link
+            href="/"
+            className="shrink-0 flex items-center"
+            aria-label="Ir para a página inicial da ABRADEPA"
+          >
             <Image
               src="/logo-abradepa.png"
               alt="Logo ABRADEPA"
@@ -27,11 +31,13 @@ export function Header() {
               height={70}
               priority
               className="object-contain"
-              style={{ width: '70px', height: '70px' }}
             />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <nav
+            className="hidden md:flex items-center space-x-4 lg:space-x-6"
+            aria-label="Menu principal"
+          >
             <Link href="/" className={linkStyle}>
               Home
             </Link>
@@ -47,7 +53,11 @@ export function Header() {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className={linkStyle}>
+              <button
+                className={linkStyle}
+                aria-haspopup="true"
+                aria-expanded={isDropdownOpen}
+              >
                 Objetivos
                 <ChevronDown
                   size={14}
@@ -104,7 +114,10 @@ export function Header() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-abradepa-dark focus:outline-none"
-              aria-label="Abrir menu"
+              aria-label={
+                isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'
+              }
+              aria-expanded={isOpen}
             >
               <svg
                 className="w-8 h-8"
@@ -134,7 +147,10 @@ export function Header() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-300 z-50 overflow-y-auto max-h-[90vh]">
+        <nav
+          className="md:hidden bg-white border-b border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-300 z-50 overflow-y-auto max-h-[90vh]"
+          aria-label="Menu móvel"
+        >
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
@@ -158,9 +174,9 @@ export function Header() {
           </Link>
 
           <div className="py-2 space-y-3">
-            <p className="block text-abradepa-dark font-medium py-2 text-lg">
+            <span className="block text-abradepa-dark font-medium py-2 text-lg">
               Objetivos
-            </p>
+            </span>
             <div className="pl-4 space-y-4 border-l-2 border-slate-100">
               <Link
                 href="/anaplastologia"
@@ -238,7 +254,7 @@ export function Header() {
               Cursos e Benefícios
             </Link>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );
