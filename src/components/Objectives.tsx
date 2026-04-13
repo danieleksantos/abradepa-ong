@@ -72,7 +72,7 @@ const actingAreas = [
   },
   {
     title: 'Psicopedagogia',
-    slug: 'https://wa.me/5541995912817', // Celular Abradepa
+    slug: 'https://wa.me/5541995912817',
     isExternal: true,
     items: [
       'Método Fônico Mediado.',
@@ -84,7 +84,7 @@ const actingAreas = [
   },
   {
     title: 'Apoio Psicológico e Terapias Complementares',
-    slug: 'https://wa.me/5541995912817', // Celular Abradepa
+    slug: 'https://wa.me/5541995912817',
     isExternal: true,
     items: ['Psicólogos.', 'Auriculoterapia.', 'Reiki.'],
     icon: <HeartPulse size={28} />,
@@ -130,11 +130,17 @@ export function Objectives() {
           </div>
 
           <div className="flex gap-3">
-            <button className="swiper-prev-btn p-3 rounded-full bg-abradepa-yellow border border-abradepa-yellow text-abradepa-dark hover:bg-abradepa-dark hover:border-abradepa-dark hover:text-white transition-all shadow-md active:scale-90 shrink-0 cursor-pointer">
+            <button
+              aria-label="Ver pilar anterior"
+              className="swiper-prev-btn p-3 rounded-full bg-abradepa-yellow border border-abradepa-yellow text-abradepa-dark hover:bg-abradepa-dark hover:border-abradepa-dark hover:text-white transition-all shadow-md active:scale-90 shrink-0 cursor-pointer"
+            >
               <ChevronLeft size={24} strokeWidth={3} />
             </button>
 
-            <button className="swiper-next-btn p-3 rounded-full bg-abradepa-yellow border border-abradepa-yellow text-abradepa-dark hover:bg-abradepa-dark hover:border-abradepa-dark hover:text-white transition-all shadow-md active:scale-90 shrink-0 cursor-pointer">
+            <button
+              aria-label="Ver próximo pilar"
+              className="swiper-next-btn p-3 rounded-full bg-abradepa-yellow border border-abradepa-yellow text-abradepa-dark hover:bg-abradepa-dark hover:border-abradepa-dark hover:text-white transition-all shadow-md active:scale-90 shrink-0 cursor-pointer"
+            >
               <ChevronRight size={24} strokeWidth={3} />
             </button>
           </div>
@@ -196,6 +202,7 @@ export function Objectives() {
                         href={area.slug}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Mais informações sobre ${area.title}`}
                         className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors cursor-pointer"
                       >
                         <span className="border-b-2 border-abradepa-yellow pb-0.5">
@@ -206,6 +213,7 @@ export function Objectives() {
                     ) : (
                       <Link
                         href={area.slug}
+                        aria-label={`Mais informações sobre ${area.title}`}
                         className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors"
                       >
                         <span className="border-b-2 border-abradepa-yellow pb-0.5">

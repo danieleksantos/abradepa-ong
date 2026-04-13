@@ -31,12 +31,12 @@ export default function Home() {
             <div className="lg:col-span-7 text-center lg:text-left">
               <h1 className="animate-fade-in mb-8 text-4xl font-extrabold text-white md:text-7xl tracking-tight leading-[1.1]">
                 ABRADEPA <br />
-                <span className="text-abradepa-pale text-3xl md:text-5xl block mt-2">
+                <span className="text-abradepa-pale text-2xl md:text-4xl block mt-2">
                   Saúde Integral
                 </span>
               </h1>
 
-              <p className="mx-auto lg:mx-0 mb-12 max-w-2xl text-lg text-white md:text-xl leading-relaxed font-medium lg:font-light">
+              <p className="mx-auto lg:mx-0 mb-12 max-w-2xl text-lg text-white md:text-xl leading-relaxed lg:font-light">
                 Transformando vidas ao ampliar o acesso à saúde, com consultas
                 médicas acessíveis, anaplastologia (próteses estéticas
                 personalizadas), terapias integrativas e dermopigmentação
@@ -46,7 +46,7 @@ export default function Home() {
               <div className="flex flex-col justify-center lg:justify-start gap-6 sm:flex-row">
                 <Link
                   href="/sobre"
-                  className="btn-primary px-10 py-4 text-lg group inline-flex items-center justify-center hover:scale-105"
+                  className="btn-primary px-8 py-3 text-base font-semibold group inline-flex items-center justify-center hover:scale-105"
                 >
                   Conheça nossa história
                   <ArrowRight
@@ -59,7 +59,7 @@ export default function Home() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-secondary px-10 py-4 text-lg hover:scale-105"
+                  className="btn-secondary px-8 py-3 text-base font-semibold hover:scale-105"
                 >
                   <MessageCircle size={20} /> Fale Conosco
                 </a>
@@ -92,10 +92,10 @@ export default function Home() {
       >
         <div className="flex flex-col items-center justify-between gap-8 rounded-3xl border border-slate-100 bg-white p-8 shadow-xl md:flex-row md:p-12">
           <div className="flex-1 text-center md:text-left">
-            <h2 className="mb-4 text-3xl font-bold text-abradepa-dark uppercase tracking-tight">
+            <h2 className="mb-4 text-abradepa-dark tracking-tight text-2xl md:text-3xl font-semibold normal-case">
               Acesso à Saúde
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-base text-slate-500">
               Consultas com Médicos, Psicólogos e Nutricionistas.
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
             <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
               Cartão Abradepa Saúde+
             </h3>
-            <p className="text-slate-400 text-[9px] uppercase tracking-widest font-bold opacity-80 mb-0 md:mb-4">
+            <p className="text-slate-400 text-[9px] uppercase tracking-[0.15em] font-bold opacity-80 mb-0 md:mb-4">
               Cuidado integral para você e sua família
             </p>
 

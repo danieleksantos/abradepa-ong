@@ -47,7 +47,7 @@ export default function SobrePage() {
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
             <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-              <div className="flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-[2.5rem] transition-all group">
+              <div className="flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl transition-all group">
                 <div className="w-14 h-14 bg-abradepa-yellow rounded-2xl flex items-center justify-center mb-8 transition-transform duration-300 group-hover:rotate-6 shrink-0 shadow-lg shadow-abradepa-yellow/20">
                   <Target size={30} className="text-abradepa-dark" />
                 </div>
@@ -66,7 +66,7 @@ export default function SobrePage() {
                 </p>
               </div>
 
-              <div className="flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-[2.5rem] transition-all group">
+              <div className="flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl transition-all group">
                 <div className="w-14 h-14 bg-abradepa-yellow rounded-2xl flex items-center justify-center mb-8 transition-transform duration-300 group-hover:-rotate-6 shrink-0 shadow-lg shadow-abradepa-yellow/20">
                   <Eye size={30} className="text-abradepa-dark" />
                 </div>
@@ -175,7 +175,7 @@ export default function SobrePage() {
             <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
               Cartão Abradepa Saúde+
             </h3>
-            <p className="text-slate-400 text-[9px] uppercase tracking-widest font-bold opacity-80 mb-0 md:mb-4">
+            <p className="text-slate-400 text-[9px] uppercase tracking-[0.15em] font-bold opacity-80 mb-0 md:mb-4">
               Cuidado integral para você e sua família
             </p>
 
