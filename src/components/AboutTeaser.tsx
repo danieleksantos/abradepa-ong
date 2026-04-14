@@ -28,13 +28,14 @@ export function AboutTeaser() {
           </div>
 
           <div className="flex flex-col text-left">
-            <span className="text-abradepa-medium font-bold uppercase tracking-[0.2em] text-sm mb-4">
+            <span className="text-abradepa-dark font-black uppercase tracking-[0.2em] text-[16px] mb-4 border-l-4 border-abradepa-yellow pl-3 inline-block">
+              {' '}
               Nossa Essência
             </span>
 
             <h2 className="text-3xl md:text-5xl font-extrabold text-abradepa-dark mb-8 leading-tight">
               Um ambiente para todos, com foco na
-              <span className="text-abradepa-medium italic">
+              <span className="text-abradepa-dark italic underline decoration-abradepa-yellow decoration-4 underline-offset-4">
                 {' '}
                 Saúde Integral.{' '}
               </span>

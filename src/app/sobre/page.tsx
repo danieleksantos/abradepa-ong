@@ -23,7 +23,7 @@ export default function SobrePage() {
         <div className="mx-auto max-w-7xl relative z-10 text-center lg:text-left">
           <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
             <Users className="text-abradepa-yellow" size={20} />
-            <span className="text-abradepa-yellow text-xs font-bold uppercase tracking-[0.2em]">
+            <span className="text-grey-700 text-xs font-bold uppercase tracking-[0.2em]">
               Nossa Essência
             </span>
           </div>

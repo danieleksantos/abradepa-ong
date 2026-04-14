@@ -20,7 +20,7 @@ export function Footer() {
           <p className="text-white font-black text-sm mb-1 uppercase tracking-wider">
             ABRADEPA - Saúde Integral
           </p>
-          <p className="text-gray-300 text-sm font-bold leading-relaxed mb-6">
+          <p className="text-white text-sm font-bold leading-relaxed mb-6">
             Redesenhando Histórias!
           </p>
 
