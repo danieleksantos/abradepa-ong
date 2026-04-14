@@ -26,6 +26,7 @@ const actingAreas = [
   {
     title: 'Cartão de Benefícios ABRADEPA Saúde+',
     slug: '/cartao-abradepa',
+    cta: 'Conhecer o Cartão ABRADEPA',
     items: [
       'Cuidado acessível para você, família e seu Pet.',
       'Médicos, psicólogos e nutricionistas online.',
@@ -38,6 +39,7 @@ const actingAreas = [
   {
     title: 'Anaplastologia',
     slug: '/anaplastologia',
+    cta: 'Saiber mais sobre Anaplastologia',
     items: [
       'Próteses personalizadas (dedos, orelhas, nariz e olhos).',
       'Próteses oncológicas de Aréolas e mamas externas.',
@@ -50,6 +52,7 @@ const actingAreas = [
   {
     title: 'Dermopigmentação Paramédica',
     slug: '/dermopigmentacao',
+    cta: 'Saber mais sobre Dermopigmentação',
     items: [
       'Reconstrução de aréolas pós-mastectomia.',
       'Reconstrução de cicatrizes e queimaduras.',
@@ -61,6 +64,7 @@ const actingAreas = [
   {
     title: 'Terapia Floral Integrativa',
     slug: '/terapia-floral',
+    cta: 'Ver mais detalhes sobre Terapia Floral',
     isExternal: true,
     items: [
       'Atendimento para crianças, adolescentes, adultos e idosos.',
@@ -73,6 +77,7 @@ const actingAreas = [
   {
     title: 'Psicopedagogia',
     slug: 'https://wa.me/5541995912817',
+    cta: 'Agendar consulta Psicopedagogica',
     isExternal: true,
     items: [
       'Método Fônico Mediado.',
@@ -85,6 +90,7 @@ const actingAreas = [
   {
     title: 'Apoio Psicológico e Terapias Complementares',
     slug: 'https://wa.me/5541995912817',
+    cta: 'Solicitar Apoio Terapêutico',
     isExternal: true,
     items: ['Psicólogos.', 'Auriculoterapia.', 'Reiki.'],
     icon: <HeartPulse size={28} />,
@@ -93,6 +99,7 @@ const actingAreas = [
   {
     title: 'Projetos e Parcerias',
     slug: '/projetos-e-parcerias',
+    cta: 'Ver Projetos Sociais',
     items: [
       'Programas e projetos sociais estruturados.',
       'Parcerias públicas e privadas.',
@@ -104,6 +111,7 @@ const actingAreas = [
   {
     title: 'Capacitação Profissional e Conscientização',
     slug: '/capacitacao',
+    cta: 'Conhecer Cursos e Palestras',
     items: [
       'Cursos, eventos, seminários e palestras.',
       'Materiais informativos para profissionais.',
@@ -202,22 +210,22 @@ export function Objectives() {
                         href={area.slug}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`Mais informações sobre ${area.title}`}
+                        aria-label={area.cta}
                         className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors cursor-pointer"
                       >
                         <span className="border-b-2 border-abradepa-yellow pb-0.5">
-                          Mais informações
+                          {area.cta}
                         </span>
                         <Plus size={14} className="text-abradepa-yellow" />
                       </a>
                     ) : (
                       <Link
                         href={area.slug}
-                        aria-label={`Mais informações sobre ${area.title}`}
+                        aria-label={area.cta}
                         className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-abradepa-dark group-hover:text-abradepa-medium transition-colors"
                       >
                         <span className="border-b-2 border-abradepa-yellow pb-0.5">
-                          Mais informações
+                          {area.cta}
                         </span>
                         <Plus size={14} className="text-abradepa-yellow" />
                       </Link>
