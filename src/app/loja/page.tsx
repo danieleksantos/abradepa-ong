@@ -84,7 +84,7 @@ export default async function LojaPage() {
 
                   <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-50">
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                      <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">
                         Valor
                       </span>
                       <span className="text-2xl font-black text-abradepa-dark">

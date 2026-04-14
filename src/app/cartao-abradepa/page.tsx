@@ -182,14 +182,14 @@ export default function CartaoAbradepaPage() {
                   {plano.nome}
                 </h4>
                 <div className="text-center mb-8">
-                  <span className="text-slate-400 text-sm font-bold">R$</span>
+                  <span className="text-slate-600 text-sm font-bold">R$</span>
                   <span className="text-4xl font-black text-abradepa-dark">
                     {plano.preco.split(',')[0]}
                   </span>
                   <span className="text-lg font-black text-abradepa-dark">
                     ,{plano.preco.split(',')[1]}
                   </span>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">
+                  <p className="text-[10px] text-slate-600 font-bold uppercase tracking-widest mt-1">
                     Mensais
                   </p>
                 </div>
@@ -236,7 +236,7 @@ export default function CartaoAbradepaPage() {
                   {plano.nome}
                 </h4>
                 <div className="text-center mb-8">
-                  <span className="text-slate-400 text-sm font-bold">R$</span>
+                  <span className="text-slate-600 text-sm font-bold">R$</span>
                   <span className="text-5xl font-black">
                     {plano.preco.split(',')[0]}
                   </span>
@@ -300,7 +300,7 @@ export default function CartaoAbradepaPage() {
 
       <section className="pb-10 px-4 bg-white text-center">
         <div className="max-w-4xl mx-auto pt-10 border-t border-slate-100">
-          <p className="text-[10px] uppercase font-black tracking-widest text-slate-400 leading-relaxed italic">
+          <p className="text-[10px] uppercase font-black tracking-widest text-slate-600 leading-relaxed italic">
             * O Programa Tá Dodói não substitui atendimentos de emergência
             presencial.
           </p>

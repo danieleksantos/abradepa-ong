@@ -64,7 +64,7 @@ export function Supporters() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-xs text-slate-400 italic">
+          <p className="text-xs text-slate-600 italic">
             Apoiamos e somos apoiados por iniciativas que garantem o direito à
             reconstrução e dignidade para todos.
           </p>

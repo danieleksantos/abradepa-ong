@@ -91,7 +91,7 @@ export default async function ArtigoPage({ params }: Props) {
             <span className="bg-abradepa-yellow/20 text-abradepa-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
               {post.tag || 'Informativo'}
             </span>
-            <div className="flex items-center gap-2 text-slate-400 text-[10px] font-bold uppercase">
+            <div className="flex items-center gap-2 text-slate-600 text-[10px] font-bold uppercase">
               <Calendar size={14} />
               {post.date
                 ? new Date(post.date).toLocaleDateString('pt-BR', {
@@ -137,7 +137,7 @@ export default async function ArtigoPage({ params }: Props) {
 
         <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-2 text-slate-400">
+            <div className="flex items-center gap-2 text-slate-600">
               <Tag size={18} />
               <span className="text-xs font-bold uppercase tracking-widest">
                 Saúde Integral • ABRADEPA • {post.tag || 'Social'}

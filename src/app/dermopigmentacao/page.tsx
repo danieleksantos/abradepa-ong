@@ -156,7 +156,7 @@ export default function DermopigmentacaoPage() {
                     className="object-cover"
                   />
                 </div>
-                <p className="text-[10px] font-black uppercase text-slate-400 tracking-widest text-center italic">
+                <p className="text-[10px] font-black uppercase text-slate-600 tracking-widest text-center italic">
                   Tratamento de Vitiligo e Hipopigmentação
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default function DermopigmentacaoPage() {
                     className="object-cover"
                   />
                 </div>
-                <p className="text-[10px] font-black uppercase text-slate-400 tracking-widest text-center italic">
+                <p className="text-[10px] font-black uppercase text-slate-600 tracking-widest text-center italic">
                   Reconstrução de Estrias
                 </p>
               </div>
@@ -182,7 +182,7 @@ export default function DermopigmentacaoPage() {
                     className="object-cover"
                   />
                 </div>
-                <p className="text-[10px] font-black uppercase text-slate-400 tracking-widest text-center italic">
+                <p className="text-[10px] font-black uppercase text-slate-600 tracking-widest text-center italic">
                   Tricopigmentação Capilar
                 </p>
               </div>

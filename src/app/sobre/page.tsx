@@ -175,7 +175,7 @@ export default function SobrePage() {
             <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
               Cartão Abradepa Saúde+
             </h3>
-            <p className="text-slate-400 text-[9px] uppercase tracking-[0.15em] font-bold opacity-80 mb-0 md:mb-4">
+            <p className="text-slate-600 text-[9px] uppercase tracking-[0.15em] font-bold opacity-80 mb-0 md:mb-4">
               Cuidado integral para você e sua família
             </p>
 

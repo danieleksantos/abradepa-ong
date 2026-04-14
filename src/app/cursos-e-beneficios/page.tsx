@@ -219,7 +219,7 @@ export default function CursosEBeneficiosPage() {
           <p className="text-abradepa-medium font-black text-xs uppercase tracking-[0.4em] italic mb-4">
             Abradepa Saúde Integral
           </p>
-          <p className="text-slate-400 text-sm font-light uppercase tracking-widest">
+          <p className="text-slate-600 text-sm font-light uppercase tracking-widest">
             Redesenhando Histórias!
           </p>
         </div>

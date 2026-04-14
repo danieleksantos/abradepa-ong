@@ -185,7 +185,7 @@ export default function TransparenciaPage() {
               <h4 className="font-black text-lg mb-4 text-abradepa-yellow uppercase">
                 Canais Oficiais
               </h4>
-              <p className="text-xs text-slate-400 mb-8 leading-relaxed font-medium">
+              <p className="text-xs text-slate-600 mb-8 leading-relaxed font-medium">
                 Para suporte financeiro ou institucional, utilize os e-mails
                 diretos da nossa tesouraria e presidência.
               </p>

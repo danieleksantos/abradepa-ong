@@ -5,7 +5,8 @@
   --color-abradepa-medium: #03989e;  
   --color-abradepa-light: #40e0d0;   
   --color-abradepa-pale: #59e1e4;   
-  --color-abradepa-yellow: #fcee21;  
+  --color-abradepa-yellow: #fcee21; 
+  --color-abradepa-btn-text: #014d51; 
 
   --font-montserrat: var(--font-montserrat), ui-sans-serif, system-ui;
 
@@ -35,12 +36,12 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-abradepa-yellow text-abradepa-dark font-bold px-6 py-3 
+    @apply bg-abradepa-yellow text-abradepa-btn-text font-bold px-6 py-3 
            rounded-full transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2;
   }
 
   .btn-secondary {
-   @apply bg-white text-abradepa-dark font-bold px-6 py-3 
+   @apply bg-white text-abradepa-btn-text font-bold px-6 py-3 
            rounded-full transition-all  
            shadow-md hover:shadow-lg flex items-center justify-center gap-2 
            border border-slate-100;

@@ -42,7 +42,7 @@ export function BlogCard({
       </div>
 
       <div className="p-8 flex flex-col grow">
-        <div className="flex items-center gap-2 text-slate-400 text-[10px] font-bold uppercase mb-4">
+        <div className="flex items-center gap-2 text-slate-600 text-[10px] font-bold uppercase mb-4">
           <Calendar size={14} />
           {date}
         </div>
