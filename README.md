@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://github.com/user-attachments/assets/a1740114-169e-40a2-8660-e356c8618746" alt="ABRADEPA Logo" width="120"/>
 
-ABRADEPA - Site Institucional & Administrativo
+# ABRADEPA - Site Institucional & Administrativo
 <p>
 <strong>Plataforma institucional completa para assistência e defesa de pacientes, integrada com Headless CMS para autonomia total da ONG.</strong>
 </p>
@@ -12,12 +12,20 @@ ABRADEPA - Site Institucional & Administrativo
 <img src="https://img.shields.io/badge/Sanity_v4-f03e2f?style=for-the-badge&logo=sanity&logoColor=white" alt="Sanity">
 <img src="https://img.shields.io/badge/Tailwind_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind">
 </p>
+
+## ⚡ Google Lighthouse Score
+<p>
+<img src="https://img.shields.io/badge/Performance-100-brightgreen?style=flat-square" alt="Performance 100">
+<img src="https://img.shields.io/badge/Accessibility-100-brightgreen?style=flat-square" alt="Accessibility 100">
+<img src="https://img.shields.io/badge/Best_Practices-100-brightgreen?style=flat-square" alt="Best Practices 100">
+<img src="https://img.shields.io/badge/SEO-100-brightgreen?style=flat-square" alt="SEO 100">
+</p>
 </div>
 
 ## Deploy
-O ecossistema está publicado e operacional nos links abaixo:
-- Site Institucional: https://abradepa-ong.vercel.app/
-- Painel Administrativo (Studio): https://abradepa-ong.vercel.app/studio
+O ecossistema está publicado e operacional no link abaixo:
+- Site Institucional: https://www.abradepa.org.br/
+- Painel Administrativo (Studio).
 - Hospedagem: Vercel (Frontend).
 - Banco de Dados & CMS: Sanity.io (Cloud).
 
@@ -25,13 +33,10 @@ O ecossistema está publicado e operacional nos links abaixo:
 O novo site da ABRADEPA foi desenvolvido para centralizar as informações da associação, oferecendo uma interface moderna para apresentação da ONG possiblitando atração de novos voluntários e parcerias. Além disso esse projeto conta com um painel administrativo intuitivo para a equipe interna gerenciar entradas estratégicas de dados mesmo após entrega.
 
 ### Autonomia via Headless CMS
-A principal premissa do projeto foi a independência da ONG. Como a hospedagem inicial utiliza camadas gratuitas (Free Tier) que não suportariam um backend personalizado online de forma ininterrupta, optou-se pela integração com o Sanity CMS.
-
-Esta arquitetura permite:
-- Disponibilidade: O banco de dados e a interface de edição ficam hospedados na infraestrutura global do Sanity, garantindo 100% de uptime sem custos de servidor backend.
-- Gestão Facilitada: A equipe da ABRADEPA pode gerenciar o Blog, a Loja Virtual e os Autores sem qualquer conhecimento técnico ou necessidade de mexer no código.
-  - Para isso foi fornecido um guia de intruções detalhadas com prints do passo a passo para cada interação com a plataforma.   
-- Performance: O conteúdo é entregue via CDN, tornando o carregamento do site institucional extremamente veloz.
+A principal premissa do projeto foi a **independência da ONG**. Optou-se pela arquitetura Headless com Sanity CMS, o que permite:
+- **Uptime de 100%:** Infraestrutura global sem custos de servidor backend.
+- **Gestão Simplificada:** A equipe gerencia Blog, Loja e Conteúdo sem necessidade de conhecimento técnico.
+- **Performance:** Entrega de conteúdo via CDN, garantindo carregamento instantâneo.
 
 ## Tecnologias Utilizadas
 ### Core
@@ -45,9 +50,9 @@ Esta arquitetura permite:
 - next-sanity: Integração otimizada para busca de dados e Live Preview.
 
 ### UI & UX
-- Tailwind CSS 4: Estilização moderna e utilitária.
-- Lucide Icons: Conjunto de ícones consistentes.
-- Swiper.js 12: Sliders responsivos para as áreas de atuação da associação.
+- **Tailwind CSS 4:** Estilização utilitária com foco em contraste e responsividade.
+- **Lucide Icons & Swiper.js 12:** Componentes visuais modernos e acessíveis.
+- **Web Vitals:** Otimização rigorosa de contraste (WCAG), semântica de tags e hierarquia de títulos.
 
 
 ## Preview
@@ -60,6 +65,10 @@ Esta arquitetura permite:
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://github.com/user-attachments/assets/cdb0de5d-c6a4-4cf0-9c6c-935a62a0eada" alt="Mobile Menu" width="200" />
 </p>
+
+<p align="center">Score Lighthouse</p>
+<p align="center"> 
+<img src="https://github.com/user-attachments/assets/0d18f850-36f5-488a-9f11-b58c60f595f6" alt="Score Lighthouse" width="700" /></p>
 <br />
 
 <div align="center">
