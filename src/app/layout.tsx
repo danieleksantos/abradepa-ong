@@ -13,6 +13,9 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.abradepa.org.br'),
+  alternates: {
+    canonical: 'https://www.abradepa.org.br',
+  },
   title: {
     default: 'ABRADEPA | Associação de Apoio à Saúde Integral',
     template: '%s | ABRADEPA',
