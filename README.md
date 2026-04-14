@@ -2,9 +2,6 @@
 <img src="https://github.com/user-attachments/assets/a1740114-169e-40a2-8660-e356c8618746" alt="ABRADEPA Logo" width="120"/>
 
 # ABRADEPA - Site Institucional & Administrativo
-<p>
-<strong>Plataforma institucional completa para assistência e defesa de pacientes, integrada com Headless CMS para autonomia total da ONG.</strong>
-</p>
 
 <p>
 <img src="https://img.shields.io/badge/Next.js_16-black?style=for-the-badge&logo=next.js" alt="Next.js">
