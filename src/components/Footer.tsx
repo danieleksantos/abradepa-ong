@@ -20,7 +20,7 @@ export function Footer() {
           <p className="text-white font-black text-sm mb-1 uppercase tracking-wider">
             ABRADEPA - Saúde Integral
           </p>
-          <p className="text-abradepa-yellow text-sm font-black leading-relaxed mb-6">
+          <p className="text-gray-300 text-sm font-bold leading-relaxed mb-6">
             Redesenhando Histórias!
           </p>
 
@@ -47,7 +47,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h3 className="font-black text-lg mb-6 text-abradepa-yellow uppercase tracking-widest">
+          <h3 className="font-black text-lg mb-6 text-white uppercase tracking-widest border-b-2 border-abradepa-yellow w-fit">
             Sede Curitiba
           </h3>
           <div className="space-y-5 text-sm text-white w-full">
@@ -91,7 +91,7 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h3 className="font-black text-lg mb-6 text-abradepa-yellow uppercase tracking-widest text-center md:text-left">
+          <h3 className="font-black text-lg mb-6 text-white uppercase tracking-widest border-b-2 border-abradepa-yellow w-fit">
             Navegação e Serviços
           </h3>
           <nav className="grid grid-cols-2 gap-x-8 gap-y-4 text-[11px] md:text-sm font-bold uppercase tracking-tight justify-items-start px-8 md:px-0">
@@ -179,14 +179,13 @@ export function Footer() {
         <div className="font-bold text-[13px] opacity-90">
           <p>© 2026 - ABRADEPA | Todos os direitos reservados</p>
         </div>
-        <div className="font-bold text-[11px]">
+        <div className="font-bold text-[11px] text-white">
           Desenvolvido por{' '}
           <Link
             href="https://danieleksantos.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Conheça o trabalho de Daniele K. Santos, desenvolvedora deste site"
-            className="text-abradepa-yellow hover:text-white transition-all underline underline-offset-4 decoration-abradepa-yellow/50"
+            className="text-white hover:text-abradepa-yellow transition-all underline underline-offset-4 decoration-abradepa-yellow"
           >
             Daniele K. Santos
           </Link>
