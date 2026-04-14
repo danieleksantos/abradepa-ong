@@ -20,7 +20,7 @@ export function Footer() {
           <p className="text-white font-black text-sm mb-1 uppercase tracking-wider">
             ABRADEPA - Saúde Integral
           </p>
-          <p className="text-abradepa-yellow text-xs italic font-extrabold leading-relaxed mb-6">
+          <p className="text-abradepa-yellow text-sm font-black leading-relaxed mb-6">
             Redesenhando Histórias!
           </p>
 
@@ -57,7 +57,7 @@ export function Footer() {
                 className="shrink-0 text-abradepa-yellow mt-0.5"
                 aria-hidden="true"
               />
-              <address className="not-italic text-left text-xs leading-relaxed font-medium">
+              <address className="not-italic text-left text-xs leading-relaxed font-semibold">
                 Biocentro - R. Padre Anchieta, 1846
                 <br />
                 Sobreloja Sala 6 - Bigorrilho
@@ -72,7 +72,7 @@ export function Footer() {
                   className="shrink-0 text-abradepa-yellow"
                   aria-hidden="true"
                 />
-                <p className="text-left text-xs font-medium">
+                <p className="text-left text-xs font-semibold">
                   contatoabradepa@gmail.com
                 </p>
               </div>
@@ -82,7 +82,9 @@ export function Footer() {
                   className="shrink-0 text-abradepa-yellow"
                   aria-hidden="true"
                 />
-                <p className="text-left text-xs font-medium">(41) 99591-2817</p>
+                <p className="text-left text-xs font-semibold">
+                  (41) 99591-2817
+                </p>
               </div>
             </div>
           </div>
@@ -96,37 +98,37 @@ export function Footer() {
             <div className="flex flex-col gap-4">
               <Link
                 href="/"
-                className="hover:text-abradepa-yellow transition-colors italic font-black text-abradepa-yellow"
+                className="text-white hover:text-abradepa-yellow transition-colors font-black underline decoration-abradepa-yellow/50 underline-offset-4"
               >
                 Home
               </Link>
               <Link
                 href="/sobre"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Nossa história
               </Link>
               <Link
                 href="/transparencia"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Transparência
               </Link>
               <Link
                 href="/como-apoiar"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Como Apoiar
               </Link>
               <Link
                 href="/capacitacao"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Palestras e Cursos
               </Link>
               <Link
                 href="/blog"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Blog
               </Link>
@@ -134,37 +136,37 @@ export function Footer() {
             <div className="flex flex-col gap-4">
               <Link
                 href="/anaplastologia"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Anaplastologia
               </Link>
               <Link
                 href="/dermopigmentacao"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Dermopigmentação
               </Link>
               <Link
                 href="/terapia-floral"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Terapia Floral
               </Link>
               <Link
                 href="/projetos-e-parcerias"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Projetos e Parcerias
               </Link>
               <Link
                 href="/cartao-abradepa"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Cartão Saúde+
               </Link>
               <Link
                 href="/loja"
-                className="hover:text-abradepa-yellow transition-colors"
+                className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Loja Virtual
               </Link>
@@ -173,18 +175,18 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto pt-10 pb-20 md:pb-8 flex flex-col items-center text-center text-slate-300 tracking-wider space-y-4">
-        <div className="font-bold text-[13px]">
+      <div className="max-w-7xl mx-auto pt-10 pb-20 md:pb-8 flex flex-col items-center text-center text-white tracking-wider space-y-4">
+        <div className="font-bold text-[13px] opacity-90">
           <p>© 2026 - ABRADEPA | Todos os direitos reservados</p>
         </div>
-        <div className="font-bold text-[11px] text-white">
+        <div className="font-bold text-[11px]">
           Desenvolvido por{' '}
           <Link
             href="https://danieleksantos.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Conheça o trabalho de Daniele K. Santos, desenvolvedora deste site"
-            className="text-abradepa-yellow hover:text-white transition-all underline underline-offset-4 decoration-abradepa-yellow/30"
+            className="text-abradepa-yellow hover:text-white transition-all underline underline-offset-4 decoration-abradepa-yellow/50"
           >
             Daniele K. Santos
           </Link>

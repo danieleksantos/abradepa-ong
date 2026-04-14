@@ -30,7 +30,7 @@ export default function SobrePage() {
           <h1 className="text-5xl md:text-6xl font-black mb-8 tracking-tight uppercase">
             Quem Somos
           </h1>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed font-light italic border-l-4 border-abradepa-yellow pl-6 max-w-2xl">
+          <p className="text-lg md:text-xl text-white leading-relaxed font-normal italic border-l-4 border-abradepa-yellow pl-6 max-w-2xl">
             A Abradepa promove a saúde, respeitando sua história!
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function SobrePage() {
                 <h3 className="text-abradepa-yellow font-black text-2xl uppercase mb-4 tracking-tight">
                   Missão
                 </h3>
-                <p className="text-white text-base leading-relaxed font-light grow">
+                <p className="text-white text-base leading-relaxed font-medium grow">
                   Promover saúde integral por meio de acolhimento humanizado,
                   tratamentos especializados, apoio emocional, psicológico e
                   social, garantindo dignidade, autoestima e esperança às
@@ -73,12 +73,12 @@ export default function SobrePage() {
                 <h3 className="text-abradepa-yellow font-black text-2xl uppercase mb-4 tracking-tight">
                   Visão
                 </h3>
-                <p className="text-white text-base leading-relaxed font-light grow">
+                <p className="text-white text-base leading-relaxed font-medium grow">
                   Ser referência nacional e internacional em apoio à saúde
                   integral, reconhecida pelo impacto humano, social e
                   transformador de suas ações, contribuindo para uma sociedade
                   mais inclusiva, consciente e solidária, onde toda pessoa tenha
-                  acesso ao cuidado integral, à reconstrução física e emocional
+                  accesso ao cuidado integral, à reconstrução física e emocional
                   e ao direito de viver com dignidade.
                 </p>
               </div>
@@ -125,10 +125,10 @@ export default function SobrePage() {
                       0{i + 1}
                     </span>
                     <div>
-                      <h4 className="text-abradepa-yellow font-bold text-sm uppercase tracking-wider mb-1">
+                      <h4 className="text-abradepa-yellow font-black text-sm uppercase tracking-wider mb-1">
                         {v.title}
                       </h4>
-                      <p className="text-white text-xs font-medium leading-relaxed">
+                      <p className="text-white text-xs font-semibold leading-relaxed">
                         {v.desc}
                       </p>
                     </div>
@@ -146,7 +146,7 @@ export default function SobrePage() {
             <h2 className="text-3xl font-black text-abradepa-dark uppercase tracking-tight mb-6">
               Governança
             </h2>
-            <p className="text-slate-500 leading-relaxed font-light">
+            <p className="text-slate-700 leading-relaxed font-medium">
               Nossa diretoria é composta por profissionais comprometidos com a
               transparência e excelência.
             </p>
@@ -157,10 +157,10 @@ export default function SobrePage() {
                 key={i}
                 className="bg-white p-8 rounded-2xl border border-slate-100 flex flex-col gap-1 shadow-sm hover:border-abradepa-yellow transition-all duration-300"
               >
-                <span className="text-lg font-black text-abradepa-dark uppercase">
+                <h3 className="text-lg font-black text-abradepa-dark uppercase">
                   {membro.name}
-                </span>
-                <span className="text-xs font-bold text-abradepa-medium uppercase tracking-[0.2em]">
+                </h3>
+                <span className="text-xs font-bold text-slate-800 uppercase tracking-[0.2em]">
                   {membro.role}
                 </span>
               </div>
@@ -169,31 +169,33 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section className="py-8 px-4 bg-white">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-0 md:gap-6">
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-0 md:gap-8">
           <div className="text-center md:text-left order-1 md:order-2 flex flex-col">
-            <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
+            <h3 className="text-sm font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
               Cartão Abradepa Saúde+
             </h3>
-            <p className="text-slate-600 text-[9px] uppercase tracking-[0.15em] font-bold opacity-80 mb-0 md:mb-4">
+            <p className="text-slate-800 text-[11px] uppercase tracking-[0.15em] font-bold mb-0 md:mb-4">
               Cuidado integral para você e sua família
             </p>
 
             <div className="hidden md:block">
               <Link
                 href="/cartao-abradepa"
-                className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
+                aria-label="Adquirir agora o Cartão Abradepa Saúde Plus"
+                className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
               >
-                <span className="border-b border-abradepa-yellow pb-0.5">
+                <span className="border-b-2 border-abradepa-yellow pb-0.5">
                   Adquirir agora
                 </span>
-                <Plus size={10} className="text-abradepa-yellow" />
+                <Plus size={14} className="text-abradepa-yellow" />
               </Link>
             </div>
           </div>
 
           <Link
             href="/cartao-abradepa"
+            aria-label="Saiba mais sobre o Cartão Abradepa Saúde Plus"
             className="block group shrink-0 order-2 md:order-1"
           >
             <div className="relative">
@@ -203,7 +205,7 @@ export default function SobrePage() {
                 alt="Cartão Abradepa Saúde+"
                 width={240}
                 height={160}
-                className="relative drop-shadow-[0_10px_20px_rgba(0,0,0,0.08)] group-hover:drop-shadow-[0_20px_40px_rgba(255,210,0,0.15)] transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1"
+                className="relative drop-shadow-xl group-hover:scale-105 transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1"
                 style={{ width: '220px', height: 'auto' }}
               />
             </div>
@@ -212,12 +214,13 @@ export default function SobrePage() {
           <div className="text-center order-3 md:hidden">
             <Link
               href="/cartao-abradepa"
-              className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
+              aria-label="Adquirir agora o Cartão Abradepa Saúde Plus"
+              className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
             >
-              <span className="border-b border-abradepa-yellow pb-0.5 ">
+              <span className="border-b-2 border-abradepa-yellow pb-0.5 ">
                 Adquirir agora
               </span>
-              <Plus size={10} className="text-abradepa-yellow" />
+              <Plus size={14} className="text-abradepa-yellow" />
             </Link>
           </div>
         </div>
