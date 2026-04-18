@@ -27,7 +27,7 @@ O ecossistema está publicado e operacional no link abaixo:
 - Banco de Dados & CMS: Sanity.io (Cloud).
 
 ## Sobre o Projeto
-O novo site da ABRADEPA foi desenvolvido para centralizar as informações da associação, oferecendo uma interface moderna para apresentação da ONG possiblitando atração de novos voluntários e parcerias. Além disso esse projeto conta com um painel administrativo intuitivo para a equipe interna gerenciar entradas estratégicas de dados mesmo após entrega.
+O novo site da ABRADEPA foi desenvolvido para centralizar as informações da associação, oferecendo uma interface moderna para apresentação da ONG possibilitando atração de novos voluntários e parcerias. Além disso esse projeto conta com um painel administrativo intuitivo para a equipe interna gerenciar entradas estratégicas de dados mesmo após entrega.
 
 ### Autonomia via Headless CMS
 A principal premissa do projeto foi a **independência da ONG**. Optou-se pela arquitetura Headless com Sanity CMS, o que permite:
