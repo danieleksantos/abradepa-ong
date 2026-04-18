@@ -30,7 +30,7 @@ O ecossistema está publicado e operacional no link abaixo:
 O novo site da ABRADEPA foi desenvolvido para centralizar as informações da associação, oferecendo uma interface moderna para apresentação da ONG possibilitando atração de novos voluntários e parcerias. Além disso esse projeto conta com um painel administrativo intuitivo para a equipe interna gerenciar entradas estratégicas de dados mesmo após entrega.
 
 ### Autonomia via Headless CMS
-A principal premissa do projeto foi a **independência da ONG**. Optou-se pela arquitetura Headless com Sanity CMS, o que permite:
+A principal premissa do projeto foi a **independência da ONG**, onde optei pela arquitetura Headless com Sanity CMS, o que permite:
 - **Uptime de 100%:** Infraestrutura global sem custos de servidor backend.
 - **Gestão Simplificada:** A equipe gerencia Blog, Loja e Conteúdo sem necessidade de conhecimento técnico.
 - **Performance:** Entrega de conteúdo via CDN, garantindo carregamento instantâneo.
