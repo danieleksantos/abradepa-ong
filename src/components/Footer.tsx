@@ -103,12 +103,6 @@ export function Footer() {
                 Home
               </Link>
               <Link
-                href="/sobre"
-                className="text-white hover:text-abradepa-yellow transition-colors"
-              >
-                Nossa história
-              </Link>
-              <Link
                 href="/transparencia"
                 className="text-white hover:text-abradepa-yellow transition-colors"
               >
@@ -163,12 +157,6 @@ export function Footer() {
                 className="text-white hover:text-abradepa-yellow transition-colors"
               >
                 Cartão Saúde+
-              </Link>
-              <Link
-                href="/loja"
-                className="text-white hover:text-abradepa-yellow transition-colors"
-              >
-                Loja Virtual
               </Link>
             </div>
           </nav>
