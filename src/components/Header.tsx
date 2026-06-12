@@ -98,9 +98,6 @@ export function Header() {
             <Link href="/blog" className={linkStyle}>
               Blog
             </Link>
-            <Link href="/loja" className={linkStyle}>
-              Loja Virtual
-            </Link>
 
             <Link
               href="/cursos-e-beneficios"
@@ -236,13 +233,6 @@ export function Header() {
             className="block text-abradepa-dark font-medium py-2 text-lg"
           >
             Blog
-          </Link>
-          <Link
-            href="/loja"
-            onClick={() => setIsOpen(false)}
-            className="block text-abradepa-dark font-medium py-2 text-lg"
-          >
-            Loja Virtual
           </Link>
 
           <div className="pt-4">
