@@ -21,12 +21,11 @@ import {
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-
 const actingAreas = [
   {
-    title: 'Cartão de Benefícios ABRADEPA Saúde+',
+    title: 'Abradepa parceria com cartão de benefícios à saúde',
     slug: '/cartao-abradepa',
-    cta: 'Conhecer o Cartão ABRADEPA',
+    cta: 'Conhecer cartão de benefícios à saúde',
     items: [
       'Cuidado acessível para você, família e seu Pet.',
       'Médicos, psicólogos e nutricionistas online.',

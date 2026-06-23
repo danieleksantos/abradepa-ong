@@ -25,7 +25,7 @@ export function Header() {
             aria-label="Ir para a página inicial da ABRADEPA"
           >
             <Image
-              src="/logo-abradepa.png"
+              src="/logo-abradepa-new.png"
               alt="Logo ABRADEPA"
               width={70}
               height={70}
@@ -101,7 +101,7 @@ export function Header() {
 
             <Link
               href="/cursos-e-beneficios"
-              className="btn-primary px-4 lg:px-6 py-2.5 text-xs lg:text-sm whitespace-nowrap shadow-sm hover:shadow-md hover:brightness-110"
+              className="btn-primary px-4 lg:px-6 py-2.5 text-xs lg:text-sm whitespace-nowrap shadow-sm hover:shadow-md hover:scale-105"
             >
               Cursos e Benefícios
             </Link>

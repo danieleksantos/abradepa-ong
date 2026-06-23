@@ -131,7 +131,9 @@ export default function ComoApoiarPage() {
               <div className="max-w-2xl">
                 <div className="flex items-center gap-4 mb-4">
                   <h3 className="text-xl font-black text-abradepa-dark uppercase">
-                    Cartão de Benefícios ABRADEPA Saúde+
+                    <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-widest mb-1">
+                      Abradepa parceria com cartão de benefícios à saúde.
+                    </h3>
                   </h3>
                 </div>
                 <p className="text-slate-600 mb-6 leading-relaxed">
@@ -180,7 +182,7 @@ export default function ComoApoiarPage() {
                 <Link href="/cartao-abradepa">
                   <Image
                     src="/cartao-abradepa.png"
-                    alt="Cartão Abradepa Saúde+"
+                    alt="Abradepa parceria com cartão de benefícios à saúde."
                     width={280}
                     height={180}
                     className="relative drop-shadow-[0_15px_30px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:-translate-y-2 group-hover:rotate-2"

@@ -11,6 +11,7 @@ export default function SobrePage() {
     { name: 'Gisele Lazara de Faria Borges', role: 'Vice-Presidente' },
     { name: 'Rita Schunemann', role: 'Secretária Geral' },
     { name: 'Georgia Teixeira', role: 'Diretora Financeira' },
+    { name: 'Indianara de Castro Stenzowski', role: 'Diretora Secretária' },
   ];
 
   return (
@@ -172,8 +173,8 @@ export default function SobrePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-0 md:gap-8">
           <div className="text-center md:text-left order-1 md:order-2 flex flex-col">
-            <h3 className="text-sm font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
-              Cartão Abradepa Saúde+
+            <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-widest mb-1">
+              Abradepa parceria com cartão de benefícios à saúde.
             </h3>
             <p className="text-slate-800 text-[11px] uppercase tracking-[0.15em] font-bold mb-0 md:mb-4">
               Cuidado integral para você e sua família
@@ -182,7 +183,7 @@ export default function SobrePage() {
             <div className="hidden md:block">
               <Link
                 href="/cartao-abradepa"
-                aria-label="Adquirir agora o Cartão Abradepa Saúde Plus"
+                aria-label="Adquirir agora o Cartão Saúde Plus"
                 className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
               >
                 <span className="border-b-2 border-abradepa-yellow pb-0.5">
@@ -195,14 +196,14 @@ export default function SobrePage() {
 
           <Link
             href="/cartao-abradepa"
-            aria-label="Saiba mais sobre o Cartão Abradepa Saúde Plus"
+            aria-label="Saiba mais sobre o Cartão Saúde Plus"
             className="block group shrink-0 order-2 md:order-1"
           >
             <div className="relative">
               <div className="absolute inset-0 bg-abradepa-yellow/10 blur-2xl rounded-full scale-110 group-hover:bg-abradepa-yellow/20 transition-all duration-500" />
               <Image
                 src="/cartao-abradepa.png"
-                alt="Cartão Abradepa Saúde+"
+                alt="Abradepa parceria com cartão de benefícios à saúde."
                 width={240}
                 height={160}
                 className="relative drop-shadow-xl group-hover:scale-105 transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1"
@@ -214,7 +215,7 @@ export default function SobrePage() {
           <div className="text-center order-3 md:hidden">
             <Link
               href="/cartao-abradepa"
-              aria-label="Adquirir agora o Cartão Abradepa Saúde Plus"
+              aria-label="Adquirir agora o Cartão Saúde Plus"
               className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-abradepa-dark hover:text-abradepa-medium transition-colors"
             >
               <span className="border-b-2 border-abradepa-yellow pb-0.5 ">

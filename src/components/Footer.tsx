@@ -10,7 +10,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/20 pb-12">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <Image
-            src="/logo-abradepa.png"
+            src="/logo-abradepa-new.png"
             alt="Logo ABRADEPA"
             width={120}
             height={120}
@@ -18,10 +18,11 @@ export function Footer() {
             className="mb-6 brightness-0 invert"
           />
           <p className="text-white font-black text-sm mb-1 uppercase tracking-wider">
-            ABRADEPA - Saúde Integral
+            ABRADEPA
           </p>
           <p className="text-white text-sm font-bold leading-relaxed mb-6">
-            Redesenhando Histórias!
+            Associação Brasileira de Dermomicropigmentação Paramédica e
+            Anaplastologia
           </p>
 
           <div className="flex space-x-3">

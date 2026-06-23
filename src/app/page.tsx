@@ -31,16 +31,16 @@ export default function Home() {
             <div className="lg:col-span-7 text-center lg:text-left">
               <h1 className="animate-fade-in mb-8 text-4xl font-extrabold text-white md:text-7xl tracking-tight leading-[1.1]">
                 ABRADEPA <br />
-                <span className="text-abradepa-pale text-2xl md:text-4xl block mt-2">
-                  Saúde Integral
+                <span className="text-abradepa-pale text-2xl md:text-4xl block mt-2 tracking-[0.02em]">
+                  Associação Brasileira de Dermomicropigmentação Paramédica e
+                  Anaplastologia
                 </span>
               </h1>
 
               <p className="mx-auto lg:mx-0 mb-12 max-w-2xl text-lg text-white md:text-xl leading-relaxed lg:font-light">
-                Transformando vidas ao ampliar o acesso à saúde, com consultas
-                médicas acessíveis, anaplastologia (próteses estéticas
-                personalizadas), terapias integrativas e dermopigmentação
-                paramédica.
+                Transformando vidas ao ampliar o acesso à saúde, anaplastologia
+                (próteses estéticas personalizadas), terapias integrativas e
+                dermopigmentação paramédica.
               </p>
 
               <div className="flex flex-col justify-center lg:justify-start gap-6 sm:flex-row">
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           <Link
             href="/cartao-abradepa"
-            className="btn-primary px-10 py-4 hover:brightness-110"
+            className="btn-primary px-10 py-3 hover:scale-105"
           >
             Saiba mais
           </Link>
@@ -115,8 +115,8 @@ export default function Home() {
       <section className="py-8 px-4 bg-white">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-0 md:gap-6">
           <div className="text-center md:text-left order-1 md:order-2 flex flex-col">
-            <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-[0.3em] mb-1">
-              Cartão Abradepa Saúde+
+            <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-widest mb-1">
+              Abradepa parceria com cartão de benefícios à saúde.
             </h3>
             <p className="text-slate-600 text-[9px] uppercase tracking-[0.15em] font-bold opacity-80 mb-0 md:mb-4">
               Cuidado integral para você e sua família
@@ -143,7 +143,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-abradepa-yellow/10 blur-2xl rounded-full scale-110 group-hover:bg-abradepa-yellow/20 transition-all duration-500" />
               <Image
                 src="/cartao-abradepa.png"
-                alt="Cartão Abradepa Saúde+"
+                alt="Abradepa parceria com cartão de benefícios à saúde."
                 width={240}
                 height={160}
                 className="relative drop-shadow-[0_10px_20px_rgba(0,0,0,0.08)] group-hover:drop-shadow-[0_20px_40px_rgba(255,210,0,0.15)] transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1"

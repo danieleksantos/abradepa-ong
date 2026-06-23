@@ -103,8 +103,9 @@ export default function CartaoAbradepaPage() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
-            Ao adquirir o cartão Abradepa, você apoia nossa iniciativa social e
-            garante mais saúde para você e sua família!
+            Ao adquirir o cartão de benefícios à saude com parceria Abradepa,
+            você apoia nossa iniciativa social e garante mais saúde para você e
+            sua família!
           </p>
         </div>
       </section>
@@ -162,7 +163,7 @@ export default function CartaoAbradepaPage() {
               <div className="relative transform md:rotate-3 hover:rotate-0 transition-all duration-700">
                 <Image
                   src="/cartao-abradepa.png"
-                  alt="Cartão Abradepa Saúde+"
+                  alt="Abradepa parceria com cartão de benefícios à saúde."
                   width={333}
                   height={280}
                   className="drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)]"

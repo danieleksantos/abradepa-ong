@@ -69,7 +69,7 @@ export default async function BlogPage() {
                 id={post.slug}
                 title={post.title}
                 description={post.description}
-                image={post.image || '/logo-abradepa.png'}
+                image={post.image || '/logo-abradepa-new.png'}
                 date={
                   post.date
                     ? new Date(post.date).toLocaleDateString('pt-BR', {
@@ -86,9 +86,13 @@ export default async function BlogPage() {
         </div>
       </section>
 
-      <div className="pb-16 text-center">
-        <p className="text-abradepa-medium font-bold text-sm tracking-[0.3em] uppercase italic">
-          Abradepa Saúde Integral. Redesenhando Histórias!
+      <div className="pb-16 text-center max-w-2xl mx-auto">
+        <p className="text-abradepa-medium font-black text-xs uppercase tracking-[0.2em] mb-4">
+          Abradepa Associação Brasileira de Dermomicropigmentação Paramédica e
+          Anaplastologia
+        </p>
+        <p className="text-abradepa-medium text-sm font-light uppercase tracking-widest">
+          Redesenhando Histórias!
         </p>
       </div>
     </div>

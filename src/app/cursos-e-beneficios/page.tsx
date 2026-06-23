@@ -216,10 +216,11 @@ export default function CursosEBeneficiosPage() {
 
       <section className="py-20 px-4 text-center">
         <div className="max-w-2xl mx-auto">
-          <p className="text-abradepa-medium font-black text-xs uppercase tracking-[0.4em] italic mb-4">
-            Abradepa Saúde Integral
+          <p className="text-abradepa-medium font-black text-xs uppercase tracking-[0.2em] mb-4">
+            Abradepa Associação Brasileira de Dermomicropigmentação Paramédica e
+            Anaplastologia
           </p>
-          <p className="text-slate-600 text-sm font-light uppercase tracking-widest">
+          <p className="text-abradepa-medium text-sm font-light uppercase tracking-widest">
             Redesenhando Histórias!
           </p>
         </div>
