@@ -92,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h3 className="font-black text-lg mb-6 text-white uppercase tracking-widest border-b-2 border-abradepa-yellow w-fit">
+          <h3 className="font-black text-lg mb-6 text-white uppercase tracking-widest border-b-2 border-abradepa-yellow w-fit ml-8 md:ml-0">
             Navegação e Serviços
           </h3>
           <nav className="grid grid-cols-2 gap-x-8 gap-y-4 text-[11px] md:text-sm font-bold uppercase tracking-tight justify-items-start px-8 md:px-0">

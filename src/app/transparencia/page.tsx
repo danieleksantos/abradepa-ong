@@ -72,6 +72,7 @@ export default function TransparenciaPage() {
     { name: 'Gisele Lazara de Faria Borges', role: 'Vice-Presidente' },
     { name: 'Rita Schunemann', role: 'Secretária Geral' },
     { name: 'Georgia Teixeira', role: 'Diretora Financeira' },
+    { name: 'Indianara de Castro Stenzowski', role: 'Diretora Secretária' },
   ];
 
   return (
@@ -185,7 +186,7 @@ export default function TransparenciaPage() {
               <h4 className="font-black text-lg mb-4 text-abradepa-yellow uppercase">
                 Canais Oficiais
               </h4>
-              <p className="text-xs text-slate-600 mb-8 leading-relaxed font-medium">
+              <p className="text-xs text-slate-400 mb-8 leading-relaxed font-medium">
                 Para suporte financeiro ou institucional, utilize os e-mails
                 diretos da nossa tesouraria e presidência.
               </p>

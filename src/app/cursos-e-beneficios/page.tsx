@@ -48,7 +48,7 @@ export default function CursosEBeneficiosPage() {
               </span>
             </div>
             <h2 className="text-4xl font-black text-abradepa-dark uppercase tracking-tight leading-tight">
-              Cartão de Benefícios ABRADEPA Saúde+
+              Abradepa parceria com cartão de benefícios à saúde
             </h2>
             <div className="space-y-6 text-slate-600 text-lg font-light leading-relaxed text-justify md:text-left">
               <p>

@@ -308,7 +308,7 @@ export default function ComoApoiarPage() {
               que <strong> redesenha histórias e restaura a vida.</strong>
             </p>
             <div className="pt-6">
-              <p className="text-abradepa-medium font-black text-sm md:text-base uppercase italic flex items-center justify-center gap-3 tracking-[0.3em]">
+              <p className="text-abradepa-medium font-black text-sm md:text-base uppercase italic flex items-center justify-center gap-3">
                 Apoie a Abradepa. Apoie a vida.{' '}
                 <Heart
                   size={20}
