@@ -96,10 +96,10 @@ export default function CartaoAbradepaPage() {
     <div className="bg-white min-h-screen font-sans">
       <section className="bg-abradepa-dark pt-22 md:pt-44 pb-12 md:pb-32 text-white px-4">
         <div className="mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tight uppercase leading-tight">
-            Abradepa parceria com <br />
-            <span className="text-abradepa-yellow text-3xl md:text-5xl italic">
-              Cartão de benefícios à saúde
+          <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tight uppercase leading-tight text-abradepa-yellow">
+            Parceria <br />
+            <span className="text-white text-3xl md:text-5xl italic">
+              Abradepa + Cartão de benefícios à saúde
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
