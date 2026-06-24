@@ -17,14 +17,14 @@ export default function SobrePage() {
   return (
     <div className="animate-fade-in bg-white min-h-screen">
       <section className="bg-abradepa-dark pt-32 pb-24 text-white px-4 relative overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-5 pointer-events-none hidden lg:block text-white">
+        <div className="absolute right-0 top-1/2 -translate-y-50 translate-x-0 opacity-5 pointer-events-none hidden lg:block text-white rotate-3">
           <Users size={400} strokeWidth={0.5} />
         </div>
 
         <div className="mx-auto max-w-7xl relative z-10 text-center lg:text-left">
-          <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
+          <div className="flex items-center justify-center lg:justify-start gap-3 mb-6 ">
             <Users className="text-abradepa-yellow" size={20} />
-            <span className="text-grey-700 text-xs font-bold uppercase tracking-[0.2em]">
+            <span className="text-grey-700 text-abradepa-pale text-xs font-bold uppercase tracking-[0.2em]">
               Nossa Essência
             </span>
           </div>

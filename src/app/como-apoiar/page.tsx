@@ -49,19 +49,33 @@ export default function ComoApoiarPage() {
 
   return (
     <main className="bg-white min-h-screen">
-      <section className="bg-abradepa-dark pt-40 pb-24 text-white px-4">
-        <div className="mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase">
-            Como Apoiar a Abradepa
-          </h1>
-          <h2 className="text-xl md:text-2xl font-bold text-abradepa-yellow uppercase mb-8">
-            Seu Apoio Transforma Vidas!
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed italic font-light">
-            Cada cicatriz redesenhada, no físico e no emocional, representa uma
-            história de superação. Para que essas histórias continuem sendo
-            escritas com um final feliz, a Abradepa precisa do seu apoio.
-          </p>
+      <section className="bg-abradepa-dark pt-20 pb-18 text-white px-4 relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-50 translate-x-0 opacity-5 pointer-events-none hidden lg:block rotate-6">
+          <Heart size={450} strokeWidth={0.5} />
+        </div>
+
+        <div className="mx-auto max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <Heart className="text-abradepa-yellow" size={20} />
+                <span className="text-abradepa-pale text-xs font-bold uppercase tracking-[0.2em]">
+                  Seu Apoio Transforma Vidas
+                </span>
+              </div>
+
+              <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight uppercase">
+                Como Apoiar a Abradepa
+              </h1>
+
+              <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl italic border-l-4 border-abradepa-yellow pl-6">
+                Cada cicatriz redesenhada, no físico e no emocional, representa
+                uma história de superação. Para que essas histórias continuem
+                sendo escritas com um final feliz, a Abradepa precisa do seu
+                apoio.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -24,8 +24,8 @@ export default async function BlogPage() {
   return (
     <div className="animate-fade-in bg-slate-50 min-h-screen">
       <section className="bg-abradepa-dark pt-32 pb-24 text-white px-4 relative overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-5 pointer-events-none hidden lg:block">
-          <Newspaper size={600} strokeWidth={0.5} />
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-0 opacity-5 pointer-events-none hidden lg:block rotate-6">
+          <Newspaper size={360} strokeWidth={0.5} />
         </div>
 
         <div className="mx-auto max-w-7xl relative z-10">
@@ -44,17 +44,6 @@ export default async function BlogPage() {
                 Informação, ciência e histórias reais para disseminar o
                 conhecimento sobre a saúde integral e o impacto social.
               </p>
-            </div>
-
-            <div className="hidden lg:flex justify-end">
-              <div className="relative">
-                <div className="absolute inset-0 bg-abradepa-yellow/10 blur-[100px] rounded-full"></div>
-                <Newspaper
-                  size={260}
-                  strokeWidth={0.5}
-                  className="relative z-10 text-white/10 rotate-6"
-                />
-              </div>
             </div>
           </div>
         </div>

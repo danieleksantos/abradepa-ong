@@ -9,7 +9,6 @@ import {
   Scale,
   ShieldCheck,
   Mail,
-  Network,
 } from 'lucide-react';
 import { Manifest } from '@/components/Manifest';
 
@@ -77,9 +76,9 @@ export default function TransparenciaPage() {
 
   return (
     <div className="animate-fade-in bg-white">
-      <section className="bg-abradepa-dark pt-32 pb-24 text-white px-4 relative overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-5 pointer-events-none hidden lg:block">
-          <Network size={600} strokeWidth={0.5} />
+      <section className="bg-abradepa-dark pt-22 pb-18 text-white px-4 relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-0 opacity-5 pointer-events-none hidden lg:block rotate-5">
+          <ShieldCheck size={360} strokeWidth={0.5} />
         </div>
 
         <div className="mx-auto max-w-7xl relative z-10">
@@ -98,13 +97,6 @@ export default function TransparenciaPage() {
                 Ética e responsabilidade como base fundamental do nosso apoio à
                 saúde integral.
               </p>
-            </div>
-            <div className="hidden lg:flex justify-end">
-              <ShieldCheck
-                size={260}
-                strokeWidth={0.5}
-                className="text-white/10 -rotate-6"
-              />
             </div>
           </div>
         </div>
