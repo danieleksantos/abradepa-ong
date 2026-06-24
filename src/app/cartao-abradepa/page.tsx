@@ -97,9 +97,9 @@ export default function CartaoAbradepaPage() {
       <section className="bg-abradepa-dark pt-22 md:pt-44 pb-12 md:pb-32 text-white px-4">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tight uppercase leading-tight">
-            Cartão de Benefícios <br />
+            Abradepa parceria com <br />
             <span className="text-abradepa-yellow text-3xl md:text-5xl italic">
-              Abradepa Saúde+
+              Cartão de benefícios à saúde
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">

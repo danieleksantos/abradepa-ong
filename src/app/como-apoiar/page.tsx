@@ -11,6 +11,7 @@ import {
   Check,
   Plus,
   Send,
+  MessageCircle,
 } from 'lucide-react';
 import { VolunteerModal } from '@/components/VolunteerModal';
 
@@ -19,12 +20,32 @@ export default function ComoApoiarPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const pixKey = 'financeiroabradepa@gmail.com';
+  const whatsappNumber = '5541995912817';
+  const whatsappMessage =
+    'Olá! Gostaria de saber mais sobre como me tornar um Associado Profissional da Abradepa.';
 
   const handleCopyPix = () => {
     navigator.clipboard.writeText(pixKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  const beneficiosProfissionais = [
+    'Encaminhamento de pacientes e interessados para profissionais associados de acordo com sua especialidade e região de atendimento;',
+    'Inclusão no Diretório Nacional de Profissionais Associados da Abradepa, ampliando a visibilidade profissional e facilitando a localização e indicação de especialistas em diferentes regiões do Brasil;',
+    'Divulgação do perfil profissional através dos canais institucionais da Abradepa;',
+    'Participação em uma rede nacional de profissionais das áreas de dermomicropigmentação paramédica, micropigmentação, anaplastologia, estética, saúde e reabilitação;',
+    'Certificação internacional através do CIBS – Conselho Internacional de Beleza e Saúde para instrutores, professores e ministrantes de cursos associados, bem como para alunos de cursos chancelados pela Abradepa;',
+    'Participação em projetos sociais, científicos, educacionais e campanhas promovidas pela associação;',
+    'Descontos e condições especiais em cursos, congressos, feiras, workshops, palestras, eventos técnicos, premiações e iniciativas de reconhecimento profissional;',
+    'Benefícios e condições diferenciadas através de convênios e empresas parceiras;',
+    'Descontos e vantagens junto a empresas parceiras de pigmentos, equipamentos, silicones, insumos para próteses, materiais, produtos e tecnologias utilizadas pelos profissionais da área;',
+    'Descontos e benefícios através de parcerias com farmácias, hotéis, academias, cartões de benefícios em saúde e demais empresas conveniadas;',
+    'Participação em grupos de estudo, atualização profissional e desenvolvimento técnico-científico;',
+    'Certificados de participação em ações, campanhas, projetos e atividades institucionais da associação;',
+    'Networking e integração com profissionais de diversas regiões do Brasil;',
+    'Fortalecimento, valorização e representatividade das categorias profissionais junto à sociedade, empresas parceiras e instituições.',
+  ];
 
   return (
     <main className="bg-white min-h-screen">
@@ -46,7 +67,7 @@ export default function ComoApoiarPage() {
 
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-abradepa-dark text-white rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center group relative overflow-hidden shadow-xl">
               <div className="relative z-10">
                 <h3 className="text-2xl font-black uppercase mb-6 tracking-tight text-abradepa-yellow">
@@ -100,7 +121,7 @@ export default function ComoApoiarPage() {
               </div>
             </div>
 
-            <div className="bg-slate-50 border border-slate-100 p-8 md:p-10 rounded-[2.5rem] text-center flex flex-col items-center justify-center gap-6 hover:border-abradepa-yellow transition-all duration-300 shadow-sm">
+            <div className="bg-slate-50 border border-slate-300 p-8 md:p-10 rounded-[2.5rem] text-center flex flex-col items-center justify-center gap-6 hover:border-abradepa-yellow transition-all duration-300 shadow-sm">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-100">
                 <Users className="text-abradepa-medium" size={32} />
               </div>
@@ -115,7 +136,7 @@ export default function ComoApoiarPage() {
               </div>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="btn-primary w-full max-w-xs py-4 text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 group cursor-pointer"
+                className="btn-primary w-full max-w-xs py-4 text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 group cursor-pointer hover:scale-105"
               >
                 Preencher Formulário
                 <Send
@@ -125,15 +146,100 @@ export default function ComoApoiarPage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
 
+      <section className="py-24 px-4 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black uppercase text-abradepa-dark tracking-tight mb-6">
+              Profissionais da Área
+            </h2>
+            <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed max-w-4xl mx-auto text-left md:text-center">
+              <p>
+                A{' '}
+                <strong className="text-abradepa-dark">
+                  Abradepa – Associação Brasileira de Dermomicropigmentação
+                  Paramédica e Anaplastologia
+                </strong>{' '}
+                reúne profissionais comprometidos com a reabilitação, inclusão,
+                reconstrução estética, desenvolvimento científico e excelência
+                profissional.
+              </p>
+              <p>
+                Se você atua nas áreas de dermomicropigmentação paramédica,
+                micropigmentação, anaplastologia, próteses estéticas, próteses
+                faciais, reconstrução areolar, oncologia, reabilitação, saúde,
+                estética ou áreas correlatas, convidamos você a fazer parte da
+                nossa rede nacional de profissionais.
+              </p>
+              <p>
+                Ao integrar a Abradepa, você passa a fazer parte de uma
+                associação dedicada ao fortalecimento da categoria, ao
+                desenvolvimento profissional, à promoção de projetos sociais,
+                científicos e educacionais e à ampliação do acesso dos pacientes
+                a profissionais qualificados em todo o Brasil.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 md:p-12">
+            <h3 className="text-xl md:text-2xl font-black uppercase text-abradepa-dark text-center mb-10 tracking-tight border-b-2 border-abradepa-yellow pb-4 inline-block mx-auto justify-center w-fit">
+              Benefícios do Associado
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {beneficiosProfissionais.map((beneficio, index) => (
+                <div
+                  key={index}
+                  className="flex gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100"
+                >
+                  <CheckCircle2
+                    className="text-abradepa-dark shrink-0 mt-0.5"
+                    size={24}
+                  />
+                  <p className="text-sm text-slate-700 leading-relaxed font-medium">
+                    {beneficio}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16 bg-abradepa-dark rounded-3xl p-8 md:p-12 text-center shadow-lg relative overflow-hidden flex flex-col items-center">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-abradepa-yellow opacity-10 blur-[100px] rounded-full pointer-events-none"></div>
+            <p className="text-lg md:text-xl text-white font-medium leading-relaxed max-w-3xl mx-auto relative z-10 mb-8">
+              Faça parte da Abradepa e contribua para o fortalecimento da{' '}
+              <span className="text-abradepa-yellow font-bold">
+                dermomicropigmentação paramédica, da micropigmentação, da
+                anaplastologia, da reconstrução estética, da reabilitação e da
+                inclusão
+              </span>{' '}
+              em todo o Brasil.
+            </p>
+            <Link
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary relative z-10 flex items-center justify-center gap-3 whitespace-nowrap shadow-sm hover:shadow-md hover:scale-105 transition-all"
+            >
+              Fale com nossa equipe
+              <MessageCircle size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-4 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto">
           <div className="bg-slate-50 rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-12 relative z-10">
               <div className="max-w-2xl">
                 <div className="flex items-center gap-4 mb-4">
                   <h3 className="text-xl font-black text-abradepa-dark uppercase">
-                    <h3 className="text-xs font-black text-abradepa-dark uppercase tracking-widest mb-1">
+                    <span className="text-xs font-black text-abradepa-dark uppercase tracking-widest mb-1 block">
                       Abradepa parceria com cartão de benefícios à saúde.
-                    </h3>
+                    </span>
                   </h3>
                 </div>
                 <p className="text-slate-600 mb-6 leading-relaxed">
@@ -191,23 +297,25 @@ export default function ComoApoiarPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="max-w-4xl mx-auto text-center pt-16 mt-16 border-t border-slate-100">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-abradepa-dark font-light leading-relaxed">
-                Junte-se à Abradepa nessa nobre causa e seja parte do movimento
-                que <strong> redesenha histórias e restaura a vida.</strong>
+      <section className="py-16 bg-white border-t border-slate-100">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <div className="space-y-6">
+            <p className="text-xl md:text-2xl text-abradepa-dark font-light leading-relaxed">
+              Junte-se à Abradepa nessa nobre causa e seja parte do movimento
+              que <strong> redesenha histórias e restaura a vida.</strong>
+            </p>
+            <div className="pt-6">
+              <p className="text-abradepa-medium font-black text-sm md:text-base uppercase italic flex items-center justify-center gap-3 tracking-[0.3em]">
+                Apoie a Abradepa. Apoie a vida.{' '}
+                <Heart
+                  size={20}
+                  className="text-abradepa-yellow animate-pulse"
+                  fill="currentColor"
+                />
               </p>
-              <div className="pt-6">
-                <p className="text-abradepa-medium font-black text-sm md:text-base uppercase italic flex items-center justify-center gap-3 tracking-[0.3em]">
-                  Apoie a Abradepa. Apoie a vida.{' '}
-                  <Heart
-                    size={20}
-                    className="text-abradepa-yellow animate-pulse"
-                    fill="currentColor"
-                  />
-                </p>
-              </div>
             </div>
           </div>
         </div>
