@@ -9,7 +9,7 @@ export default function CartaoAbradepaPage() {
     {
       nome: 'ABRADEPA SAÚDE+ ESSENCIAL',
       preco: '29,90',
-      link: 'https://parceiros.MEUCLUBE.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/2255CB39-9B10-4694-A2F1-494DB8D6B08F/',
+      link: 'https://parceiros.meuclube.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/7ED73871-C799-4B2E-907A-CA12614A3534/',
       cor: 'border-slate-200',
       bg: 'bg-white',
       vantagens: [
@@ -24,7 +24,7 @@ export default function CartaoAbradepaPage() {
     {
       nome: 'ABRADEPA SAÚDE+ BRONZE',
       preco: '35,90',
-      link: 'https://parceiros.MEUCLUBE.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/38FC040C-98E4-4A97-A766-CB55AB042CB8/',
+      link: 'https://parceiros.meuclube.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/C0CE507E-5828-4DD8-A2B4-68C446F9182C/',
       cor: 'border-orange-200',
       bg: 'bg-white',
       vantagens: [
@@ -39,7 +39,7 @@ export default function CartaoAbradepaPage() {
     {
       nome: 'ABRADEPA SAÚDE + PRATA',
       preco: '39,90',
-      link: 'https://parceiros.MEUCLUBE.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/76848EAB-2252-4A43-B410-F8ED1403D132/',
+      link: 'https://parceiros.meuclube.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/23F546AE-BC51-4B87-A0C3-B7A3F17C9E6F/',
       cor: 'border-slate-300',
       bg: 'bg-white',
       vantagens: [
@@ -57,7 +57,7 @@ export default function CartaoAbradepaPage() {
     {
       nome: 'ABRADEPA SAÚDE+ OURO',
       preco: '44,90',
-      link: 'https://parceiros.MEUCLUBE.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/9E5CBEB6-D630-4C25-9F86-750C90D3FED1/',
+      link: 'https://parceiros.meuclube.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/FC7BF8E1-DA0D-4701-ABFF-708CD27B6A7E/',
       cor: 'border-abradepa-yellow',
       bg: 'bg-yellow-50/40',
       destaque: true,
@@ -74,7 +74,7 @@ export default function CartaoAbradepaPage() {
     {
       nome: 'ABRADEPA SAÚDE+ PREMIUM',
       preco: '49,90',
-      link: 'https://parceiros.MEUCLUBE.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/AD5EFB88-6D5F-466A-BCE1-9577E39981B9/',
+      link: 'https://parceiros.meuclube.online/abradepa/VendaExterna/678B4AEA-9953-4192-A32C-5977A544B482/A99B6921-7D38-405A-8046-E1331419AF2E/',
       cor: 'border-slate-800',
       bg: 'bg-slate-900',
       textWhite: true,
