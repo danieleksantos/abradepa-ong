@@ -11,6 +11,28 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalOrganization',
+  name: 'ABRADEPA',
+  alternateName:
+    'Associação Brasileira de Dermomicropigmentação Paramédica e Anaplastologia',
+  url: 'https://www.abradepa.org.br',
+  logo: 'https://www.abradepa.org.br/og-image.png',
+  description:
+    'Promovemos saúde integral e reabilitação através da anaplastologia, dermopigmentação paramédica e próteses estéticas.',
+  knowsAbout: [
+    'Anaplastologia',
+    'Dermomicropigmentação Paramédica',
+    'Micropigmentação Paramédica',
+    'Próteses Estéticas e Faciais',
+    'Reabilitação de Pacientes Oncológicos',
+    'Saúde Integral e Práticas Integrativas',
+    'Profissionais da Estética e Qualidade de Vida',
+    'Saúde Integral e Práticas Integrativas',
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.abradepa.org.br'),
   alternates: {
@@ -71,7 +93,13 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} font-sans antialiased bg-slate-50 flex min-h-screen flex-col`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         <Header />
+
         <main className="grow">{children}</main>
 
         <Footer />
